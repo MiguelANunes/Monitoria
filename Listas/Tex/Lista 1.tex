@@ -1,0 +1,228 @@
+\documentclass[12pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges,brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment,color, fancybox} %%% 
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+\topmargin       0cm 
+\headheight      0pt 
+\headsep         0cm
+\textheight      24cm
+\textwidth       16.7cm
+\oddsidemargin   -2mm
+\evensidemargin  -2mm
+\pagestyle{empty}
+
+\begin{document}
+    
+    \begin{large}
+    
+        \begin{center}
+        
+            \shadowbox{
+                    \begin{minipage}[c]{12cm}
+                        \begin{center}
+                            \sf
+                            $1^{\underline{a}}$ Lista de Exercícios de Lógica Matemática - LMA\\
+                            Professores: Jeferson L. R. S. e Kariston P.  \\ 
+                            Monitor: Miguel A. Nunes \\
+                            Joinville, \today
+                        \end{center}
+                    \end{minipage}
+                } %% 
+                
+        \end{center}
+    
+    \end{large}
+    
+    \vskip 1cm
+    
+    \begin{enumerate}
+        \item Demonstre \textbf{SE} as equivalências se aplicam:
+        
+        \begin{enumerate}[label=(\alph*)]
+        
+            \item $P \downarrow Q \Leftrightarrow Q \downarrow P$ % comutatividade dos conectivos de scheffer
+            
+            \item $P \uparrow Q \Leftrightarrow Q \uparrow P$ % comutatividade dos conectivos de scheffer
+            
+            \item $(P \rightarrow R) \wedge (Q \rightarrow R) \Leftrightarrow (P \vee Q) \rightarrow R$ % (1ª prova 2013-1)
+            
+            \item $(P \rightarrow R) \vee (Q \rightarrow S) \Leftrightarrow (P \wedge Q) \rightarrow R \vee S$ % (1ª prova 2013-1)
+            
+            \item $P \wedge Q \rightarrow R \Leftrightarrow P \rightarrow (Q \rightarrow R)$ % regra da exportação-importação
+            
+            \item $(P \rightarrow Q) \rightarrow R \Leftrightarrow (P \wedge \sim R) \rightarrow \sim Q $ % (1ª prova 2016-1)
+            
+            \item $(P \rightarrow Q) \vee (P \rightarrow R) \Leftrightarrow P \rightarrow (Q \vee R)$ % (1ª prova 2016-1)
+
+            \item $(P \rightarrow Q) \rightarrow Q \Leftrightarrow P \vee Q $ % (1ª Prova 2015-1)
+            
+            \item $(P \downarrow Q) \downarrow (P \downarrow Q) \Leftrightarrow P \vee Q$ % (1ª Prova 2015-1)
+            
+            \item $P \leftrightarrow Q \Leftrightarrow (\sim P \wedge \sim Q) \vee (P \wedge Q)$ % (1ª Prova 2011-1)
+            
+            \item $(P \rightarrow(P \rightarrow(P \rightarrow Q))) \Leftrightarrow P \rightarrow Q$ % (1ª Prova 2011-1)
+            
+            \item $\sim (P \wedge Q \wedge R) \Leftrightarrow \sim P \vee \sim Q \vee \sim R$ % (1ª Prova 2002-2)
+            
+            \item $\sim (P \wedge Q \wedge R) \Leftrightarrow (P \rightarrow (Q \rightarrow \sim R))$ % adaptação própia da questão anterior
+            
+            \item $(P \uparrow Q) \downarrow (Q \uparrow P) \Leftrightarrow P \wedge Q$ % adaptação do segundo item desta mesma questão
+        \end{enumerate}
+        
+        \item Demonstre \textbf{SE} as implicações são verdadeiras:
+        
+        \begin{enumerate}[label=(\alph*)]
+            \item $Q \Rightarrow P \wedge Q \leftrightarrow Q$ % (1ª Prova 2017-2 substituta)
+            
+            \item $(P \vee Q) \wedge \sim Q \Rightarrow P$ % (1ª Prova 2017-2 substituta)
+            
+            \item $(P \wedge Q) \Rightarrow (P \vee Q)$ % (1ª Prova 2017-2 substituta)
+            
+            \item $(P \vee Q) \Rightarrow (P \wedge Q)$ % (1ª Prova 2016-1)
+            
+            \item $(P \rightarrow Q) \Rightarrow P \wedge R \rightarrow Q$ % (1ª Prova 2017-2)
+            
+            \item $(P \rightarrow Q) \Rightarrow ((Q \rightarrow R) \rightarrow (P \rightarrow R))$ % (1ª Prova 2017-2)
+            
+            \item $((P \rightarrow Q) \wedge (P \rightarrow \sim Q)) \rightarrow \sim P \Rightarrow \blacksquare$ % (1ª Prova 2017-2)
+            
+            \item $(P \rightarrow Q) \wedge  \sim Q \Rightarrow \sim P$ %(1ª Prova 2015-1)
+            
+            \item $(P \vee Q ) \leftrightarrow Q \Rightarrow \sim Q \rightarrow \sim P$ % (1ª Prova 2015-1)
+            
+            \item $(P \rightarrow \sim Q) \wedge (R \rightarrow Q) \wedge R \Rightarrow \sim P$ % (1ª Prova 2015-1)
+            
+            \item $(P \leftrightarrow  \sim Q) \Rightarrow (P \rightarrow Q)$ % (1ª Prova 2014-1)
+            
+            \item $Q \Rightarrow P \vee Q \leftrightarrow P$ % (1ª Prova 2014-1)
+            
+            \item $(P \rightarrow R) \wedge (Q \leftrightarrow R) \Rightarrow (P \vee Q) \rightarrow R$ % (adaptação do terceiro item da primeira questão)
+            
+            \item $(P \uparrow Q) \wedge (P \downarrow Q) \Rightarrow P \leftrightarrow Q$ % (adaptação do nono item da primeira questão)
+            
+        \end{enumerate}
+        
+        \item Determine, \underline{se existir}, a FNC e FND das seguintes formulas:
+        
+        \begin{enumerate}[label=(\alph*)]
+            \item $\sim (P \rightarrow Q) \leftrightarrow P$ % (1ª Prova 2017-2 substituta)
+            
+            \item $\sim (P \leftrightarrow Q) \vee (P \vee Q)$% (1ª Prova 2017-2 substituta)
+            
+            \item $(P \rightarrow Q) \wedge (\sim P \wedge R)$ % (1ª Prova 2017-2)
+            
+            \item $(\sim P \wedge \sim Q) \rightarrow (\sim P \rightarrow Q ) \vee (P \rightarrow \sim Q)$ % (1ª Prova 2017-2)
+            
+            \item $(\sim R \vee \sim Q) \leftrightarrow P$ % (1ª Prova 2017-2)
+            
+            \item $(\sim P \vee \sim Q) \rightarrow (P \wedge Q)$ % (1ª Prova 2016-2)
+            
+            \item $(\sim P \vee Q) \rightarrow (Q \wedge \sim R \wedge P)$ % (1ª Prova 2015-2)
+            
+            \item $(\sim P \wedge \sim Q) \leftrightarrow R$ % (1ª Prova 2015-2)
+            
+            \item $(P \wedge Q) \rightarrow \sim (P \vee Q)$ % (1ª Prova 2015-1)
+            
+            \item $(\sim P \rightarrow Q) \leftrightarrow (R \vee P)$ % (1ª Prova 2014-1)
+            
+            \item $\sim(P \leftrightarrow Q) \rightarrow (P \wedge Q) \vee R$ % (1ª Prova 2014-1 substituta)
+            
+            \item $(\sim P \wedge Q) \leftrightarrow (Q \vee \sim P)$
+            % (1ª Prova 2014-1)
+            
+            \item $(\sim P \vee \sim Q) \leftrightarrow P$ % (1ª Prova 2014-1)
+            
+            \item $(P \vee Q) \leftrightarrow (P \wedge Q)$ % (1ª Prova 2014-1)
+        \end{enumerate}
+        
+        
+        
+    \end{enumerate}
+
+
+
+
+    \newpage % ---------------------------------------------%
+    
+    
+    
+    
+    \underline{{\Large Equivalências Notáveis}}:
+    
+    \begin{description}
+        \setlength{\itemsep}{-1pt}
+        
+        \item[Idempotência (ID):] $\begin{array}{l} P\Leftrightarrow P\wedge P \\ P\Leftrightarrow P\vee P\end{array}$
+        
+        \item[Comutação (COM):] $\begin{array}{l} P\wedge Q\Leftrightarrow Q\wedge P \\ P\vee Q\Leftrightarrow Q\vee P\end{array}$
+        
+        \item[Associação (ASSOC):] $\begin{array}{l}P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R\\ P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R \end{array}$ 
+        
+        \item[Distribuição (DIST):] $\begin{array}{l}P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)\\P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)\end{array}$
+        
+        \item[De Morgan (DM):] $\begin{array}{l}\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q\\\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q\end{array}$
+        
+        \item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$ 
+        
+        \item[Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+        
+        \item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+        
+        \item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+        
+        \item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+        
+        \item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+        
+        \item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+        
+        \item[Ou-Exclusivo (X-or)] $P \veebar Q \Leftrightarrow (P \vee Q) \wedge \sim (P \wedge Q)$
+        
+        \item[Conectivos de Scheffer] $\begin{array}{l} P \uparrow Q \Leftrightarrow \sim P \vee \sim Q \\  P \downarrow Q \Leftrightarrow \sim P \wedge \sim Q \end{array}$
+        
+        \item [Absorção:] $\begin{array}{l}P \wedge (P \vee Q) \Leftrightarrow P\\P \vee (P \wedge Q) \Leftrightarrow P\end{array}$
+        
+    \end{description}
+    
+    \begin{comment}
+    
+        \vskip 1cm
+    
+        \underline{{\Large Regras de Inferência Válidas (Teoremas)}}:
+    
+        \begin{description}
+    
+        \setlength{\itemsep}{-1pt}
+        \item[Adição (AD):] $\begin{array}{l} P \vdash P \vee Q \\ P \vdash Q \vee P\end{array}$
+        
+        \item[Simplificação (SIMP):] $\begin{array}{l} P \wedge Q \vdash P\\P \wedge Q \vdash Q \end{array}$
+        
+        \item[Conjunção (CONJ)] $\begin{array}{l}P, Q \vdash P \wedge Q\\P, Q \vdash Q \wedge P\end{array}$
+        
+        \item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+        
+        \item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+        
+        \item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+        
+        \item[Silogismo Disjuntivo (SD):] $\begin{array}{l}P \vee Q, \sim P \vdash Q\\P \vee Q, \sim Q \vdash P\end{array}$
+       
+        \item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+       
+        \item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+       
+        \item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+    
+     \end{description}
+        
+    \end{comment}
+
+\end{document}
