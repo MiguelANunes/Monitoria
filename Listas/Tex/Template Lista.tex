@@ -1,0 +1,106 @@
+\documentclass[12pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges,brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment,color, fancybox} %%% 
+
+\topmargin       0cm 
+\headheight      0pt 
+\headsep         0cm
+\textheight      24cm
+\textwidth       16.7cm
+\oddsidemargin   -2mm
+\evensidemargin  -2mm
+\pagestyle{empty}
+
+\begin{document}
+    
+    \begin{large}
+    
+        \begin{center}
+        
+            \shadowbox{
+                    \begin{minipage}[c]{12cm}
+                        \begin{center}
+                            \sf
+                            Lista de Exercícios de Lógica Matemática - LMA\\
+                            Professores: Jeferson L. R. S. e Kariston P.  \\ 
+                            Monitor: Miguel A. Nunes \\
+                            Joinville, \today
+                        \end{center}
+                    \end{minipage}
+                } %% 
+                
+        \end{center}
+    
+    \end{large}
+    
+    \vskip 1cm
+    
+    \begin{enumerate}
+        \item 
+    \end{enumerate}
+
+\newpage
+\underline{{\Large Equivalências Notáveis}}:
+\begin{description}
+    \setlength{\itemsep}{-1pt}
+    
+    \item[Idempotência (ID):] $\begin{array}{l} P\Leftrightarrow P\wedge P \\ P\Leftrightarrow P\vee P\end{array}$
+    
+    \item[Comutação (COM):] $\begin{array}{l} P\wedge Q\Leftrightarrow Q\wedge P \\ P\vee Q\Leftrightarrow Q\vee P\end{array}$
+    
+    \item[Associação (ASSOC):] $\begin{array}{l}P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R\\ P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R \end{array}$ 
+    
+    \item[Distribuição (DIST):] $\begin{array}{l}P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)\\P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)\end{array}$
+    
+    \item[De Morgan (DM):] $\begin{array}{l}\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q\\\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q\end{array}$
+    
+    \item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$ 
+    
+    \item[Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+    
+    \item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+    
+    \item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+    
+    \item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+    
+    \item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+    
+    \item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+    
+    \item[Ou-Exclusivo (X-or)] $P \veebar Q \Leftrightarrow (P \vee Q) \wedge \sim (P \wedge Q)$
+    
+    \item[Conectivos de Scheffer] $\begin{array}{l} P \uparrow Q \Leftrightarrow \sim P \vee \sim Q \\  P \downarrow Q \Leftrightarrow \sim P \wedge \sim Q \end{array}$
+    
+    \item [Absorção:] $\begin{array}{l}P \wedge (P \vee Q) \Leftrightarrow P\\P \vee (P \wedge Q) \Leftrightarrow P\end{array}$
+    
+\end{description}
+
+\vskip 1cm
+
+
+\underline{{\Large Regras de Inferência Válidas (Teoremas)}}:
+
+\begin{description}
+
+     \setlength{\itemsep}{-1pt}
+     \item[Adição (AD):] $\begin{array}{l} P \vdash P \vee Q \\ P \vdash Q \vee P\end{array}$
+     \item[Simplificação (SIMP):] $\begin{array}{l} P \wedge Q \vdash P\\P \wedge Q \vdash Q \end{array}$
+     \item[Conjunção (CONJ)] $\begin{array}{l}P, Q \vdash P \wedge Q\\P, Q \vdash Q \wedge P\end{array}$
+     \item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+     \item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+     \item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+     \item[Silogismo Disjuntivo (SD):] $\begin{array}{l}P \vee Q, \sim P \vdash Q\\P \vee Q, \sim Q \vdash P\end{array}$
+     \item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+     \item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+     \item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+
+ \end{description}
+
+\end{document}
