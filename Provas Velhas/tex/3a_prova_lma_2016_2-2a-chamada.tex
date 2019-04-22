@@ -1,0 +1,205 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %% isto garante compatibilidade com seu MAC
+\usepackage{lmodern}
+\usepackage[brazil]{babel}
+
+\usepackage{comment, color} %%% 
+\usepackage{graphicx, url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%\usepackage[normalem]{ulem}
+
+\topmargin       0.15cm
+\headheight      0pt
+\headsep         -0.5cm
+\textheight      25cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\baselineskip    -13pt
+
+\begin{document}
+\framebox[15cm][c]{$3^a$ Avaliação de Lógica Matemática  (LMA) - Joinville, \today}
+
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.5cm Acadêmico(a): \hrulefill%%%
+
+%%%\noindent Algumas questões desta prova vieram de \url{http://www.cs.utsa.edu/~bylander/cs2233/index.html}
+
+\begin{enumerate}
+%\setlength{\itemsep}{-1pt}
+
+%\item Construa as duas fórmulas abaixo em suas respectivas FNC e FND\footnote{alguns alunos ficaram com dúvidas neste importante tópico do curso}:
+%%%\textcolor{red}{Rogério: Não mexi aqui mas sugiro esta questao}
+%\begin{enumerate}
+%\setlength{\itemsep}{-3pt}
+%\item  $(p\rightarrow \sim q)  \wedge (\sim q \rightarrow p) $
+%\item  $p \leftrightarrow \sim q $
+%\end{enumerate}
+%
+%\item Verificar a validade dos teoremas abaixo, usando um dos seguintes métodos de prova:  \textbf{dedução natural}  (regras de inferência diretas e propriedades lógicas), ou pela \textbf{contradição}, ou   método da demonstração \textbf{indireta} (escolha Duas das Tres abaixo):\\
+%\textcolor{red}{Rogério: Não mexi aqui ... confira ou pegue alguma outra}
+%
+%\begin{enumerate}
+%\setlength{\itemsep}{-2pt} 
+% \item $\{ p\rightarrow \sim q$, $\sim p \rightarrow (r \rightarrow \sim q)$, $(\sim s \vee \sim r)\rightarrow \sim \sim q$, $\sim s$ \} {\bf $\vdash $} $\sim r$
+%
+%\item $\{(\sim p\vee q) \rightarrow r$,  $(r \vee s)\rightarrow \sim t$, $t$ \} {\bf $\vdash $} $\sim q$
+%
+%\item $\{ p\rightarrow q$, $q \leftrightarrow s$, $t\vee (r\wedge \sim s)$ \} {\bf $\vdash $} $p \rightarrow t$
+%
+%
+%%%\item  $\{ p\rightarrow \sim q$, $\sim p \rightarrow (r \rightarrow \sim q)$, $ (\sim s \vee \sim r)\rightarrow \sim \sim q$, $ \sim s\}$ $\vdash \sim r $
+%
+%
+%\end{enumerate}
+
+
+\item {\bf (2.0 pt)} Determine o valor verdade $\{V, F \}$ (a interpretação $\Phi $)
+de cada uma das fórmulas abaixo em seu respectivo domínio.
+Faça os cálculos em separado e preencha a tabela abaixo.
+%(Determine the truth value of each statement for each domain.)\\
+%\textbf{\textcolor{red}{Rogério: Já alterei as questoes do semestre anterior ...}}
+\begin{center}
+\begin{tabular}{l|l|l|} \hline \hline
+ & \multicolumn{2}{c}{Domínios} \\ \hline
+ & $\{1,2,3\}$ & $\{-1,0,1\}$ \\ \hline
+$\exists x (x = -x^2)$ & & \\ \hline
+$\forall x (3x \leq 3x)$ & &\\ \hline
+$\exists x (x^2 = 16)$ & & \\ \hline
+$\forall x (x^4 \geq x^2)$ & &  \\ \hline
+$\forall x \exists y (xy = 2)$ & & \\ \hline \hline
+\end{tabular}
+\end{center}
+
+
+%\item {\bf (1.0 pt)} Escreva claramente uma descrição para as fórmula abaixo, indicando
+%quais são logicamente equivalentes entre elas (da ``a'' a ``e''), e quais não são.
+%Explique suas respostas.
+%%% pagina 371 do livro em ingles que estah no Dropbox
+%%\textcolor{red}{Rogério: esta é nova ... veja se está bom}
+%\begin{enumerate}
+%\setlength{\itemsep}{-3pt}
+%  \item  $\exists x \sim p(x)$ 
+%  \item  $ \exists x \forall y (p(y) \rightarrow y = x)$
+%  \item  $ \exists x \forall y (p(y) \leftrightarrow y = x)$
+%   \item $ \forall x \forall y (p(x) \wedge p(y)) \rightarrow x = y)$
+%   \item $ \forall x \forall y (p(x) \wedge p(y)) \leftrightarrow x = y)$
+%\end{enumerate}
+
+\item {\bf (1.5 pt)} Aplicando De Morgan aos
+quantificadores das fórmulas de LPO, dar a
+negação das seguintes sentenças lógicas:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+% \item $ \forall x \exists y (\sim p(x) \wedge \sim q(y))$
+ \item $ \exists x \forall y (p(x) \vee \sim q(y))$
+% \item $ \exists x \forall y (p(x)\rightarrow q(y))$
+ \item $ \forall x \exists y (\sim p(x) \vee \sim q(y))$
+  \item  $ \exists x \forall y (p(y) \rightarrow y = x)$
+  \item  $ \forall x \exists y (p(y) \leftrightarrow y = x)$
+\end{enumerate}
+
+\item {\bf (3.5 pts)} Seja o conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO):\\
+\begin{center}
+\begin{tabular}{ll}
+ \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    1. &  $\forall x\forall y (bebe(y) \wedge genitores(x,y) \rightarrow orgulhoso(x)) $ \\
+    2. &  $\forall x\forall y ( pai(x,y) \rightarrow genitores(x,y) ) $ \\
+    3. &  $\forall x\forall y ( mae(x,y) \rightarrow genitores(x,y) ) $ \\
+    4. &  $ pai(adam, maria) $ \\
+    5. &  $ bebe(maria) $ \\
+    6. &  $ mae(beatriz, maria) $ \\ \hline \hline
+ \end{tabular}
+\end{center}
+ 
+Na sequência abaixo, resolva as seguintes questões:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+\item {\bf (1.0 pt)} Interprete textualmente o significado de cada fórmula acima
+\item {\bf (2.0 pts)} Utilizando as propriedades da LPO, PU's, PE's e regras de inferências, deduza que \texttt{beatriz} e \texttt{adam}
+são pais orgulhosos de seu bebe chamado \texttt{maria}.
+\end{enumerate}
+PS: Indique claramente cada passo realizado.
+
+\item {\bf (1.5 pt)} Em Prolog, a partir da relação \texttt{pai(X,Y)}, construa a regras para deduzir \texttt{avo(X,Y)} e \texttt{tio(X,Y)}
+
+\item {\bf (1.5 pt)} Analise o código Prolog apresentado a seguir e informe qual seria a sequência de respostas válidas para a inferência {\tt person(X,Y).} {\small (na mesma ordem que seria apresentada pelo Prolog)}:
+
+\begin{center}
+\begin{tabular}{ll}
+ \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    1. &  $record(maejoana,1940).$ \\
+    2. &  $record(zeninguem, 2001).$ \\
+    3. &  $record(fulana,1955).$ \\
+    4. &  $record(fulano, 1992).$\\
+    5. &  $person(X,old) :- record(X,Y), Y=<1955.$ \\
+    6. &  $person(X,adult) :- record(X,Y), Y>1955, Y=<2000.$ \\
+    7. &  $person(X,young) :- record(X,Y), Y>2000$ \\ \hline \hline
+ \end{tabular}
+\end{center}
+
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\underline{{\large Equivalências Notáveis}}:
+\begin{description}
+\setlength{\itemsep}{-4pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall px \Leftrightarrow \exists \sim px $
+\item[Negações para LPO:] $ \sim \exists px \Leftrightarrow \forall \sim px $
+\end{description}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+\begin{description}
+\setlength{\itemsep}{-4pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+
+\end{enumerate}
+\end{flushleft}
+\end{document}

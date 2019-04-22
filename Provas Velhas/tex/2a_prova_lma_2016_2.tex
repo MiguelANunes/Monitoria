@@ -1,0 +1,257 @@
+\documentclass[12pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges,brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment,color, fancybox} %%% 
+%\usepackage{tikz}
+%\usepackage{comment, color } %%% inclui
+
+%%%\usepackage{graphicx,url}
+\topmargin       0cm 
+\headheight      0pt 
+\headsep         0cm
+\textheight      24cm
+\textwidth       16.7cm
+\oddsidemargin   -2mm
+\evensidemargin  -2mm
+\pagestyle{empty}
+
+%%%\graphicspath{{/figures/}}   
+%%\DeclareGraphicsExtensions{{.jpg},{.png}}
+%%https://logicproblems.org/problems/
+
+\begin{document}
+
+
+\begin{large}
+\begin{center}
+
+\shadowbox{
+\begin{minipage}[c]{10cm}
+\begin{center}
+\sf
+$2^{\underline{a}}$ Avalia\c c\~ao de L\'ogica Matem\'atica  (LMA)\\
+%Professores: Rogério  ($T_A$) e Claudio ($T_B$) \\
+Joinville, \today
+\end{center}
+\end{minipage}
+} %% 
+
+\end{center}
+\end{large} 
+
+%{\bf\textcolor{red}{Rogerio ... amanha pegamos novas questoes do livro}}
+
+\begin{flushright}
+``A educação é a arma mais poderosa que você pode usar para mudar o mundo.''\\{\footnotesize  Nelson Mandela}
+\end{flushright}
+
+
+\vskip 0.5cm Acad\^emico(a) : \rule{10cm}{0.4pt} Turma:  $\frac{[ ~~ ] ~ T_A - Rogerio}{[ ~~ ] ~ T_B - Claudio}$ 
+\noindent
+
+\begin{enumerate}
+%\setlength{\itemsep}{-1pt}
+
+\itemsep 1cm
+
+\item Verificar a \textbf{validade dos argumentos} (dedu\c c\~ao natural) que se seguem: %(escolha duas das 3 para desenvolver):
+
+\begin{enumerate}
+
+%\item $\{ p \vee \sim q,~ \sim p,~ \sim (p \wedge r) \rightarrow q \} ~\vdash~ r$
+%% pagina 110 -- 1h
+
+%\item $\{ \sim (p \vee q),~ \sim p \wedge \sim q \rightarrow r \wedge s,~ s \rightarrow r \} ~\vdash~ r$
+%% pagina 111 -- 4b modificado
+
+\item $\{ p \vee q,~ q \rightarrow r,~ \sim r \vee s,~ \sim p \} ~\vdash~ s$
+%% pagina 110 -- 2c
+
+%\item $\{ p \rightarrow q, \:\: p \vee (\sim \sim r \wedge \sim \sim  q), s \rightarrow \sim r, \sim (p \wedge q) \}$ {\bf $\vdash $} $\sim (s \wedge q)$
+ %% pagina 116 -- 11
+
+%\item $\{ p \rightarrow q, \:\: \sim r \rightarrow (s \rightarrow t),\:\: r \vee (p \vee s), \:\: \sim r \}$ {\bf $\vdash $} $q \vee t$
+ %% pagina 115 -- 9
+
+
+%\item $\{ p \rightarrow q, \:\: q \rightarrow r, \:\: r \rightarrow s, \:\: \sim s, \:\: p \vee t \}$ {\bf $\vdash $} $t$
+ %% pagina 117 -- 13
+
+
+%\item $\{ p \rightarrow q, \:\: q \rightarrow r, \:\: p \vee s, \:\: s \rightarrow t, \:\: \sim t \}$ {\bf $\vdash $} $r$
+ %% pagina 118 -- 16 convertendo as comparaçoes em letras
+
+
+%\item $\{ p \vee q, \:\: q \rightarrow r, \:\: p \rightarrow s,  \:\: \sim s  \}$ {\bf $\vdash $} $r \wedge (p \vee q)$
+ %% pagina 126 -- D
+
+
+\item $\{ r \rightarrow t, \:\:  s \rightarrow q, \:\: t \vee q \rightarrow \sim p, \:\:  r \vee s \}$ {\bf $\vdash $} $ \sim p$
+ %% pagina 126 -- m
+
+
+%\item $\{ p \wedge q, p \rightarrow r,  r \wedge s \rightarrow \sim t,  q \rightarrow s   \}$ {\bf $\vdash $} $\sim t$
+ %% pagina 121--  letra m
+
+%\item $\{ p \wedge \sim q, r \rightarrow q,  r \vee s,  p \vee s \rightarrow t   \}$ {\bf $\vdash $} $ t $
+ %% pagina 122--  letra e
+ 
+\item $\{ p, p \rightarrow q, p \wedge q \leftrightarrow t \vee s, \sim s \} \vdash t$
+  %% criação: prof. Rogerio
+  
+\end{enumerate}
+
+%\textcolor{red}{Vamo fazer algo totalmente NOVO}
+
+ \item Utilizando o m\'etodo de {\bf demonstra\c c\~ao condicional}, demonstre a validade das consequ\^encias abaixo:
+ 
+\begin{enumerate}
+
+%\item $\{p \wedge q \rightarrow \sim r,\:\: ~ r \vee (s \wedge t),\:\: p \leftrightarrow ~ q \} ~\vdash~  p \rightarrow s $ 
+ % pagina 134 -- 11
+
+%\item $\{ p \vee q \rightarrow r,~ s \rightarrow \sim r \wedge \sim t,~ s \vee u \} ~\vdash~ p \rightarrow u$
+%pagina 153 -- 1l
+
+%\item $\{ p \rightarrow q,~ r \rightarrow t,~ s \rightarrow r,~ p \vee s \} ~\vdash~ \sim q \rightarrow t $
+% pagina 153 -- 1m
+
+\item $ \{p \vee (q \rightarrow r), \sim r \} \vdash q \rightarrow p$
+% fonte: http://jeiks.net/wp-content/uploads/2013/10/LogMat_Slide-14.pdf (slide 5)
+
+\item $ \{\sim p \rightarrow (q \rightarrow r), s \vee (r \rightarrow t), p \rightarrow s \} \vdash \sim s \rightarrow (q \rightarrow t)$
+% fonte: http://jeiks.net/wp-content/uploads/2013/10/LogMat_Slide-14.pdf (slide 6)
+
+\item $\{r \rightarrow t, ~ t \rightarrow ~ \sim s,   ~ (r \rightarrow \sim s) \rightarrow q \} ~\vdash~  p \rightarrow (p \wedge q) $ 
+ % pagina 153 -- 1c
+
+
+%\item $\{p \rightarrow q, \:\: q \leftrightarrow ~ s, \:\: t \vee (r \wedge \sim s) \} ~\vdash~ p \rightarrow t $ 
+  % pagina 148 -- 5
+
+%\item $\{r \vee s, ~ \sim t \rightarrow ~ \sim p, ~ r \rightarrow \sim q \} ~\vdash~ \sim (p \wedge q) \rightarrow (s \wedge t) $ 
+  % pagina 153 -- 1I
+
+%\item $\{(p \rightarrow q) \vee r, ~ s \vee t \rightarrow ~ \sim r,   ~ s \vee (t \wedge u) \} ~\vdash~ p \rightarrow q $ 
+ % pagina 154 -- 3E
+
+%\item $\{ q \rightarrow p,\:\: t \vee s,\:\: q \vee\sim s \} ~\vdash~ \sim (p \vee r) \rightarrow t$
+% pagina 153 -- 1k
+
+
+\end{enumerate}
+
+
+\item  Demonstrar que o conjunto das proposi\c c\~oes abaixo geram uma contradi\c c\~ao ({\bf demons\-tra\c c\~ao por absurdo ou indireta}),  (isto \'e, derivam uma inconsist\^encia do tipo: ($\Box \Leftrightarrow (\sim x \wedge x)$)
+%Escolha duas provas para fazer das 3 que seguem  abaixo:
+
+\begin{enumerate}
+
+\item $\{\ (p \wedge q) \leftrightarrow \sim r, \:\:  \sim r \rightarrow \sim p, \:\: \sim q \rightarrow \sim r   \} ~\vdash~   q $
+% pagina 154 -- 4I 
+
+%\item $\{\ (p \rightarrow q) \wedge r,\:\: q \vee s \rightarrow t \wedge u,\:\: v \rightarrow s,\:\: v \vee p \} ~\vdash~  t \vee x $
+% pagina 147 -- 3 convertendo as comparaçoes em letras
+
+
+%\item $\{\ \} ~\vdash~  $
+
+%\item $\{\sim (p \rightarrow q) \vee (s \rightarrow\sim r),~ q \vee s,~ p \rightarrow\sim s \} ~\vdash~ \sim r \vee\sim s$
+% pagina 155 -- 6d 
+
+\item $\{\sim p \rightarrow \sim q \vee r,~ s \vee (r \rightarrow t),~ p \rightarrow s,~ \sim s \} ~\vdash~ q \rightarrow t$
+% pagina 155 -- 6c
+
+%\item $\{ \sim p \vee \sim q,~ r \vee s \rightarrow p,~ q \vee\sim s,~ \sim r ~\vdash~ \sim(r \vee s)$
+% pagina 154 -- 4I
+
+\item $\{ \sim r \vee \sim s, \:\: q \rightarrow s ~\vdash~ r \rightarrow \sim q$
+% pagina 153 -- 1a TRIVIAL !!!
+
+%{\bf\textcolor{red}{Claudio: falta alterar os 3 itens da questão 3. O resto já está OK}}
+
+%\item $\{\ \sim (p\:\: \rightarrow \:\: \sim q) \rightarrow ((r \:\: \leftrightarrow \:\: s) \vee t),\:\:  p,\:\:  q,\:\:  \sim t    ,\:\:  r \} ~\vdash~    s $
+%% Pagina 155 6 g MODIFICADA
+
+
+
+%\item $\{ p \vee q \rightarrow r,~ s \rightarrow \sim r \wedge \sim t,~ s \vee u,\:\: p   \} ~\vdash~ p \rightarrow u$
+%pagina 153 -- 1l  MODIFICADA
+
+%\item $\{ p \rightarrow q,~ r \rightarrow t,~ s \rightarrow r,~ p \vee s ,\:\: \sim q  \} ~\vdash~  t $
+% pagina 153 -- 1m
+
+
+\end{enumerate}
+
+
+%\item (0.4 pts) Você passou metade do semestre estudando a relação de implicação $A \Rightarrow B$, validando-a
+%por pelo menos dois métodos: demonstrando que $X/A \Rightarrow X/B$ e  $A \rightarrow B \equiv \blacksquare $. 
+%Assim, explique qual relação de $A \Rightarrow B$ com a definição de teorema lógico $A \vdash B$? Em outras palavras, qual a definição conceitual de teorema lógico?
+%Exemplifique se for o caso.
+
+
+\end{enumerate}
+
+
+\newpage
+\underline{{\Large Equival\^encias Not\'aveis}}:
+\begin{description}
+\setlength{\itemsep}{-4pt}
+
+\item[Idempot\^encia (ID):] $p\Leftrightarrow p\wedge p$ ou $p\Leftrightarrow p\vee p$
+\item[Comuta\c c\~ao (COM):] $p\wedge q\Leftrightarrow q\wedge p$ ou $p\vee q\Leftrightarrow q\vee p$
+\item[Associa\c c\~ao (ASSOC):] $p\wedge(q\wedge r)\Leftrightarrow (p\wedge q)\wedge r$ ou $p\vee(q\vee r)\Leftrightarrow (p\vee q)\vee r$ 
+\item[Distribui\c c\~ao (DIST):] $p\wedge(q\vee r)\Leftrightarrow (p\wedge q)\vee (p \wedge r)$ ou $p\vee(q\wedge r)\Leftrightarrow (p\vee q)\wedge (p\vee r)$
+\item[Dupla Nega\c c\~ao (DN):] $p\Leftrightarrow\sim\sim p$
+\item[De Morgan (DM):] $\sim(p \wedge q) \Leftrightarrow \sim p \vee\sim q$ ou $\sim(p \vee q) \Leftrightarrow \sim p \wedge\sim q$
+\item[Equival\^encia da Condicional (COND):] $p\rightarrow q \Leftrightarrow\sim p \vee q$
+
+\item[Bicondicional (BICOND):] $p\leftrightarrow q \Leftrightarrow (p\rightarrow q)\wedge(q\rightarrow p)$
+
+\item[Contraposi\c c\~ao (CP):] $p\rightarrow q \Leftrightarrow \sim q\rightarrow\sim p$
+
+\item[Exporta\c c\~ao-Importa\c c\~ao (EI):] $p\wedge q\rightarrow r \Leftrightarrow p\rightarrow(q\rightarrow r)$
+
+\item[Contradi\c c\~ao:] $p\wedge \sim p \Leftrightarrow \square $
+
+\item[Tautologia:] $ p\vee \sim p \Leftrightarrow \blacksquare    $
+
+\item [Absorção:] $\begin{array}{l}p \wedge (p \vee q) \Leftrightarrow p\\p \vee (p \wedge q) \Leftrightarrow p\end{array}$
+
+\end{description}
+
+\underline{{\Large Regras Infer\^encias V\'alidas (Teoremas)}}:
+\begin{description}
+\setlength{\itemsep}{-4pt}
+\item[Adi\c c\~ao (AD):] $p \vdash p \vee q$ ou $p \vdash q \vee p$
+\item[Simplifica\c c\~ao (SIMP):] $p \wedge q \vdash p$ ou $p \wedge q \vdash q$
+\item[Conjun\c c\~ao (CONJ)] $p, q \vdash p \wedge q$ ou $p, q \vdash q \wedge p$
+\item[Absor\c c\~ao (ABS):] $p \rightarrow q \vdash p \rightarrow (p \wedge q)$
+\item[Modus Ponens (MP):] $p \rightarrow q, p \vdash q$
+\item[Modus Tollens (MT):] $p \rightarrow q, \sim q \vdash \sim p$
+\item[Silogismo Disjuntivo (SD):] $p \vee q, \sim p \vdash q$ ou $p \vee q, \sim q \vdash p$
+\item[Silogismo Hipot\'etico (SH):] $p \rightarrow q, q\rightarrow r \vdash p\rightarrow r$
+\item[Dilema Construtivo (DC):] $p\rightarrow q, r\rightarrow s, p \vee r \vdash q\vee s$
+\item[Dilema Destrutivo (DD):] $p\rightarrow q, r\rightarrow s, \sim q\vee\sim s \vdash \sim p \vee\sim r$
+\end{description}
+
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observa\c c\~oes}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer d\'uvida, desenvolva a quest\~ao e deixe tudo
+explicado, detalhadamente,
+ que avaliaremos o seu conhecimentos sobre
+ o assunto;\item \underline{Clareza e legibilidade};
+
+\end{enumerate}
+\end{flushleft}
+\end{document}

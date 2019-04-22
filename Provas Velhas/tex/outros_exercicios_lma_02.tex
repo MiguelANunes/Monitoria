@@ -1,0 +1,315 @@
+\documentclass[12pt]{article}
+\usepackage{latexsym}
+\usepackage{amssymb,amsmath}
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+
+\topmargin = 0.1in \textwidth=5.7in \textheight=8.6in
+
+\oddsidemargin = 0.2in \evensidemargin = 0.2in
+
+\begin{document}
+
+\begin{center}
+\large
+JANUARY TERM 2012 \\
+FUN and GAMES WITH DISCRETE MATHEMATICS \\
+\medskip
+
+Module \#4 (Propositional Logic, Truth Tables,\\ Disjunctive Form, and Quantifiers)
+\end{center}
+Author: John Casale\\
+Reviewer: Azalea Vo \\
+Last modified: January 4, 2012 \\
+
+
+\paragraph*{Reading from Meyer, \underline{Mathematics for Computer Science}}:
+
+\begin{itemize}
+	\item Use this version of Meyer for reading below:\\ \url{http://courses.csail.mit.edu/6.042/spring11/mcs.pdf}
+	
+	\item Section 3.1-3.3 on propositional logic tools (become familiar with symbolic notation), truth table calculations, and equivalence of logic statements (ignore computer program logic)
+
+	\item Section 3.4 on disjunctive normal form and algebraic manipulation
+	
+	\item Section 3.6 on universal and existential quantifiers
+	%\item Section 3.1 on propositional logic tools (become familiar with symbolic notation) and truth table calculations
+	%
+	%\item Section 3.2.2 dives into how to show equivalence of logic statements with truth tables. We will also learn how to use algebraic manipulation to show equivalence
+
+	%\item Section 3.3-3.4 on equivalence and disjunctive normal form in this version of Meyer (\url{http://courses.csail.mit.edu/6.042/spring11/mcs.pdf})
+	
+	%\item Section 5.1 on universal and existential quantifiers
+\end{itemize}
+\medskip
+
+\paragraph*{Warmups (try to do these before class).}
+\begin{itemize}
+	\item Let $p$ mean ``I will take CS 121,'' $q$ mean ``I enjoy writing proofs,'' and $r$ mean ``I think P equals NP.'' Translate the following sentence into propositional logic: ``I will take CS 121 only if I enjoy writing proofs and I do not think P equals NP.'' Then, fill in the following truth table:
+	\begin{center}
+	\begin{tabular}{|c c c | c | c | c|}
+	\hline
+	$p$ & $q$ & $r$ & $(p \wedge q) \vee r$ & $\neg (p \vee q) \rightarrow r$ & $\neg p \leftrightarrow \neg q \wedge r$ \\ \hline
+	T & T & T & & & \\ \hline
+	T & T & F & & & \\ \hline
+	T & F & T & & & \\ \hline
+	T & F & F & & & \\ \hline
+	F & T & T & & & \\ \hline
+	F & T & F & & & \\ \hline
+	F & F & T & & & \\ \hline
+	F & F & F & & & \\ \hline
+	\end{tabular}
+	\end{center}
+	
+	\item Prove that the propositional formulas $\neg p \vee \neg q \rightarrow r$ and $\neg r \rightarrow p \wedge q$ are equivalent logical statements. Then write a third equivalent statement that is in disjunctive normal form.
+	
+\end{itemize}
+
+
+
+
+
+\pagebreak
+
+
+\paragraph*{Notes}
+\begin{enumerate}
+
+\item Propositional logic
+
+A proposition is a statement or sentence that can be either true or false. For example, the statement ``I like to sing'' is a proposition that is true for some people and false for others.
+
+We will typically use propositional (or boolean) variables such as $p$ and $q$ instead of propositions like ``Joe wants to dance'' or ``11 is a prime number'' because we are less concerned about the subject of the propositions and more interested in how the propositions can be combined, modified, and related. The table below summarizes the main tools for symbolic logic:
+\begin{center}
+\begin{tabular}{c | c }
+	Logic Statement & Symbolic Notation \\ \hline
+	NOT($p$) & $\neg p$ (equivalently $\overline{p}$) \\
+	$p$ AND $q$ & $p \wedge q$ \\
+	$p$ OR $q$ & $p \vee q$ \\
+	IF $p$ THEN $q$ & $p \rightarrow q$ \\
+	$p$ IF AND ONLY IF $q$ & $p \leftrightarrow q$ \\
+	$p$ XOR $q$ & $p \oplus q$
+\end{tabular}
+\end{center}
+
+\item Equivalence of logic statements
+
+We can show that two statements, such as $\neg (p \vee q)$ and $\neg p \wedge \neg q$, are equivalent by evaluating a truth table and showing that every row has the same outcome. If there are $n$ propositional variables, a truth table will have $2^n$ rows and so this process can become tedious quickly.
+
+We can instead do algebraic manipulation of statements using these rules:
+\begin{itemize}
+	\item Commutativity and associativity of AND and OR:
+	\begin{align*}
+		p \wedge q \;\;\; &\leftrightarrow \;\;\; q \wedge p \;\;\; \;\;\; \;\;\; \;\;\; \;\;\; \;\;\; \;\;\; \;\;\; \;\;\; \;\;\; \;\;\;  \text{ (similar for OR)}\\
+		(p \vee q) \vee r \;\;\; &\leftrightarrow \;\;\; p \vee q \vee r \;\;\; \leftrightarrow \;\;\; p \vee (q \vee r) \text{ (similar for AND)}
+	\end{align*}
+	
+	\item Identity and zero for AND and OR: 
+	\begin{align*}
+		\text{T} \wedge p \;\;\; &\leftrightarrow \;\;\; p \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \text{F} \wedge p \;\;\; \leftrightarrow \;\;\; \text{F}\\
+		\text{F} \vee p \;\;\; &\leftrightarrow \;\;\; p \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; \text{T} \vee p \;\;\; \leftrightarrow \;\;\; \text{T}
+	\end{align*}
+	
+	\item Distributivity of AND over OR:
+	\begin{align*}
+		p \wedge (q \vee r) \;\;\; &\leftrightarrow \;\;\; (p \wedge q) \vee (p \wedge r)
+	\end{align*}
+	
+	\item DeMorgan's law for distributing NOT over AND or OR:
+	\begin{align*}
+		\neg (p \wedge q) \;\;\; &\leftrightarrow \;\;\; \neg p \vee \neg q \\
+		\neg (p \vee q) \;\;\; &\leftrightarrow \;\;\; \neg p \wedge \neg q
+	\end{align*}
+\end{itemize}
+
+\item Disjunctive normal form
+
+A statement is in disjunctive form if it is an OR of AND terms, such as $(p \wedge q) \vee (p \wedge \neg r)$.
+
+A statement is in disjunctive normal form (DNF) if it is an OR of AND terms each containing every one of the variables or their negations, such as\\ $(p \wedge q \wedge r) \vee (p \wedge q \wedge \neg r) \vee (p \wedge \neg q \wedge \neg r)$.
+
+Using the above rules, we can always convert any propositional formula into one that is in disjunctive normal form. Thus, to prove equivalence, we can always write the formulas in DNF and compare the results.
+
+
+\item Quantifiers
+
+A predicate is a statement that contains 1 or more variables and becomes a proposition when the variable is replaced with an object. For example, we can form predicates $P(x)$ and $W(x)$ to mean ``$x$ is a philosopher'' and ``$x$ is wise'' respectively.
+
+An assertion that a predicate is sometimes true is called an existential quantification, which uses the ``exists'' notation. Examples include\\
+$(\exists x \in \mathbb{R}) \; x^2 + 1 = 7$ or $(\exists x) \; P(x) \wedge W(x)$ or ``There are Harvard students currently enrolled in Fun and Games with Paul Bamberg.''
+
+An assertion that a predicate is always true is called a universal quantification, which uses the ``for-all'' notation. Examples include\\
+$(\forall x \in \mathbb{R}) \; x^2 + 1 \geq 0$ or $(\forall x) \; P(x) \rightarrow W(x)$ or ``Every Harvard undergraduate student has an identification card for yard access.''
+
+The domain of discourse refers to the set of objects over which the variables $x$, $y$, etc can range. It is important to specify your domain because, as an example, the statement $(\exists x) \; x^2 = 2$ is true if the domain is the real numbers, $\mathbb{R}$, but is false if the domain is the natural numbers, $\mathbb{N}$. If no domain is explicitly given, then we assume that the statements exist in the universal domain of all objects.
+
+The order of quantifiers matters if there is more than one variable involved. Notice that the statement:\\
+($\forall x \in \mathbb{N}$) ($\exists a, b, c, d \in \mathbb{N}$) $x = a^2 + b^2 + c^2 + d^2$ is true since any positive integer can be written as the sum of four squares, but the statement:\\
+($\exists a, b, c, d \in \mathbb{N}$) ($\forall x \in \mathbb{N}$) $x = a^2 + b^2 + c^2 + d^2$ is false since it is certainly not the case that every positive integer is the sum of \emph{the same} four square numbers.
+
+\end{enumerate}
+
+
+
+
+
+
+
+\pagebreak
+
+\paragraph*{Sample problems}
+
+\begin{enumerate}
+
+\item Use algebraic manipulation to reduce the following formula to one in disjunctive normal form:
+$$((p \wedge \neg q) \vee \neg (p \vee r)) \wedge (\neg q \vee (p \wedge r))$$
+
+\vspace{100pt}
+
+\item Given the predicates:
+\begin{align*}
+	P(x, y) &= \text{``$x$ is a parent of $y$''} \\
+	S(x, y) &= \text{``$x$ is a sibling of 	$y$''} \\
+	M(x) &= \text{``$x$ is male''}
+\end{align*}
+How would you quantify the following kinships?
+\begin{enumerate}	
+	\item $x$ is a grandparent
+	
+	\item $x$ is a grandfather of $y$
+	
+	\item $x$ is $y$'s uncle
+\end{enumerate}
+
+\vspace{100pt}
+
+\item Give me a cubic polynomial, $f(x)$, and its roots. Write a formula that means $x$ is a real number that makes $f(x)$ positive.
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\pagebreak
+
+\paragraph*{Small group exercises}
+\begin{enumerate}
+\item
+
+\begin{enumerate}
+
+\item 
+\begin{enumerate}
+	\item Translate the following into a statement of propositional logic: ``I will take CS 121 if and only if Bamberg advises me to and Lewis advises me not to.''
+	
+	\item Determine which of the following are equivalent to $p \wedge q \rightarrow r$ and which are equivalent to $p \vee q \rightarrow r$:
+	\begin{align*}
+		p &\rightarrow (q \rightarrow r) \\
+		q &\rightarrow (p \rightarrow r) \\
+		(p &\rightarrow r) \wedge (q \rightarrow r) \\
+		(p &\rightarrow r) \vee (q \rightarrow r)
+	\end{align*}
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+	\item Translate the following into a statement of propositional logic: ``If I do not study, then I will not pass the course unless the professor accepts bribes.''
+	
+	\item Show that the formula $(p \vee q \rightarrow r) \rightarrow (p \rightarrow r)$ is a validity (always true).
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+	\item Translate the following into a statement of propositional logic: ``Miami will win the championship only if Wade is not injured and LeBron rebounds.''
+	
+	\item The logical connectives IF $p$ THEN $q$ ($p \rightarrow q$), $p$ IF AND ONLY IF $q$ ($p \leftrightarrow q$), and $p$ XOR $q$ ($p \oplus q$) are convenient tools, but they are actually unnecessary. Show how to express $p \rightarrow q$, $p \leftrightarrow q$, and $p \oplus q$ using only the operators NOT ($\neg$), AND ($\wedge$), and OR ($\vee$).
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+	\item Translate the following into a statement of propositional logic: ``The US economy will recover provided that Greece does not default or European banks become regulated.''
+	
+	\item Find an equivalent formula in disjunctive normal form for your answer in part (i).
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+
+
+\pagebreak
+
+\item 
+\begin{enumerate}
+
+\item Let $H(x,y)$ mean ``$x$ helps $y$'' in the universe of discourse including all persons. Paraphrase the following into quantificational notation and idiomatic English:
+\begin{enumerate}
+	\item ``Anyone who helps all those who help her is helped by all those she helps.''
+	
+	\item $(\exists x)((\exists y) H(x, y) \rightarrow (\exists y) H(y, x))$
+\end{enumerate}
+
+\item Let the universe of discourse include everything. Translate the following into quantificational notation and idiomatic English using the following:
+\begin{align*}
+	P(x) &= \text{``$x$ is a person''} \\
+	D(x, y) &= \text{``$x$ deserves $y$''} \\
+	G(x, y) &= \text{``$x$ gets $y$''}
+\end{align*}
+\begin{enumerate}
+	\item ``Anyone who gets everything she deserves deserves something she gets.''
+	
+	\item $(\forall x) P(x) \wedge (\forall y)(D(x, y) \rightarrow G(x, y)) \rightarrow \neg (\forall y)(G(x, y) \rightarrow D(x, y))$
+\end{enumerate}
+	
+
+\item Let $S(x, y, z)$ mean ``$z$ is the sum of $x$ and $y$'' and $P(x, y, z)$ mean ``$z$ is the product of $x$ and $y$.'' Defining your domain of discourse, use quantificational notation to construct a formula that means: ``Every prime number of the form $4n + 1$ is equal to the sum of two square numbers.''
+
+\item Let $P$ be the set of all people and let $R(x)$ mean that ``$x$ is in the classroom.'' Write a formula that means: ``there are exactly 2 people in the classroom.'' You can use any mathematical signs such as =, $<$, $\geq$, $\neq$, etc.
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\pagebreak
+
+\paragraph*{Homework problems.}
+
+
+\begin{enumerate}
+
+
+\item 
+\begin{enumerate}
+	\item For his logic homework, Steve tries to save space on the paper by writing $(p \rightarrow q) \rightarrow r$ as $p \rightarrow q \rightarrow r$, claiming that it doesn't matter if we use parenthesis when working with the conditional IF $p$ THEN $q$. Prove or disprove Steve's assertion that $(p \rightarrow q) \rightarrow r$ and $p \rightarrow (q \rightarrow r)$ are equivalent to $p \rightarrow q \rightarrow r$.
+	
+	\item Suppose that $p \rightarrow q$ is true. Show that in this case $p \vee q$ is equivalent to $q$ and $p \wedge q$ is equivalent to $p$.
+\end{enumerate}
+
+\item Let $S(x, y, z)$ mean that ``$z$ is the sum of $x$ and $y$.''
+\begin{enumerate}
+	\item Write a formula that means $x$ is an even integer.
+	
+	\item Write a formula that symbolizes the commutative property for addition $(x+y = y +x)$ of real numbers.
+	
+	\item Write a formula that symbolizes the associativity law for addition\\ $(x + (y + z) = (x + y) + z)$ of rational numbers.
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+
+\pagebreak
+
+
+\end{document}

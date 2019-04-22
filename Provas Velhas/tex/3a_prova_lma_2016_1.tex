@@ -1,0 +1,262 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %% isto garante compatibilidade com seu MAC
+%\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage{comment,color, fancybox} %%% 
+\usepackage{graphicx, url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%\usepackage[normalem]{ulem}
+
+\topmargin       0.1cm
+\headheight      0pt
+\headsep         -0.7cm
+\textheight      25cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\baselineskip    -13pt
+
+\begin{document}
+%\framebox[15cm][c]{$3^a$ Avaliação de Lógica Matemática  (LMA) - Joinville, \today}
+
+\begin{large}
+\begin{center}
+
+\shadowbox{
+\begin{minipage}[c]{10cm}
+\begin{center}
+\sf
+$2^{\underline{a}}$ Avalia\c c\~ao de L\'ogica Matem\'atica  (LMA)\\
+Professores: Claudio ($T_B$) e Rogério  ($T_A$) \\
+Joinville, \today
+\end{center}
+\end{minipage}
+} %% 
+\end{center}
+\end{large} 
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.2cm Acad\^emico(a) : \rule{10cm}{0.4pt} Turma:  \rule{1cm}{0.4pt}
+%%%\noindent Algumas questões desta prova vieram de \url{http://www.cs.utsa.edu/~bylander/cs2233/index.html}
+
+\begin{enumerate}
+\setlength{\itemsep}{-1pt}
+
+%{\Huge Rogerio pegar exercicios daqui }
+%\url{http://cnx.org/contents/46af3ad0-8636-4653-b64a-ea5f934df9d6@28/Exercises_for_First-Order_Logi}
+\item Atenção: Exame Final dia 04/07 (2a. feira às 17:00 hrs.)
+
+
+\item {\bf (1.0 pt.)} Ao contrário  do que voce vai fazer na próxima questão,
+seja o conjunto $0 \leq N\leq 20$ dos números naturais. Determine o conjunto-verdade ou domínio para o qual a fórmula é \textbf{verdadeira},  
+para cada  uma das fórmulas abaixo:
+
+\begin{enumerate}
+\itemsep -2pt
+   \item Exemplo: $\forall x . ((2x = 6) \vee (2x = 8)) $,  aqui o valor da resposta é $D=\{3, 4\}$
+ %   \item $\forall x . (x^2 - 5x + 6 = 0)$
+ %       \item $\exists x . (x^2 - 5x + 6 = 0)$
+  % \item $\exists x . (x^2 - 3x = 0)$ 
+  \item $\exists x . ((2x = 6) \vee (2x = 8)) $
+      \item $\forall x . ((x - 7) > 4 )$
+       \item $\exists y \forall x . (x  \geq y)$
+     \item $\exists x . \sim (\text{ x é ímpar})$ 
+     %%% \item REPENSAR AS FORMULAS.....
+ \end{enumerate} 
+
+
+
+\item {\bf (2.5 pts.)} Determine o valor verdade $\{V, F \}$ (a interpretação $\Phi $)
+de cada uma das fórmulas abaixo em seu respectivo domínio. Dados: $A = \{ 3,  5 \}$, $B = \{ -15, 1, 15\}$ e  $C = \{ 6,  7 \}$.
+As questões serão \textbf{apenas} validadas mediante os cálculos em separado. Em seguida preencha a tabela abaixo:
+
+%{\Huge Veja pagina 42 exercicio 5 do livro do CHANG-LEE}\\
+%trocarimos por esta daqui ....
+
+\begin{center}
+\begin{tabular}{l|c|c|c|c} \hline \hline
+ & \multicolumn{4}{c}{Domínios} \\ \hline
+ & $ x \in A$ & $x \in A ~e~ y \in C$ & $x \in B ~e~ y \in A$ & $x \in B$ \\ \hline
+
+$\forall x (7+x \leq x^2)$ & & --xxx-- & --xxx--  & \\ \hline
+%% $\exists x \exists y ((2+x)^2 \geq 24 - y)$ &  --xxx-- & & & --xxx-- \\ \hline
+%% $\forall x (x^2 \geq 5)$ & & --xxx-- & --xxx-  & \\ \hline
+$\exists y \forall x (2x \neq y^2)$ & --xxx-- &  & & --xxx-- \\ \hline
+$\forall x \exists y (xy \leq 40)$ & --xxx-- &  & & --xxx-- \\ \hline \hline
+\end{tabular}
+\end{center}
+PS: esta questão é longa (10 cálculos a serem feitos), preste atenção, seja organizado.
+
+%\item  {\bf (1.0 pt)} Reescreva a negação de todos os predicados 
+%da questão acima. Exemplo: $\forall x \:\: p(x)$ negando
+%fornece $\sim \forall x \:\: p(x) \equiv  \exists x \:\: \sim p(x)$.
+%Isto é, elimine todas  negações em frente aos quantificadores.
+
+%\item {\bf (1.0 pt)} Escreva claramente uma descrição para as fórmula abaixo, indicando
+%quais são logicamente equivalentes entre elas (da ``a'' a ``e''), e quais não são.
+%Explique suas respostas.
+%%% pagina 371 do livro em ingles que estah no Dropbox
+%%\textcolor{red}{Rogério: esta é nova ... veja se está bom}
+%\begin{enumerate}
+%\setlength{\itemsep}{-3pt}
+%  \item  $\exists x \sim p(x)$ 
+%  \item  $ \exists x \forall y (p(y) \rightarrow y = x)$
+%  \item  $ \exists x \forall y (p(y) \leftrightarrow y = x)$
+%   \item $ \forall x \forall y (p(x) \wedge p(y)) \rightarrow x = y)$
+%   \item $ \forall x \forall y (p(x) \wedge p(y)) \leftrightarrow x = y)$
+%\end{enumerate}
+
+\begin{comment}
+\item {\bf (1.5 pts)} Aplicando De Morgan aos
+quantificadores das fórmulas de LPO, dar a
+negação das seguintes sentenças lógicas:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+ \item $ \forall x \:\: \exists y \:\:(p(x) \wedge \sim q(y))$
+ \item $ \forall x\:\: \forall y \:\: \sim (\sim p(x) \vee \sim q(y))$
+ \item $ \exists x \:\:\forall y\:\: (p(x)\rightarrow q(y))$
+ \item $ \forall x\:\: \exists y\:\: (\sim p(x) \vee \sim q(y))$
+  \item  $ \forall y\:\: (p(y) \rightarrow \exists x \:\: q(x))$
+  \item  $ \forall x\:\: (p(x) \leftrightarrow \sim \exists y \:\: r(y) )$
+\end{enumerate}
+PS: Lembre que De Morgan não se aplica com os conectivos $\leftrightarrow$ e $\rightarrow$.
+\end{comment}
+
+\item {\bf (2.0 pts.)} Seja o conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO), as quais descrevem o comportamento de um adversário 
+autônomo (NPC--\textit{nerd por computador}) em um videogame:\\
+\begin{tabular}{ll}
+\\  \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1. & agente(oponente) \\
+  2. & estado(oponente, fome) \\
+  3. & fruta(banana) \\
+  4. & fruta(laranja) \\
+  5. & sanduiche(bigmac) \\
+  6. & $\forall x \exists y: (fruta(x) \vee sanduiche(y) \rightarrow alimento(x) )$ \\
+  7. & $\exists z \forall x: (agente(z) \wedge estado(z, fome) \wedge alimento(x) \rightarrow decisao(z, comer, x))$ \\
+    \hline \hline
+ \end{tabular}
+
+Demonstre as possíveis decisões que o \textbf{agente} pode executar quando está no estado ``{\tt fome}''.
+
+
+\item {\bf (2.0 pts.)} Seja o conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO), as quais descrevem uma estória:
+\\
+\begin{tabular}{ll}
+ \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    1. &  $\forall y \exists x ( pessoa(y) \wedge pet(x) \wedge vacinado(x) \rightarrow ama(y, x) )$ \\
+    2. &  $ \forall x ( pet(x) \wedge saudavel(x) \rightarrow vacinado(x) ) $ \\
+    3. &  $ pessoa(mickey) $ \\
+    4. &  $ pet(pluto) $ \\
+    5. &  $ pet(garfield) $ \\
+    6. &  $ saudavel(pluto)$ \\
+    7. &  $ saudavel(garfield)$ \\
+
+    \hline \hline
+ \end{tabular}
+
+ Na sequência abaixo, resolva as seguintes questões:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+\item {\bf (0.5 pt)} Interprete textualmente o significado de cada fórmula acima
+\item {\bf (1.5 pts)} Utilizando as propriedades da LPO, PU's, PE's e regras de inferências, demonstre quem  {\it Mickey} ama.
+
+\end{enumerate}
+
+\item {\bf (2.5 pts.)} Dado os enunciados abaixo, escolha um e implemente-o em Prolog ou Picat.
+
+\begin{enumerate}
+  \item Dado um predicado \texttt{retangulo(X,Y)}, onde \texttt{X} é o número de linhas e \texttt{Y} é o número de colunas (tamanho
+  da linha), imprima um retângulo com base nos exemplos abaixo:
+  \begin{verbatim}
+  retangulo(2,2)
+  **
+  **
+  retangulo(3,7)
+  *******
+  *******
+  *******
+  \end{verbatim}
+  Onde \texttt{X} e \texttt{Y >= 1}
+  
+  \item Um predicado (ou função) que calcule  a soma da seguinte sequência, \texttt{seq(N, Soma)},
+  definida por:$$ 1\times n + 2\times n  + 3 \times n   + \ldots  + n\times n $$ 
+  Exemplo:
+  \begin{verbatim}
+  seq(2,X)
+  X = 5
+  seq(4,X)
+  X = 40
+  \end{verbatim}
+
+\end{enumerate}
+
+
+
+
+
+\end{enumerate}
+
+
+\underline{{\large Equivalências Notáveis}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall x: px \Leftrightarrow \exists x: \sim px $
+\item[Negações para LPO:] $ \sim \exists x: px \Leftrightarrow \forall x: \sim px $
+\end{description}
+}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+\end{enumerate}
+\end{flushleft}
+}
+\end{document}

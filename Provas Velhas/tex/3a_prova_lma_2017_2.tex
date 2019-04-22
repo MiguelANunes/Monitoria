@@ -1,0 +1,228 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %% isto garante compatibilidade com seu MAC
+%\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage{comment,color, fancybox} %%% 
+\usepackage{graphicx, url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%\usepackage[normalem]{ulem}
+
+\topmargin       0.1cm
+\headheight      0pt
+\headsep         -0.7cm
+\textheight      25cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\baselineskip    -13pt
+
+\begin{document}
+%\framebox[15cm][c]{$3^a$ Avaliação de Lógica Matemática  (LMA) - Joinville, \today}
+
+\begin{large}
+\begin{center}
+
+\shadowbox{
+\begin{minipage}[c]{10cm}
+\begin{center}
+\sf
+$3^{\underline{a}}$ Avalia\c c\~ao de L\'ogica Matem\'atica  (LMA)\\
+Professores: Rogério  ($T_B$) e  Claudio ($T_A$)\\
+Joinville, \today
+\end{center}
+\end{minipage}
+} %% 
+\end{center}
+\end{large} 
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.2cm Acad\^emico(a) : \rule{10cm}{0.7pt} Turma:  \rule{1cm}{0.7pt}
+%%%\noindent Algumas questões desta prova vieram de \url{http://www.cs.utsa.edu/~bylander/cs2233/index.html}
+
+%{\bf Atenção: Exame Final dia 07/12 (4a. feira às 17:00 hrs. -- Sala F101)}
+%{\bf Atenção: Exame Final dia 06/07 (4a. feira às 17:00 hrs. -- Sala F101)}
+
+\begin{enumerate}
+\setlength{\itemsep}{13pt}
+
+%{\Huge Rogerio pegar exercicios daqui }
+%\url{http://cnx.org/contents/46af3ad0-8636-4653-b64a-ea5f934df9d6@28/Exercises_for_First-Order_Logi}
+
+\item {\bf (1.0 pt.)} Determine o valor verdade $\{V, F \}$ (a interpretação $\Phi $)
+de cada uma das fórmulas abaixo em seu respectivo domínio. Dados: $A = \{ 3,  5 \}$, $B = \{ -15, 1, 15\}$ e  $C = \{ 6,  7 \}$.
+As questões serão \textbf{apenas} validadas mediante os cálculos em separado.
+ Em seguida preencha a tabela abaixo:
+
+\begin{center}
+\begin{tabular}{l|c|c|c} \hline \hline
+ & \multicolumn{2}{c}{Domínios} \\ \hline \hline
+ & $x \in A ~e~ y \in C$ & $x \in B ~e~ y \in A$ & $x,z \in A ~e~ y \in C$  \\ \hline
+
+$\exists x \forall y: ~ (x+y \neq 2.y)$ &  &  & ******** \\ \hline
+$\forall x \exists y \exists z: ~ (x+y+z \leq 5)$ & ******** & ******** &   \\ \hline \hline
+\end{tabular}
+
+\end{center}
+
+%\textcolor{red}{Rogerio ... aqui teria que dar uma pensada melhor ... rever as formula propostas}
+
+
+\item \label{P1} {\bf (2.5 pts.)} Para a base de conhecimento abaixo, descrita em LPO, prove que {\em jonhsmith} come a {\em fruta}.
+
+\vspace{-0.5cm}
+
+\begin{tabular}{ll}
+\\  \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1. & $homem(johnsmith)$ \\
+  2. & $mulher(janesmith)$ \\
+  3. & $\forall x: homem(x) \vee mulher(x) \rightarrow humano(x)$ \\
+  4. & $comida(fruta)$ \\
+  5. & $\forall x: humano(x) \rightarrow sente\_fome(x)$ \\
+  6. & $\forall x \exists y: humano(x) \wedge sente\_fome(x) \wedge comida(y) \rightarrow come(x,y)$ \\
+    \hline \hline
+ \end{tabular}
+ 
+ \textcolor{red}{Rogerio ... já corrigi}
+
+\item {\bf (1.5 pts.)} Dada as formulações em LPO do problema anterior, reescreva-as em cláusulas de  PICAT.
+  
+\item {\bf (1.5 pts.)} Dado o código abaixo, indique precisamente a sua saída, após   a execução do predicado \texttt{main}:
+%\textcolor{red}{JA MODIFICADA E IMPLEMENTADA ... NESTE DIRETORIO DE PROVAS}
+
+\begin{scriptsize}
+\begin{verbatim}
+index(-)      
+     f1(3).
+     f1(5).
+     f1(6).
+	
+index(-)  
+     f2(1).
+     f2(2).
+	
+index(-)     
+     f3(3).
+     f3(6).
+    
+regra( X_1, Y_1, Resp ) => f1(X_1), f2(Y_1), Resp = (X_1 * Y_1), f3(Resp).
+%%% esta regra tem backtracking
+main ?=> regra(X,Y,R), printf("\n X: %d \tY: %d \tResp: %d", X,Y,R), false.
+main =>  printf("\n\n FIM DOS FATOS \n\n") , true.
+\end{verbatim}
+\end{scriptsize}
+
+%\vskip 0.3cm
+
+OBS.: O predicado ``\texttt{false}''  é usado apenas para forçar o PICAT retornar todas as respostas usando o ({\em backtracking}). 
+
+\newpage
+\item Implementar em PICAT (usando notação da \textbf{programação em lógica}) as funções abaixo:
+
+\begin{enumerate}
+
+   \item {\bf (1.0 pt.)} Dada a implementação do predicado {\tt main} abaixo, implemente os predicados {\tt lado(X)} (fato) e 
+   {\tt area\_quadrado(X,AREA)} (regra) a fim de determinar a área de um quadrado. Dado: 
+   
+   \begin{footnotesize}
+   {\tt main => lado(X), area\_quadrado(X,AREA),\\ printf("A area do quadrado de lado \%d = \%d", X, AREA).}
+   \end{footnotesize}
+   
+   
+   \item {\bf (1.25 pts.)} Implemente um predicado que calcule $A \times B	$ sem usar o operador de multiplicação (apenas use somas sucessivas e não multiplicação, e A e B são números naturais, logo a resposta será um natural).
+   
+   Exemplo: $5 \times 3 = 5 + 5 + 5$
+
+	\item {\bf (1.25 pts.)} Crie um predicado que converta um número decimal em seu correspondente binário de acordo com o procedimento descrito 
+	a seguir:
+		\begin{enumerate}
+		\item Dado o número decimal $N$ a ser convertido divida-o sucessivas vezes por 2 até $N=0$
+		\item Apresente todos os restos das divisões na ordem inversa que foram produzidos (ver exemplo para $N=25$ na figura abaixo)
+		\item \underline{OBS}.: em PICAT o resto da divisão é dado pelo comando {\tt X mod Y}. 
+		
+		Exemplo: no {\tt R = 10 mod 3} a variável $R$ recebe o valor 1
+		\end{enumerate}
+ 
+	\begin{center}\includegraphics[width=6cm]{dec-bin.png}\end{center}
+\end{enumerate}
+
+\end{enumerate}
+%\textcolor{red}{Removi as RIs ... etc ... nao sao mais necessarias neste estagio! colocamos no quadro o que precisarem}
+
+\begin{comment}
+  \item  Algo como ....:
+  $$ 
+  \operatorname{fact}(n) =
+ \begin{cases}
+  1 & \mbox{if } n = 0 \\
+  n \cdot \operatorname{fact}(n-1) & \mbox{se } n > 0 \\
+ \end{cases}
+$$
+   \end{comment}
+
+
+\begin{comment}
+\underline{{\large Equivalências Notáveis}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall x: px \Leftrightarrow \exists x: \sim px $
+\item[Negações para LPO:] $ \sim \exists x: px \Leftrightarrow \forall x: \sim px $
+\end{description}
+}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+\end{comment}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre  o assunto;
+
+ 
+ \item Todas as questões devem ter seus passos precisamente identificados para validar a questão
+ 
+  \item \underline{Clareza e legibilidade};
+\end{enumerate}
+\end{flushleft}
+
+\end{document}

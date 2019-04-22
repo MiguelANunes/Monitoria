@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=30mm,right=30mm,top=25mm,bottom=19mm]{geometry}
+\usepackage{graphicx,url}
+\usepackage{titlesec}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+
+% Setting configuration for the text format
+%\renewcommand{\contentsname}{Table of Contents}
+%\renewcommand{\bibname}{References}
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\filleft\chaptername\ \thechapter}{5pt}{\filleft\Huge}
+%\sloppy
+
+\title{Lógica Matemática - Avaliação 2}
+\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+\date{\today}
+
+\graphicspath{{/figures/}}   
+\DeclareGraphicsExtensions{{.jpg},{.png}}
+
+
+\begin{document}
+\maketitle
+
+\begin{flushright}
+``\textit{A imaginação é mais importante que o conhecimento}''\\ (Albert Einstein)
+\end{flushright}
+
+\begin{large}
+\begin{enumerate}
+
+\item Verificar a validade por dedução natural os argumentos que se seguem (escolha duas para fazer das 3 abaixo):
+
+\begin{enumerate}
+\item $\{ p\rightarrow \sim q$, $\sim p \rightarrow (r \rightarrow \sim q)$, $(\sim s \vee \sim r)\rightarrow \sim \sim q$, $\sim s$ \} {\bf $\vdash $} $\sim r$
+
+\item $\{(\sim p\vee q) \rightarrow r$,  $(r \vee s)\rightarrow \sim t$, $t$ \} {\bf $\vdash $} $\sim q$
+
+\item $\{ p\rightarrow \sim q$,  $\sim q \rightarrow \sim s$,  $(p \rightarrow \sim s) \rightarrow \sim t$,  $r \rightarrow t$ \}  {\bf $\vdash $} $\sim r$
+\end{enumerate}
+
+
+\item Utilizando o método de {\em demonstração indireta}, demonstre a validade das consequências abaixo:
+\begin{enumerate}
+\item $\{ q \vee p, p \rightarrow \sim r, q \rightarrow \sim s \} \vdash r \rightarrow s $
+
+\item $p \wedge q \leftrightarrow\sim r, \sim r \rightarrow\sim p, \sim q \rightarrow\sim r \vdash q$
+\end{enumerate}
+
+\item Demonstrar que o conjunto das proposições abaixo geram uma contradição, ou {\em demonstração por absurdo},  (isto é,derivam uma inconsistência do tipo: $\Box \Leftrightarrow (\sim x \wedge x)$) Escolha duas provas para fazer das 3 abaixo:
+
+\begin{enumerate}
+\item $\{ \sim (p \wedge q), \sim r \vee q, p \rightarrow r \} \vdash \sim p $
+\item $\{ p \rightarrow q, q \rightarrow r, r \rightarrow p, p \rightarrow \sim r \} \vdash \sim p \wedge \sim r $
+\item $\{ \sim p \rightarrow \sim q, r \rightarrow s, (\sim p \wedge t) \vee (r  \vee u), q \} \vdash s $
+\end{enumerate}
+\end{enumerate}
+\end{large}
+
+\newpage
+
+Argumentos válidos fundamentais:
+\begin{description}
+\item[Adição (AD)] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP)] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS)] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP)] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT)] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD)] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH)] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC)] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD)] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+
+Equivalências Notáveis:
+\begin{description}
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribução (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Tautologia:] $P\vee \sim P \Leftrightarrow \blacksquare  $
+
+\item[Contradição:] $ P\wedge \sim P \Leftrightarrow \square  $
+
+
+\end{description}
+%\bibliographystyle{ieeetr} % ieeetr or acm or apalike or alpha or splncs
+%\bibliography{LMArefs.bib}
+
+\end{document}

@@ -1,0 +1,235 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %% isto garante compatibilidade com seu MAC
+\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage{comment, color} %%% 
+%\usepackage{graphicx, url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%\usepackage[normalem]{ulem}
+
+\topmargin       0.15cm
+\headheight      0pt
+\headsep         -0.5cm
+\textheight      25cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\baselineskip    -13pt
+
+\begin{document}
+\framebox[15cm][c]{$3^a$ Avaliação de Lógica Matemática  (LMA) - Joinville, \today}
+
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.5cm Acad\^emico(a) : \rule{10cm}{0.4pt} Turma:  \rule{1cm}{0.4pt}
+%%%\noindent Algumas questões desta prova vieram de \url{http://www.cs.utsa.edu/~bylander/cs2233/index.html}
+
+\begin{enumerate}
+\setlength{\itemsep}{-1pt}
+
+
+
+\item {\bf (2.0 pts.)} Determine o valor verdade $\{V, F \}$ (a interpretação $\Phi $)
+de cada uma das fórmulas abaixo em seu respectivo domínio. Dados: $A = \{ -3,  5 \}$, $B = \{ -10, 0, 10\}$ e  $C = \{ 2,  4 \}$.
+Faça os cálculos em separado e preencha a tabela abaixo.
+
+\begin{center}
+\begin{tabular}{l|c|c|c|c} \hline \hline
+ & \multicolumn{4}{c}{Domínios} \\ \hline
+ & $ x \in A$ & $x \in A ~e~ y \in C$ & $x \in B ~e~ y \in C$ & $x \in C$ \\ \hline
+
+$\forall x (2x \leq x^2)$ & & --xxx-- & --xxx--  & \\ \hline
+$\exists x ((2x)^2 > 16)$ & &  --xxx-- & --xxx--  & \\ \hline
+$\forall x (x^3 < 1)$ & &  --xxx-- & --xxx-  & \\ \hline
+$\exists y \forall x (y = x^3)$ & --xxx-- &  & & --xxx-- \\ \hline
+$\forall x \exists y (xy \leq 1)$ & --xxx-- &  & & --xxx-- \\ \hline \hline
+\end{tabular}
+\end{center}
+
+%\item  {\bf (1.0 pt)} Reescreva a negação de todos os predicados 
+%da questão acima. Exemplo: $\forall x \:\: p(x)$ negando
+%fornece $\sim \forall x \:\: p(x) \equiv  \exists x \:\: \sim p(x)$.
+%Isto é, elimine todas  negações em frente aos quantificadores.
+
+\item {\bf (1.0 pt)} Traduza as expressões abaixo (apresentadas em linguagem natural) para uma representação equivalente em lógica de primeira ordem. Contudo, 
+justifique a escolha dos predicados e átomos.
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt} 
+\item Alguém está em casa %%% 
+%%Errar é humano
+\item Existe um número que é par
+\item Quem estuda sempre alcança bons resultados
+\item Todos os alunos têm exatamente um número e este é igual a sua matrícula
+% \item A necessidade é a mãe de todas as invenções
+\item A inteligência do homem resolve problemas que os músculos não conseguem
+\end{enumerate}
+
+%\item {\bf (1.0 pt)} Escreva claramente uma descrição para as fórmula abaixo, indicando
+%quais são logicamente equivalentes entre elas (da ``a'' a ``e''), e quais não são.
+%Explique suas respostas.
+%%% pagina 371 do livro em ingles que estah no Dropbox
+%%\textcolor{red}{Rogério: esta é nova ... veja se está bom}
+%\begin{enumerate}
+%\setlength{\itemsep}{-3pt}
+%  \item  $\exists x \sim p(x)$ 
+%  \item  $ \exists x \forall y (p(y) \rightarrow y = x)$
+%  \item  $ \exists x \forall y (p(y) \leftrightarrow y = x)$
+%   \item $ \forall x \forall y (p(x) \wedge p(y)) \rightarrow x = y)$
+%   \item $ \forall x \forall y (p(x) \wedge p(y)) \leftrightarrow x = y)$
+%\end{enumerate}
+
+%\item {\bf (1.5 pt)} Aplicando De Morgan aos
+%quantificadores das fórmulas de LPO, dar a
+%negação das seguintes sentenças lógicas:
+%\begin{enumerate}
+%\setlength{\itemsep}{-2pt}
+% \item $ \forall x \exists y (\sim p(x) \wedge \sim q(y))$
+% \item $ \exists x \forall y (p(x) \vee \sim q(y))$
+% \item $ \exists x \forall y (p(x)\rightarrow q(y))$
+% \item $ \forall x \exists y (\sim p(x) \vee \sim q(y))$
+%  \item  $ \exists x \forall y (p(y) \rightarrow y = x)$
+%  \item  $ \forall x \exists y (p(y) \leftrightarrow y = x)$
+%\end{enumerate}
+
+\item {\bf (3.0 pts.)} Seja o conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO):\\
+\begin{tabular}{ll}
+\\  \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    1. &  $\forall x \exists y ( come(x,y)  \rightarrow cadeia\_alimentar(x,y) )$ \\
+    2. &  $ \forall x \exists y \exists z( cadeia\_alimentar(x,z) \wedge come(z,y) \rightarrow cadeia\_alimentar(x,y) ) $ \\
+    3. &  $ come(jacare, gueopardo) $ \\
+    4. &  $ come(jacare, leao) $ \\
+    5. &  $ come(leao, gnus) $ \\
+    6. &  $ come(leao, hienas) $ \\
+   %% 7. &  $ come(gueopardo, gnus) $ \\
+    7 &  $ come(gueopardo, gazelas) $ \\
+    8. &  $ come(gnus, mata\_nativa) $ \\
+    9. &  $ come(gazelas, mata\_nativa) $ \\
+    \hline \hline
+ \end{tabular}
+
+Demonstre que $gnus$, $gazelas$, $hienas$ e $mata\_nativa$ estão na cadeia alimentar
+do $jacare$. {\bf Uma} leitura  dos predicados é: $come(x,y)$, ``{\em x come y}'';  e 
+$cadeia\_alimentar(x,y)$, ``{\em x está na cadeia alimentar de  y}''. Quem mais é alimentado
+indiretamente por quem?
+PS: Indique claramente cada passo realizado.
+
+\begin{comment}
+\begin{tabular}{ll}
+ \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+    1. &  $\forall y \exists x ( pessoa(y) \wedge pet(x) \wedge vacinado(x) \rightarrow ama(y, x) )$ \\
+    2. &  $ \forall x ( pet(x) \wedge saudavel(x) \rightarrow vacinado(x) ) $ \\
+    3. &  $ pessoa(mickey) $ \\
+    4. &  $ pet(pluto) $ \\
+    5. &  $saudavel(pluto)$ \\
+    \hline \hline
+ \end{tabular}
+
+ Na sequência abaixo, resolva as seguintes questões:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+\item {\bf (1.0 pt)} Interprete textualmente o significado de cada fórmula acima
+\item {\bf (2.0 pts)} Utilizando as propriedades da LPO, PU's, PE's e regras de inferências, deduza se {\it Mickey} ama {\it Pluto}.
+\end{enumerate}
+\end{comment}
+
+
+\item {\bf (2.0 pts.)} Em Prolog, imagine um predicado {\tt pessoa(Nome, Ano)}, onde {\it Ano} representa o ano de nascimento da pessoa. Crie um predicado para calcular a idade dessa pessoa, e depois utilize este predicado para classificar a pessoa em:
+\begin{small}
+\begin{description}
+\setlength{\itemsep}{-3pt}
+\item[Bebê:] $idade < 2$
+\item[Criança:] $2 \leq idade < 12$
+\item[Adolescente:] $12 \leq idade < 21$
+\item[Adulto:] $21 \leq idade < 60$
+\item[Idoso:] $idade \geq 60$
+\end{description}
+\end{small}
+
+Assuma as suas convenções de seu código e justifique-as.
+
+\item {\bf (2.0 pts.)} Analise o código Prolog apresentado abaixo e informe qual é  a sequência de respostas válidas para a inferência {\tt resultado(X,Y,Z).} (todas respostas) 
+{\small (na mesma ordem que seria apresentada pelo Prolog)}:
+
+\begin{verbatim}
+a(1).
+a(2).
+a(3).
+b(4).
+b(5).
+b(6).
+resultado(X,Y,Z) :- a(X), 
+                    b(Y), 
+                    predicado(X,Y,Z).
+predicado(X,X,0).
+predicado(X,Y,Z) :- W is (Y-1), 
+                    W > 0,  
+                    predicado(X,W,R), 
+                    Z is (R + 1).
+\end{verbatim}
+\end{enumerate}
+
+
+\underline{{\large Equivalências Notáveis}}:
+{\small
+\begin{description}
+\setlength{\itemsep}{-4pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall x: px \Leftrightarrow \exists x: \sim px $
+\item[Negações para LPO:] $ \sim \exists x: px \Leftrightarrow \forall x: \sim px $
+\end{description}
+}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+{\small
+\begin{description}
+\setlength{\itemsep}{-4pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+\end{enumerate}
+\end{flushleft}
+}
+\end{document}

@@ -1,0 +1,269 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %% isto garante compatibilidade com seu MAC
+%\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage{comment,color, fancybox} %%% 
+\usepackage{graphicx, url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%\usepackage[normalem]{ulem}
+
+\topmargin       0.1cm
+\headheight      0pt
+\headsep         -0.7cm
+\textheight      25cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\baselineskip    -13pt
+
+\begin{document}
+%\framebox[15cm][c]{$3^a$ Avaliação de Lógica Matemática  (LMA) - Joinville, \today}
+
+\begin{large}
+\begin{center}
+
+\shadowbox{
+\begin{minipage}[c]{10cm}
+\begin{center}
+\sf
+$3^{\underline{a}}$ Avalia\c c\~ao de L\'ogica Matem\'atica  (LMA)\\
+Professores: Rogério  ($T_A$) e  Claudio ($T_B$)\\
+Joinville, \today
+\end{center}
+\end{minipage}
+} %% 
+\end{center}
+\end{large} 
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.2cm Acad\^emico(a) : \rule{10cm}{0.7pt} Turma:  \rule{1cm}{0.7pt}
+%%%\noindent Algumas questões desta prova vieram de \url{http://www.cs.utsa.edu/~bylander/cs2233/index.html}
+
+{\bf Atenção: Exame Final dia 07/12 (4a. feira às 17:00 hrs. -- Sala F101)}
+
+\begin{enumerate}
+\setlength{\itemsep}{-1pt}
+
+%{\Huge Rogerio pegar exercicios daqui }
+%\url{http://cnx.org/contents/46af3ad0-8636-4653-b64a-ea5f934df9d6@28/Exercises_for_First-Order_Logi}
+
+\item {\bf (2.5 pts.)} Determine o valor verdade $\{V, F \}$ (a interpretação $\Phi $)
+de cada uma das fórmulas abaixo em seu respectivo domínio. Dados: $A = \{ 3,  5 \}$, $B = \{ -15, 1, 15\}$ e  $C = \{ 6,  7 \}$.
+As questões serão \textbf{apenas} validadas mediante os cálculos em separado.
+ Em seguida preencha a tabela abaixo:
+
+\begin{center}
+\begin{tabular}{l|c|c|c|c} \hline \hline
+ & \multicolumn{4}{c}{Domínios} \\ \hline
+ & $ x \in A$ & $x \in A ~e~ y \in C$ & $x \in B ~e~ y \in A$ & $x \in B$ \\ \hline
+
+$\forall x: ~ (7+x \leq x^2)$ & & --xxx-- & --xxx--  & \\ \hline
+%% $\exists x \exists y ((2+x)^2 \geq 24 - y)$ &  --xxx-- & & & --xxx-- \\ \hline
+%% $\forall x (x^2 \geq 5)$ & & --xxx-- & --xxx-  & \\ \hline
+$\exists y \forall x: ~ (2x \neq y^2)$ & --xxx-- &  & & --xxx-- \\ \hline
+$\forall x \exists y: ~ (xy \leq 40)$ & --xxx-- &  & & --xxx-- \\ \hline \hline
+\end{tabular}
+\end{center}
+PS: esta questão é longa (6 cálculos a serem feitos), preste atenção, seja organizado.
+%\textcolor{red}{Rogerio ... aqui teria que dar uma pensada melhor ... rever as formula propostas}
+
+\item {\bf (0.5 pts.)} Ao contrário  do que você fez na questão anterior, seja o conjunto $0 \leq \mathbb{N}\leq 20$ dos números naturais. Determine o conjunto-verdade ou domínio para o qual a fórmula é \textbf{verdadeira}, para cada  uma das fórmulas abaixo:
+
+Exemplo: $\forall x: ~ ((2x = 6) \vee (2x = 8)) $,  aqui o valor da resposta é $D=\{3, 4\}$
+
+\begin{enumerate}
+\itemsep -2pt   
+ %   \item $\forall x . (x^2 - 5x + 6 = 0)$
+ %       \item $\exists x . (x^2 - 5x + 6 = 0)$
+  % \item $\exists x . (x^2 - 3x = 0)$ 
+%  \item $\exists x . ((2x = 6) \vee (2x = 8)) $
+  \item $\exists x \exists y: ~ ((2x = 12) \vee (3y = 12)) $
+%      \item $\forall x . ((x - 7) > 4 )$
+      \item $\forall x: ~ ((x - 7) \le 4 )$
+       
+       %\item $\exists y \forall x . (x  \geq y)$
+
+       \item $\exists y \forall x: ~ (x  \geq y + 10)$
+       
+%     \item $\exists x . \sim (\text{ x é ímpar})$
+     \item $\exists x: ~ (\text{x é primo})$ \hspace{1cm} OBS: o $1$ não é primo!
+     %%% \item REPENSAR AS FORMULAS.....
+ \end{enumerate} 
+\item \label{P1} {\bf (2.0 pts.)} Seja o conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO), onde os domínios dos alunos é dado por $D =\{joao, pedro, vitor\}$:\\
+\begin{tabular}{ll}
+\\  \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1. & $\forall x:  aluno(x) $ \\
+  2. & $fato(vitor, preguicoso)$ \\
+  3. & $fato(joao, estudioso)$ \\
+  4. & $fato(pedro, preguicoso)$ \\
+  6. & $\forall x : (aluno(x) \wedge fato(x, estudioso) \rightarrow vai\_passar(x) )$ \\
+  7. & $\forall x : (aluno(x) \wedge fato(x, preguicoso) \rightarrow volta\_proximo\_ano(x) )$ \\
+    \hline \hline
+ \end{tabular}
+
+%Demonstre quais são os alunos que voltarão no próximo semestre.
+\vskip 0.2cm
+\underline{PROBLEMA}: Escolha um aluno qualquer do domínio e prove qual será o resultado para esse aluno.
+
+\item  \label{P2} {\bf (2.0 pts.)} Na universidade de Berkeley há pré-requisitos entre algumas disciplinas.
+Ou seja, \textit{toda disciplina $x$ que é um pré-requisito de alguma disciplina $y$, 
+então $x$ deve preceder $y$}. Esta sequência
+ de pré-requisitos eventualmente atrasa a graduação de alguns estudantes por lá. Fato similar ocorre por aqui!
+ Assim, a situação desta grade-curricular é dada pelo 
+ conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO):
+\\
+  $$\begin{array}{llr} \hline\hline
+	(1) & requisito(a, b) & (\text{leia-se: ``a é pré-requisito de b''}) \\
+	(2) & requisito(a, c) &  \\
+	(3) & requisito(a, d) &  \\
+	(4) & requisito(b, e) &  \\
+	(5) & requisito(c, e) & \\
+			(6) & requisito(d, e) & \\
+				(7) & requisito( e, f) & \\
+	(8) & \forall x ~\exists y: requisito(x, y) \rightarrow precede(x, y) & \\
+	(9) & \forall x ~\exists z ~\exists y: (requisito(x, z) \wedge precede(z, y)) \rightarrow precede(x,y) &\\
+	\hline\hline
+	\end{array}$$	
+ Utilizando as propriedades da LPO, PU's, PE's e regras de inferências, 
+ demonstre que a disciplina  \/`\textbf{a}' \/ deve preceder \/`\textbf{f}'.
+
+\item {\bf (2.0 pts.)} Dada as formulações
+em LPO dos dois problemas anteriores (questões \ref{P1} e  \ref{P2}), 
+ implemente-os em Prolog ou Picat.
+  
+\item {\bf (1.0 pts.)} Dado o código abaixo, indique a sua saída precisamente, após
+  a execução do \texttt{main}. 
+
+\begin{minipage}{0.45\textwidth}
+\begin{tiny}
+\begin{center}{\bf PICAT}\end{center}
+\begin{verbatim}
+index(-)      % fatos instanciados como retorno
+     f1(a).
+     f1(b).
+	
+index(-)  % fatos instanciados como retorno
+    f2(1).
+    f2(2).
+	
+index(-)     % fatos instanciados como retorno
+    f3('#').
+    f3('@').
+    
+regra( X_1, Y_1, Z_1 ) =>     
+                      	f1(Z_1),
+          	            f2(X_1),
+          	            f3(Y_1).
+
+main ?=>     %%% this rule is  backtrackable
+   regra(X,Y,Z),                            
+   printf("\n X: %w \tY: %w \tZ: %w ", X,Y,Z)  ,   %% and
+   false.
+
+main => 
+       printf("\n\n FIM DOS FATOS \n\n") , true. 
+\end{verbatim}
+\end{tiny}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tiny}
+\begin{center}{\bf PROLOG}\end{center}
+\begin{verbatim}
+f1(b).
+f1(a).
+    
+f2(2).
+f2(1).
+    	
+f3('#').
+f3('@').
+    
+regra( X_1, Y_1, Z_1 ) :-
+                      	f1(Z_1),
+          	            f2(X_1),
+          	            f3(Y_1).
+
+main :-            %%% this rule is  backtrackable
+   regra(X,Y,Z),                            
+   writef("\n X: "), write(X),
+   writef("\t Y: "), write(Y),
+   writef("\t Z: "), write(Z), 
+   fail.
+
+main :- 
+       writef("\n\n FIM DOS FATOS \n\n") . 
+\end{verbatim}
+\end{tiny}
+\end{minipage}
+
+\vskip 0.3cm
+
+OBS.: O comando ``\texttt{false/true}'' e ``\texttt{fail}'' serve apenas para forçar o PICAT/PROLOG retornar todas as respostas de uma vez ({\em backtracking}).
+
+\end{enumerate}
+%\textcolor{red}{Removi as RIs ... etc ... nao sao mais necessarias neste estagio! colocamos no quadro o que precisarem}
+
+\begin{comment}
+\underline{{\large Equivalências Notáveis}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall x: px \Leftrightarrow \exists x: \sim px $
+\item[Negações para LPO:] $ \sim \exists x: px \Leftrightarrow \forall x: \sim px $
+\end{description}
+}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+\end{comment}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+\end{enumerate}
+\end{flushleft}
+
+\end{document}

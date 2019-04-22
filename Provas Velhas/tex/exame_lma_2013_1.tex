@@ -1,0 +1,108 @@
+\documentclass[10pt, a4paper,final]{article}
+\usepackage{t1enc}\usepackage[utf8]{inputenc} %%% garante mactosh\usepackage[portuges]{babel}\usepackage{amsmath}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{comment, color} %%% 
+%\usepackage{graphicx}\topmargin       -1.5cm\headheight      0pt\headsep  0cm\textheight      27cm\textwidth       16.7cm\oddsidemargin   -5mm\evensidemargin  -5mm\pagestyle{empty}
+
+\begin{document}\begin{center}\begin{tabular}{||c||} \hline \hline 
+{\Large Logica Matemática  (LMA)}  \\\mbox{\hskip 2cm  UDESC/DCC -- \today  \hskip 2cm }
+\\Exame Final   \\ \hline \hline\end{tabular}\end{center}%\vskip1cm 
+\textbf{Aluno(a)/TURMA}: \hrulefill%%%\noindent
+
+\begin{flushright}
+``{\em Educação é aquilo que fica depois que você esquece o que a escola ensinou.}''\\
+Albert Einstein
+\end{flushright}
+
+%\textcolor{red}{Rogério ... a prova está bem carregada, mas bem DIMENSIONADA. Confira
+%e corte o que achares excesso, e atribua a pontuação, pois está faltando.}
+\begin{enumerate}%\setlength{\itemsep}{-5pt}\item {\bf (2.0 pt)} Determinar as Formas Normais Disjuntiva e Conjuntiva para:\begin{description}\setlength{\itemsep}{-5pt} \item [1.]  $\sim (p \rightarrow q) \wedge (q \rightarrow p) $ \item [2.]  $(\sim p \rightarrow q) \vee (q \rightarrow \sim p) $\end{description}Qual o tipo dessas fórmulas? (consistentes, ... etc)
+%% OK\item {\bf (1.0 pt)} Efetuar a prova (ou demonstração) direta para validade dos argumentosque se seguem: \\ $\{p\rightarrow \sim q \: , \:\:\: \sim p \rightarrow (r \rightarrow \sim q)  \: , \:\:\: (\sim s \vee \sim r)\rightarrow \sim \sim q  \: , \:\:\: \sim s  \} \vdash  r $ \\ 
+Caso esse conjunto não derive um teorema, que mudanças
+você faria nas premissas para derivar $r$?%% OK\item {\bf (1.0 pt)} Utilizando o método de  {\em demonstração por absurdo} ou {\em indireta}, demonstre a validade do   argumento $ \sim p \wedge \sim r $, a partir  das premissas: \\1. $  p \rightarrow  q $ \\2. $ q \rightarrow r $ \\3. $ r \rightarrow p $ \\4. $ p \rightarrow \sim r $ \\Isto é, esta sequência deduz ( $\vdash $, consistede um teorema) $ \sim p \wedge \sim r$?
+%%%%
+\item {\bf (2.0 pt)} Aplicando a negação nas fórmulas abaixo, obtenha
+ as novas  sentenças lógicas equivalentes:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+ \item $ \forall x \exists y ((\sim p(x) \wedge \sim q(y)) \vee \exists z (r(z)))$
+% \item $ \exists x \forall y (p(x) \vee \sim q(y))$
+ \item $ \exists x \forall y ((p(x) \vee q(y)) \wedge \forall z (r(z)))$
+% \item $ \forall x \exists y (\sim p(x) \vee \sim q(y))$
+  \item  $ \exists x \forall y (p(y) \leftrightarrow q(y))$
+  \item  $ \forall x \exists y (p(y) \leftrightarrow q(y))$
+\end{enumerate}
+
+\item {\bf (1.5 pts)} Considere o seguinte conjunto de f\'ormulas: 
+\begin{tabular}{ll}  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...1 &  $\forall x\forall y (q(x,y) \wedge r(y) \rightarrow p(y)) $ \\2 &  $\forall x (q(x,x) \rightarrow p(x))  $ \\3 &  $\forall x (s(x) \rightarrow q(x,x)) $ \\4 &  $r(b)$ \\ 5 &  $s(a)$ \\6 &  $s(b)$ \\\end{tabular}\\Utilizando as propriedades da LPO, tais como PU, GU, GE e PE, detalhando passo-a-passo, verifique se há uma resposta para $\sim p(X)$ ou $p(X)$, 
+consequentemente para $\sim p(a)$ ou $p(a)$ e $\sim p(b)$ ou $p(b)$.O domínio é dado por $D=\{a,b\}$. 
+
+\item {\bf (1.5 pts)} Seja o seguine texto: Sam, Clyde e Oscar são elefantes. N\'os sabemos os seguintes  fatos sobre eles:\begin{itemize}\setlength{\itemsep}{-2pt}    \item Sam é rosa;    \item Clyde é cinza e gosta de Oscar;    \item Oscar é ou rosa ou cinza, mas não tem as duas cores, e gosta de Sam.\end{itemize}Usando as propriedades da LPO como prova, demonstre que um elefante cinza gosta de um elefante rosa. Construa passo-a-passo as expressões acima, e prove que: $\exists x \:\: \exists y \:\:(cinza(x) \wedge rosa(y) \wedge gosta(x,y))$
+
+\item {\bf (1.0 pt)} Expresse {\bf em Prolog} o seguinte texto e resolva: 
+``\textit{Tweety é um pássaro. Goldie é um peixe. Molie é uma minhoca. Pássaros gostam de minhocas. Gatos gostam de peixes. Gatos gostam de pássaros. Amigos gostam uns dos outros. O meu gato é meu amigo. O meu gato come tudo o que gosta. O meu gato chama-se Silvester.}''
+
+\begin{enumerate}
+  \item Escreva o texto acima em Prolog (era o enunciado);
+  \item Use Prolog para determinar tudo o que come o Silvester?
+  \item Da resposta do item anterior, a resposta é razoável ? Se não for, verifique se o problema está na especificação original ou na sua tradução para Prolog, corrija o seu programa e veja uma nova resposta para o que Silvester come.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\underline{{\large Equivalências Notáveis}}:
+\begin{description}
+\setlength{\itemsep}{-2pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall px \Leftrightarrow \exists \sim px $
+
+\item[Negações para LPO:] $ \sim \exists px \Leftrightarrow \forall \sim px $
+
+\end{description}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+\begin{description}
+\setlength{\itemsep}{-2pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+
+\end{enumerate}
+\end{flushleft}\noindent Boas férias!%% detalhamento.%\noindent\end{document}

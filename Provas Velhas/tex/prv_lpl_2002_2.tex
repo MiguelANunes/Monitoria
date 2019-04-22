@@ -1,0 +1,157 @@
+ 
+\documentclass[12pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[latin1]{inputenc}
+\usepackage[portuges]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+ 
+%\usepackage{graphicx}
+\topmargin       -1cm
+%\headheight      17pt
+ \headsep  1cm
+ 
+\textheight      24cm
+ 
+\textwidth       16.7cm
+ 
+\oddsidemargin   2mm
+ 
+\evensidemargin  2mm
+ 
+\pagestyle{empty}
+ 
+\begin{document}
+\begin{center}
+\framebox[\textwidth][c]{Lógica e Programação em Lógica  (LPL)-
+Joinville, \today}
+%%\newline
+\end{center}
+ 
+\vskip1cm Aluno(a): \hrulefill
+%%%\noindent
+ 
+\begin{enumerate}
+\setlength{\itemsep}{-5pt}
+ \item (cap. 13) Utilizando o método de
+ ``{\em Demonstração por Absurdo}'',
+ demonstre a validade ou não do seguinte
+ argumento: \\
+1. $ \sim p \vee \sim q $ \\
+2. $ r \vee s \rightarrow p $ \\
+3. $ q \vee \sim s $ \\
+4. $ \sim r $ \\
+esta sequência deduz ( $\vdash $, consiste
+de um teorema): $ \sim(r \vee s) $
+ 
+
+\item  (cap. 15) Considere um domínio $A =
+ \{1,2,3,4,5,6,7,8,9\}$, e dada as seguintes
+ fórmulas:
+\begin{enumerate}
+\setlength{\itemsep}{-5pt}
+ \item $p(x): x^2 \subseteq A$ e $q(x):$ x é ímpar.
+ \item $r(x): x + 2 \leq 9 $ e $s(x):$ x é par.
+\end{enumerate}
+Calcule os valores verdades
+(\emph{conjunto-verdade}, isto é, onde a
+${\mathbf\Phi } ($fórmula$) = V$)
+ para seguintes fórmulas:
+\begin{enumerate}
+\setlength{\itemsep}{-5pt}
+ \item $p \rightarrow q$ e $q \vee p$
+ \item $r \rightarrow s$ e $s \wedge r$
+\end{enumerate}
+ 
+\item (cap. 16) Determine e justifique (explique)
+o valor lógico das fórmulas abaixo:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+ \item $ \forall x (2^x > x^2)$ para $x \in N$
+% \item $ \forall x (x^2 + 3x + 2 = 0)$ para $x \in R$
+% \item $ \exists x (x+2 = x)$ para $x \in R$
+ \item $ \exists x (3x^2 - 2x -1 = 0)$ para $x \in R$
+\end{enumerate}
+ 
+\item (cap. 17) Aplicando De Morgan aos
+quantificadores das fórmulas de LPO, dar a
+negação das seguintes sentenças lógicas:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+% \item $ \forall x \exists y (\sim p(x) \wedge \sim q(y))$
+ \item $ \exists x \forall y (p(x) \vee \sim q(y))$
+% \item $ \exists x \forall y (p(x)\rightarrow q(y))$
+ \item $ \forall x \exists y (\sim p(x) \vee \sim q(y))$
+\end{enumerate}
+ 
+\item Faça a interpretação lógica dos
+seguintes argumentos:
+ 
+\begin{enumerate}
+    \item ``{\em Todo estudante de CC, então
+    trabalha mais do que alguém. Todo mundo
+    que trabalha mais do que alguém, então
+    dorme menos que essa pessoa.  Maria é
+    uma estudante de CC. João dorme menos
+    que alguém. Encontre que Maria dorme
+    menos que alguém. Opcionalmente, a
+    generalização e particularização existencial, será um caso
+     para João}''. Logo, encontrar o fato que Maria dorme menos
+     que João é uma verdade. Sugestão de predicados a
+    serem utilizados: est\_cc(x); trab(x,y),
+    dorme(x,y), Domínio $= \{ \ joao , \  maria\}$.
+ 
+    \item ``{\em Todos embaixadores
+    conversam
+    apenas com alguns diplomatas. Alguns
+    embaixadores implicam conversar com alguém que
+    não é diplomata. Ronaldinho não é um
+    diplomata. Flecha Lima é um
+    diplomata. Sarney é um embaixador.}''
+    Demonstre que Sarney conversa com
+    Ronaldinho, e este não conversar com
+    Flecha Lima. Sugestão de predicados a
+    serem utilizados: dip(x) (diplomata); conversa(x,y),
+    emb(x) (embaixador),
+    Domínio $= \{\  sarney, \ ronaldinho, \ flecha \}$.
+ 
+
+    \item Seja a fórmula de LPO: \\
+ $ \exists x \forall y maior(\sim  p(f(x) , q(y))$,
+  onde o $D=\{-2,-1,0,1, ....13\}$,
+  e a definição do functor f(x) é dado
+pela expressão matemática: $f(x) = (x+2) \ mod \ x
+$. A definição do predicado ``{\em maior}''
+é análogo ao da  matemática.
+ 
+Faça as suposições necessárias nas 03
+questões acima, e justifique.
+\end{enumerate}
+ 
+
+\item  Desenvolva as seguintes regras  em Prolog,
+que implemente uma fun\c{c}\~{a}o recursiva,
+definida por
+\begin{center}
+\vskip -10pt
+$$
+f(x)=\left\{
+\begin{array}[l]{l}
+x = 1 \mbox{  ent\~{a}o   } f(1)=7\\
+x > 1 \mbox{  ent\~{a}o  } f(x) =
+f(x-1)\ast(x+13)
+\end{array}
+\right.
+$$
+\end{center}
+\item Calcule a soma recursiva entre dois
+números $N1$ e $N2$, tal que $N2 > N1$.
+Caso, $N2 \le N1$, a soma é 0. Protótipo do
+predicado: soma\_n1\_n2(N1,N1,S) ;
+ 
+\end{enumerate}
+Observação: Clareza e legibilidade.
+%\noindent
+ 
+\end{document}

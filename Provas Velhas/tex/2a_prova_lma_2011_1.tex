@@ -1,0 +1,33 @@
+\documentclass[12pt, a4paper,final]{article}\usepackage{t1enc}\usepackage[latin1]{inputenc}\usepackage[portuges]{babel}\usepackage{amsmath}\usepackage{amsfonts}\usepackage{amssymb}%\usepackage{graphicx}\topmargin       -1cm%\headheight      17pt\headsep  0cm\textheight      24.3cm\textwidth       16.8cm\oddsidemargin   -2mm\evensidemargin  -2mm\pagestyle{empty}\begin{document}
+\begin{center}\framebox[\textwidth][c]{Lógica Matemática -- LMA (\today)}%%\newline\end{center}\vskip 0.5cm Aluno(a): \hrulefill%%%\noindent\begin{enumerate}\setlength{\itemsep}{-2pt}
+ \item Utilizando o método de {\em demonstração por absurdo} ou {\em indireta}, demonstre a validade do  argumento $ \sim q \vee  \sim s$, a partir das premissas: \\1. $  \sim p \rightarrow  \sim q $ \\2. $ \sim p  \vee  r$ \\3. $ r \rightarrow \sim s $ \\Isto é, esta sequência deduz ( $\vdash $, consistede um teorema) $ \sim q \vee  \sim s$?\item Demonstrar que o conjunto dasproposições abaixo geram uma contradição (isto é,derivam uma inconsistência do tipo: $\Box \Leftrightarrow (\sim x \wedge x)$).\begin{enumerate}\setlength{\itemsep}{-4pt}\item %%\vskip 11pt\begin{tabular}{ll}  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...    1 &  $\sim (p \wedge q) $ \\    2 &  $ \sim r \vee q $ \\    3 &  $p \rightarrow r$ \\ \hline
+      & $\sim p$   
+\end{tabular}\item \vskip 11pt\begin{tabular}{ll}  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...    1 &  $ q \vee p $ \\   
+    2 &  $ p \rightarrow \sim r$ \\    3 &  $ q \rightarrow \sim s$ \\ \hline
+      &  $\sim r \vee s $\end{tabular}\end{enumerate}\item Aplique  o método da Resolução nos itens a) e b) da questão anterior. Indique 
+passo-a-passo, indicando o resolvente $\lambda$ e as novas cláusulas obtidas. 
+A árvore de prova é dispensável.
+%\item Seja a hipótese de um teorema dado por: $ (p \rightarrow (r \rightarrow q) ) \wedge ( p \rightarrow r ) \vdash (p \rightarrow q)$.
+%Demonstre pelo método da Resolução 
+%que  $(p \rightarrow q)$ é uma verdade a partir desses argumentos.
+\item  Faça as interpretações ($\Phi$) e justifique (explique)o valor lógico das fórmulas abaixo segundo os domínios:\begin{enumerate}\setlength{\itemsep}{-3pt} %\item $ \forall x (x + 2)^2 = x^2 + 4x + 4$ para $x \in N$
+ %\item $ \exists x (3x^2 - 2x -1) = 0$ para $x \in R$
+ \item $ \forall x (2^x > x^2)$ para $x \in N$ \item $ \forall x (x^2 + 3x + 2 = 0)$ para $x \in R$ \item $ \exists x (x+2 = x)$ para $x \in R$ \item $ \exists x (3x^2 - 2x -1 = 0)$ para $x \in R$\end{enumerate}
+\item Aplicando De Morgan aosquantificadores das fórmulas de LPO, dar a\underline{negação} das seguintes sentenças lógicas:\begin{enumerate}\setlength{\itemsep}{-2pt} %\item $ \forall x \exists y (\sim p(x) \wedge \sim q(y))$ %\item $ \exists x \forall y (p(x) \vee \sim q(y))$ %\item $ \exists x \forall y (p(x)\rightarrow q(y))$ %\item $ \forall x \exists y (\sim p(x) \vee \sim q(y))$ \item $ \forall x \sim \exists y ( p(x) \wedge \sim q(y))$ \item $ \exists x \sim \forall y (\sim p(x) \vee \sim q(y))$ \item $ \sim (\exists x \forall y (p(x)\rightarrow q(y)))$ \item $ \forall x \exists y \sim (\sim p(x) \vee \sim q(y))$\end{enumerate}%\item Prove esta implicação lógica usando as propriedades da 
+%LPO: $\exists x (ax \wedge bx) \vdash \exists x (ax) \wedge \exists x (bx) $                              
+
+\item Dado um domínio $D = \{ a,b \}$, verifique via prova da resolução o seguinte teorema: \\ $\exists x \forall y (q(x,y)) \vdash \forall y \exists x (q(x,y))$
+
+\item Determinar se $\Box$ é derivável do seguinte conjunto de cláusulas:$$\{ \{r(x_1,x_1)\}, \{ \sim r(x_2,f(x_2))\}, \{r(x_3,f(x_3)), \sim r(f(x_3),y_1) \}, \{r(x_4,y_2), \sim r(x_4,z_1),  \sim r(y_2,z_1) \}   \}  $$
+Se não for derivável que mudanças voce faria para gerar $\Box$?
+\item Transforme a sentença abaixo em um conjunto de cláusulas equivalentes:$$\exists x \forall y (p(x,y) \leftrightarrow \sim p(y,x))$$ %\item Faça a interpretação lógica da seguinte fórmula em LPO: \\  %$ \exists x \forall y \: > \: (\sim  f(x) , y )$,   %onde o $D=\{-2,-1,0,1, ....13\}$,   %e a definição do functor $f(x)$ é dado%%pela expressão matemática: $f(x) = (x+2) \ mod \ x $. %A definição do predicado ``{\em maior}'' ou $ > $ %é análogo ao da  matemática. Faça as considerações %necessárias.\end{enumerate}
+
+%\begin{flushleft}
+%\underline{Observações}:
+%\begin{enumerate}
+%\setlength{\itemsep}{-3pt}
+%\item Nas questões sobre Resolução faça as árvores de expansão, indique \underline{claramente} os termos $\lambda$,
+%e as novas cláusulas obtidas.%\item %\vfill%\underline{Clareza e legibilidade}
+%\item Se der vontade de escrever nas carteiras, solicite ao prof papel rascunho!
+%\end{enumerate}
+%\end{flushleft}%\noindent\end{document}

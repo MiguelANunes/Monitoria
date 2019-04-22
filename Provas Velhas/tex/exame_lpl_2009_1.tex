@@ -1,0 +1,24 @@
+\documentclass[12pt, a4paper,final]{article}\usepackage{t1enc}\usepackage[latin1]{inputenc}\usepackage[portuges]{babel}\usepackage{amsmath}\usepackage{amsfonts}\usepackage{amssymb}%\usepackage{graphicx}\topmargin       -1cm%\headheight      17pt\headsep  0cm\textheight      25cm\textwidth       16.7cm\oddsidemargin   0mm\evensidemargin  0mm\pagestyle{empty}\begin{document}\begin{center}\begin{tabular}{||c||}\hline \hline {\Large Lógica e Programação em Lógica}  \\\mbox{\hskip 2cm  UDESC/DCC -- \today  \hskip 2cm }\\Exame Final \\ \hline \hline\end{tabular}\end{center}\vskip1cm Aluno(a): \hrulefill%%%\noindent\begin{enumerate}%\setlength{\itemsep}{-5pt}\item Determinar as seguintes Formas Normais:\begin{description}\setlength{\itemsep}{-5pt} \item [Disjuntiva] para: $(p \rightarrow q) \wedge \sim(q \rightarrow p) $ \item [Conjuntiva] para: $\sim (\sim p \rightarrow q) \vee (q \rightarrow \sim p) $\end{description}%% OK\item Efetuar a prova (ou demonstração) direta para validade dos argumentosque se seguem:\begin{enumerate}\setlength{\itemsep}{-2pt} \item $\{p\rightarrow \sim q \: , \:\:\: \sim p \rightarrow (r \rightarrow \sim q)  \: , \:\:\: (\sim s \vee \sim r)\rightarrow \sim \sim q  \: , \:\:\: \sim s  \} \vdash \sim r $\end{enumerate}Conclua algo sobre este teorema.%% OK\item Aplicando o método da Resolução e considerando as premissas dos item anterior, demonstre que:\begin{enumerate}\setlength{\itemsep}{-2pt}\item $\sim r $ é consequente lógico do item a)%\item $x = t$ é consequente lógico  do item b)\end{enumerate}Construa a árvore de expansão (hoje tem que fazer esta árvore)
+ apresentado cada termo $\lambda$ \item  Considerando um domínio $A = \{1,2,3,4,5,6,7,8,9\}$ e dado os seguintes predicados:\begin{enumerate}\setlength{\itemsep}{-2pt} \item $p(x): x^2 \subseteq A$ e $q(x):$ x é par. \item $r(x): x + 3 \leq 9 $ e $s(x):$ x é ímpar.\end{enumerate}Calcule a validade, 
+fazendo a interpretação de alguns casos, das seguintes fórmulas:
+\begin{enumerate}
+\item  $\forall x (q(x) \rightarrow p(x))$
+\item $\exists x (qx \vee px)$  
+\item $\exists x (sx \rightarrow rx)$ 
+\item $\forall x (sx \wedge rx)$
+ \end{enumerate}
+
+Simplificando a notação, leia-se, $q(x) = qx$ e assim 
+ sucessivamente aos demais predicados.% \item Dar a negação das seguintes% proposições:% \begin{enumerate}% \setlength{\itemsep}{-2pt}% \item $ \sim \forall x \exists y (\sim p(x,y) \wedge \sim q(y,x))$% \item $ \exists x \sim \forall y (p(x) \vee \sim q(y))$% \item $ \sim \exists x \forall y (p(x) \rightarrow q(y))$% \item $ \forall x \sim \exists y (\sim p(x) \vee \sim q(y))$% \end{enumerate}%%%%\item Escreva o seguinte enunciado sob anotação da lógica de primeira ordem, em umconjunto de premissas e uma conclusão:\begin{quote}``{\em Todo estudante de CC trabalha mais doque alguém. Se todo mundo que trabalha maisdo que uma pessoa, então dorme menos queessa pessoa. Maria é estudante de CC. A Beatriz
+não é estudante de CC. Portanto, Maria dorme menos do que alguém}''\end{quote}Utilize os seguintes predicados: \vspace {-13pt}\begin{itemize}\setlength{\itemsep}{-2pt}    \item trab$(x,y)$   \hskip 2cm -- leia-se: $x$ trabalha mais que $y$    \item dorme$(z,w)$  \hskip 2cm -- leia-se: $z$ dorme menos que $w$    \item estudante\_cc$(x)$, e  $D=\{maria,bea\}$\end{itemize}
+Utilizando as propriedades da LPO, e método da Resolução
+conseguimos demostrar que Maria dorme menos que Beatriz?
+Prove.\item Considere as seguintes fórmulas: \begin{tabular}{ll}  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...1 &  $\forall x\forall y (q(x,y) \wedge r(y) \rightarrow p(y)) $ \\2 &  $\forall x (q(x,x) \rightarrow p(x))  $ \\3 &  $\forall x (s(x) \rightarrow q(x,x)) $ \\4 &  $r(b)$ \\ 
+5 &  $s(a)$ \\
+6 &  $s(b)$ \\\end{tabular}\\
+Utilizando o método da Resolução, encontre uma resposta para $\sim p(X)$.
+Pelas instâncias átomicas, o domínio é dado por $D=\{a,b\}$.
+
+\item Desenvolva a questão que voce mais estudou e justifique porquê.
+
+\end{enumerate}Observação: Clareza,  legibilidade, ejustifique suas escolhas, etc,%% detalhamento.%\noindent\end{document}

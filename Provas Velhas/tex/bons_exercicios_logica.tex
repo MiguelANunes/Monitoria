@@ -1,0 +1,530 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage{comment, color} %%% 
+\usepackage{graphicx, url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{colortbl}
+\usepackage{multirow}
+%%%\usepackage[normalem]{ulem}
+
+\topmargin       0.15cm
+\headheight      0pt
+\headsep         -0.5cm
+\textheight      25cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\baselineskip    -13pt
+
+\begin{document}
+\framebox[15cm][c]{$3^a$ Avaliação de Lógica Matemática  (LMA) - Joinville, \today}
+
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.5cm Acadêmico(a): \hrulefill%%%
+
+
+\footnotesize{Obs.: Algumas questões desta prova vieram de \url{www.cs.utsa.edu/~bylander/cs2233/index.html}}
+
+\begin{enumerate}
+%\setlength{\itemsep}{-1pt}
+
+\item {\bf Construa as duas fórmulas abaixo em suas respectivas FNC e FND:} %\footnote{alguns alunos ficaram com dúvidas neste importante tópico do curso}:
+\begin{enumerate}
+\setlength{\itemsep}{-3pt}
+\item  $\sim (p\rightarrow \sim q)  \wedge (\sim q \rightarrow p) $
+\item  $p \leftrightarrow q $
+\end{enumerate}
+
+\item {\bf Verificar a validade dos teoremas abaixo, usando um dos seguintes métodos de prova:  \textit{dedução natural}  (regras de inferência diretas e propriedades lógicas), ou pela \textit{contradição}, ou método da demonstração \textit{condicional} (escolha duas das três abaixo):}
+
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt} 
+ \item $\{ p\rightarrow \sim q$, $\sim p \rightarrow (r \rightarrow \sim q)$, $(\sim s \vee \sim r)\rightarrow \sim \sim q$, $\sim s$ \} {\large $\vdash$} $\sim r$
+
+\item $\{(\sim p\vee q) \rightarrow r$,  $(r \vee s)\rightarrow \sim t$, $t$ \} {\large $\vdash $} $\sim q$
+
+\item $\{ p\rightarrow q$, $q \leftrightarrow s$, $t\vee (r\wedge \sim s)$ \} {\large $\vdash $} $p \rightarrow t$
+
+
+%%\item  $\{ p\rightarrow \sim q$, $\sim p \rightarrow (r \rightarrow \sim q)$, $ (\sim s \vee \sim r)\rightarrow \sim \sim q$, $ \sim s\}$ $\vdash \sim r $
+
+\end{enumerate}
+
+%\begin{comment}
+\item {\bf Considere cada uma das proposições atômicas abaixo:}
+\begin{enumerate}
+\setlength{\itemsep}{-2pt} 
+\item $y < 0$
+\item $y = 0$
+\item $y > 0$
+\item $x < y$
+\item $x > y$
+\item $x = y$
+\end{enumerate}
+Quais destas proposições deveriam ser escolhidas e combinadas, para
+demostrar ou concluir a proposição $x < 0$? Faça suas escolhas e exiba esta demonstração.
+
+
+
+\item {\bf Considere o jogo ``Pedra ($r$), Papel ($p$), Tesoura ($s$)''.
+  Com dois jogadores usaremos as seis proposições seguintes:}
+  %%Exercício resolvido por Daniel Camargo%%
+  
+\begin{table}[htb]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+Jogador 			    & Literais & Significado \\\hline
+  \multirow{3}{*}{Jogador 1} & $r_1$ & Escolhe Pedra. \\
+			     & $p_1$ & Escolhe Papel. \\
+			     & $s_1$ & Escolhe Tesoura. \\\hline
+  \multirow{3}{*}{Jogador 2} & $r_2$ & Escolhe Pedra. \\
+			     & $p_2$ & Escolhe Papel. \\
+			     & $s_2$ & Escolhe Tesoura.\\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{enumerate}
+%\setlength{\itemsep}{-2pt} 
+\item {\bf Expresse como uma proposição: \textit{``Cada jogador deve escolher ao menos uma opção de pedra, papel ou tesoura''}.}\\
+ 
+ \textcolor{red}{Resposta}: O jogador deve escolher pelo menos um, dois ou três literais e não pode escolher nenhum, portanto a primeira linha da T.V. (em que os literais são falso) será Falso e as demais será Verdadeiro.
+ \begin{table}[htb]
+ \begin{center}
+ \begin{minipage}{0.4\linewidth}
+ \centering
+ \begin{tabular}{|c|c|c|c|}
+     \hline
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_1$} & { $r_1$} & { $s_1$} & {\bf Expressão} \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2}  $F$   & $F$   & $F$   & $F$ \\ \hline
+   $F$   & $F$   & $V$   & $V$ \\ \hline
+   $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $V$ \\ \hline
+   $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $V$ \\ \hline
+   $V$   & $V$   & $F$   & $V$ \\ \hline
+   $V$   & $V$   & $V$   & $V$ \\ \hline
+ \end{tabular}
+ \caption{Jogador 1}
+ \label{4a1}
+ \end{minipage}
+ $\wedge$
+ \begin{minipage}{0.4\linewidth}
+ \centering
+ \begin{tabular}{|c|c|c|c|}
+     \hline
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_2$} & { $r_2$} & { $s_2$} & {\bf Expressão} \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2}  $F$   & $F$   & $F$   & $F$ \\ \hline
+   $F$   & $F$   & $V$   & $V$ \\ \hline
+   $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $V$ \\ \hline
+   $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $V$ \\ \hline
+   $V$   & $V$   & $F$   & $V$ \\ \hline
+   $V$   & $V$   & $V$   & $V$ \\ \hline
+ \end{tabular}
+ \caption{Jogador 2}
+ \label{4a2}
+ \end{minipage}
+ \end{center}
+ \end{table}
+ 
+ 
+ \begin{itemize}
+ \item No conceito de construir uma expressão através de uma TV, deve-se preferencialmente escolher trabalhar com a resposta da expressão que aparece o menor número de vezes.
+ 
+ \item Ao escolhermos a linha em que a expressão é falsa, \textit{e.g.}, em \textcolor{red}{vermelho}, faremos uma relação de disjunção ($\vee$) forçando com que a resposta da Expressão seja Falso.
+ 
+ \item Na tabela \ref{4a1} estamos considerando as opções do jogador 1, portanto a resposta será: $(p_1 \vee r_1 \vee s_1$). 
+ 
+ \item Ao considerarmos a tabela \ref{4a2} do jogador 2, chegaremos à expressão $(p_2 \vee r_2 \vee s_2$). 
+ 
+ \item A resposta final consiste na relação de conjunção entre as expressões dos dois jogadores, chegando à resposta final:
+ 
+ \begin{center} \begin{Large}
+  $(r_1 \vee p_1 \vee s_1) \wedge (r_2 \vee p_2 \vee s_2)$
+  \end{Large}  \end{center}
+  \item Este método de encontrar uma expressão através da manipulação da TV será utilizado para as demais questões.
+ \end{itemize}
+ 
+  
+\item \label{quatrobee} {\bf Expresse como uma proposição: \textit{``Cada jogador não pode escolher mais de uma opção de pedra, papel ou tesoura''}.}\\
+  
+ \textcolor{red}{Resposta:} Cada jogador deve escolher no máximo um literal ou nenhum. Vejamos as tabelas ~\ref{4b1} e ~\ref{4b2}: 
+ 
+ \begin{table}[htb]
+ \begin{center}
+ \begin{minipage}{0.4\linewidth}
+ \centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_1$} & { $r_1$} & { $s_1$} & {\bf Expressão} \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $F$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+ \end{tabular}
+ \caption{Jogador 1}
+ \label{4b1}
+ \end{minipage}
+ $\wedge$
+ \begin{minipage}{0.4\linewidth}
+ \centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_2$} & { $r_2$} & { $s_2$} & {\bf Expressão} \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $F$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+ \end{tabular}
+ \caption{Jogador 2}
+ \label{4b2}
+ \end{minipage}
+ \end{center}
+\end{table}
+
+\begin{itemize}
+   \item Para estas tabelas, encontra-se uma quantidade igual de linhas \textcolor{red}{Verdadeiras} e Falsas.
+   \item Ao trabalhar com as linhas verdadeiras, deve-se fazer uma conjunção entre cada literal e uma disjunção entre cada linha da tabela.
+   \item Para finalizar deve-se considerar a expressão do jogador 2, fazendo uma conjunção entre os dois jogadores.
+\end{itemize}
+
+ Jogador 1:
+
+  $((\sim p_1 \wedge \sim r_1 \wedge \sim s_1) \vee$ Referente à 1a. linha da tabela. \\ 
+  $ (\sim p_1 \wedge \sim r_1 \wedge s_1 ) \vee $ Referente à 2a. linha da tabela.\\
+  $(\sim p_1 \wedge  r_1 \wedge \sim s_1 ) \vee $ Referente à 3a. linha da tabela. \\
+  $ (p_1 \wedge \sim r_1 \wedge \sim s_1))$ Referente à 5a. linha da tabela.  \\
+
+ Jogador 2:
+  
+  $((\sim p_2 \wedge \sim r_2 \wedge \sim s_2) \vee$ Referente à 1a. linha da tabela. \\ 
+  $ (\sim p_2 \wedge \sim r_2 \wedge s_2 ) \vee $ Referente à 2a. linha da tabela.\\
+  $(\sim p_2 \wedge  r_2 \wedge \sim s_2 ) \vee $ Referente à 3a. linha da tabela. \\
+  $ (p_2 \wedge \sim r_2 \wedge \sim s_2))$ Referente à 5a. linha da tabela.  \\
+  
+  Resultando na expressão:
+  \begin{center}
+
+  $(((\sim p_1 \wedge \sim r_1 \wedge \sim s_1) \vee (\sim p_1 \wedge \sim r_1 \wedge s_1 ) \vee (\sim p_1 \wedge  r_1 \wedge \sim s_1 ) \vee (p_1 \wedge \sim r_1 \wedge \sim s_1))$ \\
+  $\wedge$\\
+  $((\sim p_2 \wedge \sim r_2 \wedge \sim s_2) \vee (\sim p_2 \wedge \sim r_2 \wedge s_2 ) \vee (\sim p_2 \wedge  r_2 \wedge \sim s_2 ) \vee (p_2 \wedge \sim r_2 \wedge \sim s_2)))$\\
+  \end{center}
+  Esta expressão pode ser melhorada utilizando a simplificação na tentativa de chegar à uma forma mais reduzida.
+ 
+ 
+\item {\bf(100 pts., crédito extra) Expresse da maneira mais reduzida possível: \textit{``Cada jogador deve escolher exatamente  uma opção de pedra, papel ou tesoura''}.}\\
+
+\textcolor{red}{Resposta:} Esta questão refere-se à operação de OU EXCLUSIVO (XOR). Vamos às tabelas:
+
+\begin{table}[htb]
+\begin{center}
+\begin{minipage}[htb]{0.4\linewidth}
+\centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline	
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_1$} & { $r_1$} & { $s_1$} & {\bf Expressão} \\ \hline
+   $F$   & $F$   & $F$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+\end{tabular}
+\caption{Jogador 1}
+\label{4c1}
+\end{minipage}
+$\wedge$
+\begin{minipage}[htb]{0.4\linewidth}
+\centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline	
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_2$} & { $r_2$} & { $s_2$} & {\bf Expressão} \\ \hline
+   $F$   & $F$   & $F$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+\end{tabular}
+\caption{Jogador 2}
+\label{4c2}
+\end{minipage}
+\end{center}
+\end{table}
+
+
+\begin{itemize}
+   \item Observe que a relação entre os objetos significa que cada jogador pode escolher uma das três opções possíveis para cada jogador:
+   \begin{center}
+   $((~Tesoura1 ~\underline{\vee} ~Pedra1 ~\underline{\vee} ~Papel1) ~\wedge ~(~Tesoura2 ~\underline{\vee} ~Pedra2 ~\underline{\vee} ~Papel2))$
+   \end{center} 
+   
+   \item Mas deve-se considerar que na tabela ~\ref{4c1}:
+   \begin{itemize}
+   \item A Tesoura1 será Verdade se $(\sim p_1 \wedge \sim r_1 \wedge s_1)$;
+   \item A Pedra1 será Verdade se $(\sim p_1 \wedge r_1 \wedge \sim s_1)$;
+   \item O Papel1 será verdade se $(~p_1 \wedge \sim r_1 \wedge \sim s_1)$;
+   \end{itemize}
+   \item E da mesma forma para o jogador 2 na tabela ~\ref{4c2}...
+   \item Substituindo as considerações em cada objeto, chegamos à expressão:
+\end{itemize}
+\begin{center}
+$(((\sim p_1 \wedge \sim r_1 \wedge ~s_1)~\underline{\vee} ~(\sim p_1 \wedge ~r_1 ~\wedge \sim s_1)~\underline{\vee} ~(~p_1 ~\wedge \sim r_1 \wedge \sim s_1))$\\
+$\wedge$\\
+$((\sim p_2 \wedge \sim r_2 \wedge ~s_2)~\underline{\vee} ~(\sim p_2 \wedge ~r_2 ~\wedge \sim s_2)~\underline{\vee} ~(~p_2 ~\wedge \sim r_2 \wedge \sim s_2)))$\\   
+\end{center}
+
+
+\item {\bf Expresse como uma proposição: \textit{``Os jogadores empatam''}.  Assuma que você não tenha que se importar com a regra anterior.}
+
+\textcolor{red}{Resposta:} Nesta questão desconsideraremos ``não jogar uma opção'' (linha 1). Faremos uma relação de conjunção entre os jogadores e disjunção entre as opções, {\it i.e.}, faremos: \\
+``$((tesoura_1 ~e ~tesoura_2) ~ou ~(pedra_1 ~e ~pedra_2) ~ou ~(papel_1 ~e ~papel_2))$''
+\begin{table}[htb]
+\begin{center}
+\begin{minipage}[htb]{0.4\linewidth}
+\centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline	
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_1$} & { $r_1$} & { $s_1$} & {\bf Expressão} \\ \hline
+   $F$   & $F$   & $F$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+\end{tabular}
+\caption{Jogador 1}
+\label{4d1}
+\end{minipage}
+$\wedge$
+\begin{minipage}[htb]{0.4\linewidth}
+\centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline	
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_2$} & { $r_2$} & { $s_2$} & {\bf Expressão} \\ \hline
+   $F$   & $F$   & $F$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+\end{tabular}
+\caption{Jogador 2}
+\label{4d2}
+\end{minipage}
+\end{center}
+\end{table}
+ 
+ \begin{itemize}
+    \item Verifica-se que nas tabelas ~\ref{4d1} e ~\ref{4d2} temos 3 linhas cujo a expressão é verdadeira, portanto trabalharemos com elas.
+    \item Ao chegar à expressão da opção do jogador 1, deve-se fazer a expressão da opção do jogador 2 (que tem a mesma forma).
+    \item Una as três jogadas por uma disjunção.
+ \end{itemize}
+ 
+ \begin{center}
+ $(((\sim p_1 \wedge \sim r_1 \wedge s_1) \wedge (\sim p_2 \wedge \sim r_2 \wedge s_2))$ = os dois jogam tesoura;\\
+\parindent=29,2mm $\vee$ = ou \parindent=0mm\\
+ $((\sim p_1 \wedge r_1 \wedge \sim s_1) \wedge (\sim p_2 \wedge r_2 \wedge \sim s_2))$ = os dois jogam pedra;\\
+\parindent=29,2mm $\vee$ = ou \parindent=0mm\\
+ $(( p_1 \wedge \sim r_1 \wedge \sim s_1) \wedge ( p_1 \wedge \sim r_1 \wedge \sim s_1)))$ = os dois jogam papel.\\
+ \end{center}
+Observe que a expressão a seguir não funciona pois há muitas verdades na tabela que não deveriam existir. $ (r_1 \wedge r_2) \vee (p_1 \wedge p_2) \vee (s_1 \wedge s_2)$
+
+
+\item {\bf Expresse como uma proposição: \textit{``O jogador 1 ganha''}. Assuma que você não tenha que se preocupar com a regra em parte (c).} % you don't have to worry about the rule in part (c).
+
+  \textcolor{red}{Resposta:} Considere as tabelas e as observações a seguir.
+  
+ \begin{table}[htb]
+\begin{center}
+\begin{minipage}[htb]{0.4\linewidth}
+\centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline	
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_1$} & { $r_1$} & { $s_1$} & {\bf Expressão} \\ \hline
+   $F$   & $F$   & $F$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+\end{tabular}
+\caption{Jogador 1}
+\label{4e1}
+\end{minipage}
+\begin{minipage}[htb]{0.4\linewidth}
+\centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline	
+  \rowcolor[rgb]{0.9,0.9,0.9} { $p_2$} & { $r_2$} & { $s_2$} & {\bf Expressão} \\ \hline
+   $F$   & $F$   & $F$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $F$   & $V$   & $V$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $F$   & $V$   & $F$   & $V$ \\ \hline
+   $F$   & $V$   & $V$   & $F$ \\ \hline
+  \rowcolor[rgb]{1,0.2,0.2} $V$   & $F$   & $F$   & $V$ \\ \hline
+   $V$   & $F$   & $V$   & $F$ \\ \hline
+   $V$   & $V$   & $F$   & $F$ \\ \hline
+   $V$   & $V$   & $V$   & $F$ \\ \hline
+\end{tabular}
+\caption{Jogador 2}
+\label{4e2}
+\end{minipage}
+\end{center}
+\end{table}
+
+\begin{itemize}
+   \item Para o jogador 1 ganhar, deve seguir a regra do jogo, obedecendo a precedência das opções:
+   \begin{enumerate}
+      \item Tesoura ganha do Papel;
+      \item Pedra ganha da Tesoura;
+      \item Papel ganha da Pedra;
+   \end{enumerate}
+    \item Se desconsiderar a regra do item (c), não teremos que nos preocupar com o OU EXCLUSIVO (XOR).
+    \item Com isso, chegamos à seguinte conclusão:
+\end{itemize}
+\begin{center}
+   $(((\sim p_1 \wedge \sim r_1 \wedge s_1) \wedge (p_2 \wedge \sim r_2 \wedge \sim s_2))$ = regra i;\\
+   $ \vee $ ou \\
+   $((\sim p_1 \wedge r_1 \wedge \sim s_1) \wedge (\sim p_2 \wedge \sim r_2 \wedge s_2))$ = regra ii;\\
+   $ \vee $ ou  \\
+   $((p_1 \wedge \sim r_1 \wedge \sim s_1) \wedge (\sim p_2 \wedge r_2 \wedge \sim s_2)))$ = regra iii;\\
+\end{center}
+
+
+\end{enumerate}
+
+\item {\bf Determine o valor verdade $\{V, F \}$ (a interpretação $\Phi $)
+de cada uma das fórmulas abaixo, em seu respectivo domínio.
+Faça os cálculos em separado e preencha a tabela abaixo.}
+%(Determine the truth value of each statement for each domain.)
+
+\begin{center}
+\begin{tabular}{|c|l|l|l|l|} \hline
+ & \multicolumn{4}{c|}{Domínios} \\ \hline
+ & Num. Reais & Reais Positivos & Inteiros & Inteiros Positivos \\ \hline
+$\exists x (x = -x)$ & & & & \\ \hline
+$\forall x (2x \leq 3x)$ & & & & \\ \hline
+$\exists x (x^2 = 2)$ & & & & \\ \hline
+$\forall x (x \leq x^2)$ & & & & \\ \hline
+$\forall x \exists y (xy = 1)$ & & & & \\ \hline
+\end{tabular}
+\end{center}
+
+
+\item {\bf Seja o enunciado: ``{\em \ldots para todo caminho definido de $x$ até $z$ e arco entre $z$ e $y$, então há um caminho entre $x$ e $y$. Sabe-se que todo arco 
+entre $x$ e $y$ é também um caminho entre $x$ e $y$}''. Sabe-se ainda que há arcos
+definidos pelas fórmulas: $arco(a,b)$, $arco(a,c)$, $arco(b,d)$,  e  $arco(c,d)$. 
+Prove que é possível ir de um ponto $a$ a $e$ definido por  um 
+$caminho(a,e)$ como verdade. Desta vez vamos fornecer
+a fórmulas referente ao texto acima, as quais são dadas por:}
+
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt} 
+  \item  $\forall x \forall y \forall z ( caminho(x,z) \wedge arco(z,y) \rightarrow  caminho(x,y) )$
+\item $\forall x \forall y ( arco(x,y)  \rightarrow  caminho(x,y) )$
+\item   $arco(a,b)$
+\item   $arco(a,c)$
+\item   $arco(b,d)$
+\item   $arco(c,d)$
+\item   $arco(d,e)$
+\end{enumerate}
+{\bf Deduza tal caminho como verdade, indicando todas instâncias
+das variáveis,  PU's, PE's e regras de inferências
+utilizadas. Faça um grafo (flechas e nós) orientado para ver o que estás calculando.}
+
+\end{enumerate}
+
+\newpage 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\underline{{\Large Equivalências Notáveis}}:
+\begin{description}
+\setlength{\itemsep}{-4pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+
+\end{description}
+
+\underline{{\Large Regras Inferencias Válidas (Teoremas)}}:
+\begin{description}
+\setlength{\itemsep}{-4pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+
+\end{enumerate}
+\end{flushleft}
+
+\vskip 2cm
+
+\begin{flushright}
+\textit{In formal logic, a contradiction is the signal of defeat, but in the evolution\\
+of real knowledge it marks the first step in progress toward a victory.} 
+
+Alfred North Whitehead
+\end{flushright}
+\end{document}

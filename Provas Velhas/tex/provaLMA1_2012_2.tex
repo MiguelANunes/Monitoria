@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=30mm,right=30mm,top=25mm,bottom=19mm]{geometry}
+\usepackage{graphicx,url}
+\usepackage{titlesec}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+
+% Setting configuration for the text format
+%\renewcommand{\contentsname}{Table of Contents}
+%\renewcommand{\bibname}{References}
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\filleft\chaptername\ \thechapter}{5pt}{\filleft\Huge}
+%\sloppy
+
+\title{Lógica Matemática - Avaliação 1}
+\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+\date{\today}
+
+\graphicspath{{/figures/}}   
+\DeclareGraphicsExtensions{{.jpg},{.png}}
+
+
+\begin{document}
+\maketitle
+
+\begin{flushright}
+``\textit{O que é ensinado em escolas e universidades não representa educação, mas são meios para obtê-la.}''\\ (Ralph Emerson)
+\end{flushright}
+
+\begin{enumerate}
+
+\item (1.0 pt) Determinar por tabela-verdade se a fórmula abaixo é uma tautologia, contradição ou contingência: 
+
+\begin{enumerate}\setlength{\itemsep}{-2pt}\item $(P \wedge Q \wedge \sim R) \rightarrow \sim (R \vee Q)$\item $(B \rightarrow A) \rightarrow (A \rightarrow  B)$\item $(A \rightarrow (A \leftrightarrow  B)) \rightarrow  B $
+\item $(A \vee B)\rightarrow (A \wedge  B)$\end{enumerate}
+
+
+\item (2.5 pts) Determine as formas normais (FNC e FND) equivalentes para as fórmulas abaixo: 
+\begin{enumerate}
+\setlength{\itemsep}{-5pt}
+
+\item $(\sim P\rightarrow Q)\leftrightarrow (R \vee P)$
+\item $\sim(P\leftrightarrow Q)\rightarrow (P\vee Q)\wedge R$
+\end{enumerate}
+
+
+
+\item (1.0 pt) Das 04 fórmulas
+encontradas no item anterior, escolha duas, uma 
+FNC ($\mathcal{P}_1$) e sua respectiva FND ($\mathcal{Q}_1$). Obviamente que: $\mathcal{P}_1 \Leftrightarrow \mathcal{Q}_1$. Encontre as suas respectivas duais,
+$\mathcal{P}_2$ e $\mathcal{Q}_2$,  tal que obviamente 
+$\mathcal{P}_2 \Leftrightarrow \mathcal{Q}_2$.
+
+
+\item (2.0 pts) Escolha duas fórmulas para esta questão.
+Utilizando as propriedades e equivalências
+fornecidas na página seguintee verifique  se essas fórmulas apresentam uma relaç\~ao de implicaç\~ao lógica  verdadeira:
+\begin{enumerate}\setlength{\itemsep}{-2pt}\item $q \Rightarrow p \wedge q\leftrightarrow q$\item  $ (p \vee q) \wedge \sim q \Rightarrow p $\item $(p \rightarrow q) \wedge \sim q \Rightarrow \sim p$\end{enumerate}
+
+
+\item (3.0 pts) Utilizando as propriedades e equivalências
+fornecidas na página seguinte, demonstre a
+as equivalências:
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+
+\item $p \rightarrow q \Leftrightarrow p \vee q \rightarrow  q$ %% Ex 12 da pag 80
+
+\item  $(p \rightarrow q) \vee (p \rightarrow r) \Leftrightarrow p  \rightarrow  (q \vee r) $ %% Ex 16 da pag 80
+
+\end{enumerate}
+
+
+
+
+
+
+\end{enumerate}
+\newpage
+
+%Argumentos válidos fundamentais:
+%\begin{description}
+%\item[Adição (AD)] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+%\item[Simplificação (SIMP)] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+%\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+%\item[Absorção (ABS)] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+%\item[Modus Ponens (MP)] $P \rightarrow Q, P \vdash Q$
+%\item[Modus Tollens (MT)] $P \rightarrow Q, \sim Q \vdash \sim P$
+%\item[Silogismo Disjuntivo (SD)] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+%\item[Silogismo Hipotético (SH)] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+%\item[Dilema Construtivo (DC)] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+%\item[Dilema Destrutivo (DD)] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+%\end{description}
+%\end{enumerate}
+
+\underline{Equivalências Notáveis}:
+\begin{description}
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Tautologia:] $P\wedge \sim P \Leftrightarrow \blacksquare  $
+
+\item[Contradição:] $ P\vee \sim P \Leftrightarrow \square  $
+
+
+\end{description}
+%\bibliographystyle{ieeetr} % ieeetr or acm or apalike or alpha or splncs
+%\bibliography{LMArefs.bib}
+
+\end{document}

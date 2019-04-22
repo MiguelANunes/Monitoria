@@ -1,0 +1,135 @@
+\documentclass[12pt,fleqn]{article}
+
+%\setlength{\parindent}{2em}
+\setlength{\parskip}{0ex}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{9in}
+
+\newcommand{\comment}[1]{}
+\renewcommand{\thepage}{}
+
+\begin{document}
+
+\setcounter{page}{1}
+\thispagestyle{empty}
+
+\begin{center}
+\LARGE
+Homework 2 \\
+\normalsize 
+\ \\
+CS 2233/2231 -- Fall 2012 \hfill assigned September 6, 2012 \\
+Tom Bylander, Instructor \hfill due September 17, 2012
+\end{center}
+
+\normalsize
+
+\begin{enumerate}
+
+\item (15 points) Section 1.4: 8 (no more than 10 words each), 12,
+  16.
+
+\item (5 points) Section 1.5: 2
+
+\item (20 pts.)
+Determine the truth value of each statement for each domain.
+
+\begin{center}
+\begin{tabular}{l|l|l|l|l}
+ & \multicolumn{4}{c}{Domain} \\
+ & Real Numbers & Positive Reals & Integers & Positive Integers \\ \hline
+$\exists x (x = -x)$ & & & & \\
+$\forall x (2x \leq 3x)$ & & & & \\
+$\exists x (x^2 = 2)$ & & & & \\
+$\forall x (x \leq x^2)$ & & & & \\
+$\forall x \exists y (xy = 1)$ & & & &
+\end{tabular}
+\end{center}
+
+\item (10 pts.) Express the negations of each of these statements so
+  that there are no negation symbols.  For the last statement, recall
+  that $p \rightarrow q$ is equivalent to $\neg p \vee q$.
+
+\begin{enumerate}
+\item $\forall x (x^2 > 0)$
+\item $\exists x (x^2 < 0)$
+\item $\forall x (x < 0 \vee x > 0)$
+\item $\exists x (x < 0 \wedge x > 0)$
+\item $\forall x (x < 0 \rightarrow x > 0)$
+\end{enumerate}
+
+\item (10 points) Determine the truth value of each of these
+  statements.  The domain is the real numbers.
+
+\begin{enumerate}
+\item $\exists x (x < x^2)$
+
+\item $\forall y (y < y^2)$
+
+\item $\exists x \forall y (x < y^2)$
+
+\item $\forall y \exists x (x < y^2)$
+
+\item $\exists y \forall x (x < y^2)$
+
+\item $\forall x \exists y (x < y^2)$
+
+\item $\exists x \forall y (x > y^2)$
+
+\item $\forall y \exists x (x > y^2)$
+
+\item $\exists y \forall x (x > y^2)$
+
+\item $\forall x \exists y (x > y^2)$
+\end{enumerate}
+
+\item (5 points) Show that $\neg \exists x \, \neg P(x)$ is equivalent
+to $\forall x \, P(x)$.
+
+\item (5 points) Prove that disjunctive syllogism is a rule of inference.
+
+\item (5 points) Use a truth table to prove that $q$ can be inferred
+  from $p \rightarrow q$ and $\neg p \rightarrow q$.  This could be thought
+  of as the rule of inference underlying proof by cases.
+
+\item (5 points) What combinations of the following are sufficient to
+conclude $x < 0$?
+
+\begin{itemize}
+\item $y < 0$
+\item $y = 0$
+\item $y > 0$
+\item $x < y$
+\item $x > y$
+\item $x = y$
+\end{itemize}
+
+\item (10 points) Suppose $x > 1$. Which of the following are valid
+  conclusions?  Provide a brief justification of each answer.
+
+\begin{enumerate}
+\item $x > 0$
+\item $x > 2$
+\item $x$ is even.
+\item $x > -x$
+\item $y > 1 \vee y < x$
+\end{enumerate}
+
+
+\item (10 points) Suppose $x + y$ is an even number and $x + y > 0$.
+  Which of the following are valid conclusions?  Provide a brief
+  justification of each answer.
+
+\begin{enumerate}
+\item $x > 0 \wedge y > 0$
+\item $x > 0 \vee y > 0$
+\item $x > 0 \oplus y > 0$
+\item $x \mbox{\ is odd\ } \leftrightarrow y \mbox{\ is odd}$
+\item $x \mbox{\ is even\ } \vee y \mbox{\ is odd}$
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

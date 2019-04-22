@@ -1,0 +1,315 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %% isto garante compatibilidade com seu MAC
+%\usepackage{lmodern}
+\usepackage[brazil]{babel}
+\usepackage{comment,color, fancybox} %%% 
+\usepackage{graphicx, url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%%%\usepackage[normalem]{ulem}
+
+\topmargin       0.1cm
+\headheight      0pt
+\headsep         -0.7cm
+\textheight      25cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\baselineskip    -13pt
+
+\begin{document}
+%\framebox[15cm][c]{$3^a$ Avaliação de Lógica Matemática  (LMA) - Joinville, \today}
+
+\begin{large}
+\begin{center}
+
+\shadowbox{
+\begin{minipage}[c]{10cm}
+\begin{center}
+\sf
+$3^{\underline{a}}$ Avalia\c c\~ao de L\'ogica Matem\'atica  (LMA)\\
+Professores: Rogério  ($T_A$) e  Claudio ($T_B$)\\
+Joinville, \today
+\end{center}
+\end{minipage}
+} %% 
+\end{center}
+\end{large} 
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.2cm Acad\^emico(a) : \rule{10cm}{0.7pt} Turma:  \rule{1cm}{0.7pt}
+%%%\noindent Algumas questões desta prova vieram de \url{http://www.cs.utsa.edu/~bylander/cs2233/index.html}
+
+%{\bf Atenção: Exame Final dia 07/12 (4a. feira às 17:00 hrs. -- Sala F101)}
+{\bf Atenção: Exame Final dia 06/07 (4a. feira às 17:00 hrs. -- Sala F101)}
+
+\begin{enumerate}
+\setlength{\itemsep}{13pt}
+
+%{\Huge Rogerio pegar exercicios daqui }
+%\url{http://cnx.org/contents/46af3ad0-8636-4653-b64a-ea5f934df9d6@28/Exercises_for_First-Order_Logi}
+
+\item {\bf (1.0 pt.)} Determine o valor verdade $\{V, F \}$ (a interpretação $\Phi $)
+de cada uma das fórmulas abaixo em seu respectivo domínio. Dados: $A = \{ 3,  5 \}$, $B = \{ -15, 1, 15\}$ e  $C = \{ 6,  7 \}$.
+As questões serão \textbf{apenas} validadas mediante os cálculos em separado.
+ Em seguida preencha a tabela abaixo:
+
+\begin{center}
+\begin{tabular}{l|c|c} \hline \hline
+ & \multicolumn{2}{c}{Domínios} \\ \hline \hline
+ & $x \in A ~e~ y \in C$ & $x \in B ~e~ y \in A$  \\ \hline
+
+%$\forall x: ~ (7+x \leq x^2)$ & & --xxx-- & --xxx--  & \\ \hline
+%% $\exists x \exists y ((2+x)^2 \geq 24 - y)$ &  --xxx-- & & & --xxx-- \\ \hline
+%% $\forall x (x^2 \geq 5)$ & & --xxx-- & --xxx-  & \\ \hline
+$\exists y \forall x: ~ (2x+y \neq y^2)$ &  &  \\ \hline
+$\forall x \exists y: ~ (xy + 2 \leq 40)$ &   & \\ \hline \hline
+\end{tabular}
+\end{center}
+
+%\textcolor{red}{Rogerio ... aqui teria que dar uma pensada melhor ... rever as formula propostas}
+
+\item {\bf (1.0 pts.)} Ao contrário  do que você fez na questão anterior, seja o conjunto $0 \leq \mathbb{N}\leq 20$ dos números naturais. Determine o(s) conjunto(s)-verdade ou domínio(s) para o qual a fórmula é \textbf{verdadeira}, para cada  uma das fórmulas abaixo (em resumo, calcule $D_x$ e $D_y$ conforme o caso):
+
+Exemplo: $\forall x: ~ ((2x = 6) \vee (2x = 8)) $,  aqui o valor da resposta é $D=\{3, 4\}$
+
+\begin{enumerate}
+\itemsep -2pt   
+ %   \item $\forall x . (x^2 - 5x + 6 = 0)$
+ %       \item $\exists x . (x^2 - 5x + 6 = 0)$
+  % \item $\exists x . (x^2 - 3x = 0)$ 
+%  \item $\exists x . ((2x = 6) \vee (2x = 8)) $
+  \item $\exists x \exists y: ~ ((2x = 12) \wedge (3y = 12)) $
+%      \item $\forall x . ((x - 7) > 4 )$
+      \item $\forall x: ~ ((x - 7) \le 4 )$
+       
+       %\item $\exists y \forall x . (x  \geq y)$
+
+       \item $\exists y \forall x: ~ (x  \geq y + 10)$
+       
+%     \item $\exists x . \sim (\text{ x é ímpar})$
+     \item $\exists x: ~ (\text{x é primo})$ \hspace{1cm} OBS: o $1$ não é primo!
+     %%% \item REPENSAR AS FORMULAS.....
+ \end{enumerate} 
+\item \label{P1} {\bf (2.5 pts.)} Em contação de estória infantis, os tipos clássicos de personagens são chamados {\em arquétipos} e cada um apresenta sempre 
+um comportamento padrão específico. Seja o conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO):\\
+\begin{tabular}{ll}
+\\  \hline \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  1. & $personagem(dragao, mau) $ \\
+  2. & $personagem(cavaleiro, bom)$ \\
+  3. & $personagem(princesa, bom)$ \\
+  4. & $captura(dragao, princesa)$ \\
+  5. & $armado(cavaleiro)$\\
+  6. & $\forall x \exists y: personagem(x, bom) \wedge personagem(y, mau) \wedge ameacado(y) \rightarrow ataca(y, x)$ \\
+  7. & $\forall x \exists y \exists z: (personagem(x, bom) \wedge personagem(z, bom) \wedge armado(x) \wedge captura(y, z) \rightarrow ameacado(y) )$ \\
+    \hline \hline
+ \end{tabular}
+
+%Demonstre quais são os alunos que voltarão no próximo semestre.
+\vskip 0.2cm
+\underline{PROBLEMA}: Prove que o dragão irá atacar o cavaleiro.
+
+\begin{comment}
+\item  \label{P2} {\bf (2.0 pts.)} Na universidade de Berkeley há pré-requisitos entre algumas disciplinas.
+Ou seja, \textit{toda disciplina $x$ que é um pré-requisito de alguma disciplina $y$, 
+então $x$ deve preceder $y$}. Esta sequência
+ de pré-requisitos eventualmente atrasa a graduação de alguns estudantes por lá. Fato similar ocorre por aqui!
+ Assim, a situação desta grade-curricular é dada pelo 
+ conjunto das seguintes fórmulas em lógica de primeira-ordem (LPO):
+\\
+  $$\begin{array}{llr} \hline\hline
+	(1) & requisito(a, b) & (\text{leia-se: ``a é pré-requisito de b''}) \\
+	(2) & requisito(a, c) &  \\
+	(3) & requisito(a, d) &  \\
+	(4) & requisito(b, e) &  \\
+	(5) & requisito(c, e) & \\
+			(6) & requisito(d, e) & \\
+				(7) & requisito( e, f) & \\
+	(8) & \forall x ~\exists y: requisito(x, y) \rightarrow precede(x, y) & \\
+	(9) & \forall x ~\exists z ~\exists y: (requisito(x, z) \wedge precede(z, y)) \rightarrow precede(x,y) &\\
+	\hline\hline
+	\end{array}$$	
+ Utilizando as propriedades da LPO, PU's, PE's e regras de inferências,  demonstre que a disciplina  \/`\textbf{a}' \/ deve preceder \/`\textbf{f}'.
+
+\end{comment}
+
+\item {\bf (1.0 pt.)} Dada as formulações
+em LPO do problema anterior (questões \ref{P1}),  reescreva-os em Prolog ou Picat.
+  
+\newpage
+\item {\bf (2.0 pts.)} Dado o código abaixo, indique a sua saída precisamente, após   a execução do \texttt{main}. 
+
+%\textcolor{red}{JA MODIFICADA E IMPLEMENTADA ... NESTE DIRETORIO DE PROVAS}
+
+\begin{minipage}{0.45\textwidth}
+\begin{tiny}
+\begin{center}{\bf PICAT}\end{center}
+\begin{verbatim}
+
+index(-)      % fatos instanciados como retorno
+     f1(22).
+     f1(24).
+	
+index(-)  % fatos instanciados como retorno
+    f2(1).
+    f2(2).
+	
+index(-)     % fatos instanciados como retorno
+    f3(13).
+    f3(15).
+    
+regra( X_1, Y_1, Z_1, Resp ) =>     
+                      	f1(Z_1),
+          	            f2(X_1),
+          	            f3(Y_1),
+          	            Resp = (X_1 + Y_1 + Z_1 ).
+
+main ?=>     %%% this rule is  backtrackable
+   regra(X,Y,Z, R),                            
+   printf("\n X: %d \tY: %d \tZ: %d \tResp: %d", X,Y,Z, R)  ,  
+   false.
+
+main => 
+       printf("\n\n FIM DOS FATOS \n\n") , true.
+\end{verbatim}
+\end{tiny}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{tiny}
+\begin{center}{\bf PROLOG}\end{center}
+\begin{verbatim}
+
+    f1(22).
+    f1(24).
+	
+    f2(1).
+    f2(2).
+	
+    f3(13).
+    f3(15).
+    
+regra( X_1, Y_1, Z_1, Resp ) :-     
+      f1(Z_1),
+      f2(X_1),
+      f3(Y_1),
+      Resp is (X_1 + Y_1 + Z_1 ).
+
+main :-     %%% this rule is  backtrackable
+   regra(X,Y,Z, R),                            
+   writef("\n X: "), write(X),
+   writef("\t Y: "), write(Y),
+   writef("\t Z: "), write(Z), 
+   writef("\t R: "), write(R), 
+   false.
+
+main :- 
+   writef("\n\n FIM DOS FATOS \n\n") , true.
+\end{verbatim}
+\end{tiny}
+\end{minipage}
+
+\vskip 0.3cm
+
+OBS.: O predicado ``\texttt{false / fail}''  é usado  apenas para forçar o PICAT/PROLOG retornarem todas as respostas usando o ({\em backtracking}). 
+
+
+\item {\bf (2.5 pts.)} Implementar em PICAT (usando notação da programação em lógica) ou PROLOG  a funções recursivas dos 2 enunciados abaixo:
+\begin{enumerate}
+   \item Implemente o predicado do cálculo do máximo divisor comum entre dois números, definidos pela função recursiva abaixo:\\
+  $ \operatorname{maior\_divisor}(x,y) =
+  \begin{cases}
+ x & \mbox{if } y = 0 \\
+\operatorname{maior\_divisor}(y, \operatorname{resto\_divisao}(x,y)) & \mbox{se } y > 0 \\
+ \end{cases}
+$\\
+dado: $\operatorname{resto\_divisao}(x,y) = mod(x,y)$
+
+\item Idem para função que calcula o número de movimentos da torre de Hanoi:\\
+$
+\operatorname{hanoi}(n) =
+ \begin{cases}
+ 1 & \mbox{if } n = 1 \\
+ 2\times\operatorname{hanoi}(n-1) + 1 & \mbox{if } n > 1\\
+ \end{cases}
+$ 
+ 
+\end{enumerate}
+
+\end{enumerate}
+%\textcolor{red}{Removi as RIs ... etc ... nao sao mais necessarias neste estagio! colocamos no quadro o que precisarem}
+
+\begin{comment}
+  \item  Algo como ....:
+  $$ 
+  \operatorname{fact}(n) =
+ \begin{cases}
+  1 & \mbox{if } n = 0 \\
+  n \cdot \operatorname{fact}(n-1) & \mbox{se } n > 0 \\
+ \end{cases}
+$$
+   \end{comment}
+
+
+\begin{comment}
+\underline{{\large Equivalências Notáveis}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall x: px \Leftrightarrow \exists x: \sim px $
+\item[Negações para LPO:] $ \sim \exists x: px \Leftrightarrow \forall x: \sim px $
+\end{description}
+}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+{\footnotesize
+\begin{description}
+\setlength{\itemsep}{-2pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+\end{comment}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+\end{enumerate}
+\end{flushleft}
+
+\end{document}

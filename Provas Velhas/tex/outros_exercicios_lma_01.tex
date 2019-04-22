@@ -1,0 +1,290 @@
+% Document Type: latex
+% Master File: sheet1_ND_Prop_FOL.tex
+\documentclass[a4paper]{article}
+
+\usepackage[textwidth=13cm]{geometry}
+
+\usepackage{amssymb,latexsym,alltt,eepic,
+%showkeys,showtags 
+%stmaryrd,
+amsmath,amsthm
+}
+
+%% GrÃ¡ficos portables
+%\usepackage{tikz}
+%\usetikzlibrary{arrows}
+
+%\usepackage{wasysym}
+%\usepackage{cmll}
+%\usepackage{bussproofs}
+%\EnableBpAbbreviations
+
+\pagestyle{myheadings} 
+\newcommand{\tstamp}{\mbox{\tt Time-stamp: <2009-05-06 02:10:34
+    jmarino localhost.localdomain natprop.tex>}} 
+%\newcommand{\tensor}{\otimes}
+%\newcommand{\lolli}{\multimap}
+
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\topmargin}{0in}
+%\addtolength{\textwidth}{1.2in}
+%\addtolength{\textheight}{0.5in}
+%
+
+\usepackage[utf8]{inputenc}
+\usepackage{fourier}
+\renewcommand{\ttdefault}{txtt}
+
+\theoremstyle{definition}
+\newtheorem{prob}{Problem}
+
+\newcommand{\imp}{\rightarrow}
+\newcommand{\ang}[1]{\langle {#1} \rangle}   %< thing >
+\newcommand{\mea}{\llbracket}
+\newcommand{\ning}{\rrbracket}
+\newcommand{\me}[1]{\mea{#1}\ning}
+\newcommand{\NK}{\ensuremath{\mathrm{NK}}}
+\newcommand{\NJ}{\ensuremath{\mathrm{NJ}}}
+%\newcommand{\land}{\wedge}
+%\newcommand{\lor}{\vee}
+\newcommand{\then}{\rightarrow}
+\newcommand{\ded}{\vdash}
+\newcommand{\fl}{\rightarrow}
+
+\begin{document}
+\title{Exercises on Natural Deduction and Semantics of Classical Propositional 
+       and First Order Logic}
+\author{Nonclassical Logics\\
+Universidad PolitÃ©cnica de Madrid}
+
+\maketitle
+
+\thispagestyle{empty}
+
+%
+%{\footnotesize
+%\tableofcontents
+%}
+\bibliographystyle{plain}
+
+\noindent
+\begin{em}
+Solutions must be sent by mail to \texttt{jmarino@fi.upm.es} no later
+than April 12, 2010. 
+\end{em}
+
+\subsection*{Classical propositional logic}
+
+\begin{prob}
+Which of the following are tautologies? Prove the tautologies in the
+following list by natural deduction. To prove something of the form
+$\alpha \leftrightarrow \beta$ you must give a proof of 
+$\alpha \rightarrow \beta$ and another proof of 
+$\beta \rightarrow \alpha$.
+
+\begin{enumerate}
+\item $(\alpha \vee \alpha) \rightarrow \alpha$.
+\item $((\alpha \vee \beta) \vee \gamma) \leftrightarrow 
+       (\alpha \vee (\beta \vee \gamma))$.
+\item $(\alpha \rightarrow \beta) \leftrightarrow 
+       \neg(\neg\alpha \wedge \beta)$.
+\item $(\alpha \wedge (\alpha \vee \beta)) \leftrightarrow \alpha$.
+\item $\neg(\alpha \vee \beta) \leftrightarrow (\neg\alpha \wedge \neg\beta)$.
+\item $\alpha \rightarrow (\beta \rightarrow \gamma) \rightarrow 
+       ((\alpha \rightarrow \beta) \rightarrow (\alpha \rightarrow \gamma))$.
+\item $(\alpha \rightarrow \beta) \rightarrow 
+       ((\alpha \rightarrow \neg\beta) \rightarrow \neg\alpha)$.
+\item $\alpha \rightarrow \neg\neg\alpha$.
+\item $\neg\neg\alpha \rightarrow \alpha$.
+\item $(\alpha \rightarrow \beta) \vee (\beta \rightarrow \alpha)$.
+\item $((\alpha \rightarrow \beta) \rightarrow \alpha) \rightarrow
+       \alpha$.
+\item $(\alpha \rightarrow \beta) \leftrightarrow 
+       (\neg\alpha \vee \beta)$.
+\item $\alpha \vee \neg\alpha$.
+\end{enumerate}
+\end{prob}
+
+
+\begin{prob}\label{prob:haskell-prop}
+Define the syntax of propositional logic as a set of datatype
+definitions in Haskell. Then, define the semantics of propositional
+formulas as a Haskell function from formulas and valuations to truth
+values. 
+Finally, use that function to check the results of the previous problem.
+\end{prob}
+
+
+\begin{prob}
+Prove the \emph{soundness theorem} for classical propositional logic,
+i.e., show that if there is a natural deduction proof of $\phi$ from
+premises $\Gamma$ (written $\Gamma \vdash_{\text{NK}} \phi$), then
+every valuation making $\Gamma$ true also makes $\phi$ true 
+(written $\Gamma \models \phi$).
+\end{prob}
+
+
+\begin{prob}
+Prove the converse of the previous result, i.e.~\emph{completeness}
+for classical propositional logic. 
+\end{prob}
+
+
+
+\subsection*{Classical first order logic}
+
+\begin{prob}Translate the following syllogisms into (classical) first-order
+predicate logic and study their validity:
+
+\begin{enumerate}
+
+\item \begin{tabular}[t]{l} 
+     All soldiers are strong;\\
+     All soldiers are brave.\\
+     $\vdash$ Some strong men are brave.
+     \end{tabular}
+
+\item \begin{tabular}[t]{l}
+     All soldiers can walk;\\
+     Some children are not soldiers.\\
+     $\vdash$ Some children cannot walk.
+     \end{tabular}
+
+\item \begin{tabular}[t]{l}
+     I admire these paintings;\\
+     When I admire something, I like to scrutinize it thoroughly.\\
+     $\vdash$ I like to scrutinize some of these paintings thoroughly.
+     \end{tabular}
+
+\item \begin{tabular}[t]{l}
+     All soldiers are brave;\\
+     Some spaniards are brave.\\
+     $\vdash$ Some spaniards are soldiers.
+     \end{tabular}
+
+\item \begin{tabular}[t]{l}
+     All bullfighters are brave;\\
+     Some spaniards are bullfighters.\\
+     $\vdash$ Some spaniards are brave.
+     \end{tabular}
+
+\item \begin{tabular}[t]{l}
+     Every altruistic person is also generous;\\
+     No greedy person is generous.\\
+     $\vdash$ No greedy person is altruistic.
+     \end{tabular}
+
+\end{enumerate}
+\end{prob}
+
+
+\begin{prob}
+Prove the following using natural deduction:
+\begin{enumerate}
+\item $\forall x(\phi(x) \rightarrow \phi(x))$.
+\item $\forall x\phi(x) \rightarrow \exists x\phi(x)$.
+\item $\forall x(\phi(x) \wedge \psi(x)) \rightarrow 
+       (\forall x\phi(x)) \wedge (\forall x \psi(x))$.
+\item $\forall x(\phi \rightarrow \psi(x)) \rightarrow 
+       (\phi \rightarrow \forall x \psi(x)),~
+       \text{where $x$ is not free in $\phi$}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}
+Prove the substitution lemma for first-order logic, stated in the
+following way. Let $L = \ang{F, R}$ be a first-order language, and 
+${\cal A}=\ang{A, {\cal F}^{\cal A}, {\cal R}^{\cal A}}$ be a
+first-order structure over $L$.
+Let $\eta:{\sf Vars}\imp A$ be an environment for ${\cal A}$,
+and $t$ be a term over the language $L$, possibly with
+free variables.
+
+\newcommand{\semeta}[1]{\me{#1}_{\eta}^{\cal A}}
+
+%% \clearpage
+%% \noindent
+Recall that we denote by $\semeta{t}$ the \emph{interpretation} of
+$t$ in ${\cal A}$ under the environment $\eta$, defined as follows:
+
+\begin{itemize}
+\item $\semeta{x} = \eta(x)$
+\item $\semeta{f(t_1,\ldots,t_n)} = 
+      f^{\cal A}(\semeta{t_1},\ldots,\semeta{t_n})$
+\end{itemize}
+
+\noindent
+Recall also, the definition of the truth value 
+$\semeta{\varphi}$ of a formula, by induction on the structure of
+$\varphi$ (see e.g.~your class notes).
+
+\begin{enumerate}
+
+\item First prove the substitution lemma for {\em terms} $t$, that
+      is to say, that 
+
+      \[ \semeta{t[u/x]} = \me{t}_{\eta[x:=\semeta{u}]}. \] 
+
+      This says that the interpretation of a term $t$ in a structure
+      ${\cal A}$ under environment $\eta$ is the same if we substitute
+      a term $u$ for every free occurrence of a variable $x$ in $t$,
+      or if we alter the environment to assign the denotation
+      $\semeta{u}$ to $x$.
+
+\item Now prove the same lemma for {\em formulas} $\varphi$,
+      that is to say
+
+      \[\semeta{\varphi[u/x]} = \me{\varphi}_{\eta[x:=\semeta{u}]},\] 
+
+      or, equivalently
+
+      \[ {\cal A} \models_{\eta} \varphi[u/x] \mbox{ iff }
+         {\cal A} \models_{\eta[x:=\semeta{u}]} \varphi \]
+
+      where $\varphi$ is a formula and $u$ is a term. You must do this by
+      induction on the structure of the formula $\varphi$. The base case,
+      i.e.~the case where $\varphi$ is an atomic formula
+      $r(t_1,\ldots,t_n)$ makes use of what you showed in the first part
+      of this problem. 
+
+\end{enumerate}
+\end{prob}
+
+
+\begin{prob}
+Formalize the first-order language for the \emph{scissors-rock-paper}
+game and define the first-order structure that represents its
+behaviour. 
+
+Use this to falsify the following sentence:
+
+\[ \forall y. \exists x. r(x, y) \implies 
+   \exists x. \forall y. r(x, y) . \]
+\end{prob}
+
+
+\begin{prob}
+In the spirit of Prob.~{\ref{prob:haskell-prop}}, define the semantics
+of first order formulas as a Haskell function from formulas, a first
+order structure and an environment, to truth values. Using it,
+formalize the counterexample in the previous problem.
+\end{prob}
+
+
+\begin{prob}
+Prove the soundness theorem for predicate logic (classical or
+intuitionistic). In more detail: show that if $\Gamma \vdash_{NK} A$ 
+($A$ is derivable using natural deduction from -- some or all of -- 
+the premisses in $\Gamma$) then $\Gamma \models A$, 
+i.e.~for every structure ${\cal A}$ in which all the formulas in
+$\Gamma$ hold, $A$ is also true.
+
+You must do this by induction on the length of the given natural
+deduction proof, considering all ten possibilities for the last rule
+used in the proof ($\wedge$-intro, $\wedge$-elim, etc.). 
+\end{prob}
+
+
+
+\end{document}

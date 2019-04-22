@@ -1,0 +1,269 @@
+
+\documentclass[11pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc} %%% garante mactosh
+\usepackage[portuges]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment,color, fancybox} %%% 
+
+
+%\usepackage{graphicx}
+\topmargin       -1cm
+\headheight      0pt
+\headsep  0cm
+\textheight      27cm
+\textwidth       16.7cm
+\oddsidemargin   -5mm
+\evensidemargin  -5mm
+\pagestyle{empty}
+
+
+\begin{document}
+
+\begin{large}
+\begin{center}
+
+\shadowbox{
+\begin{minipage}[c]{10cm}
+\begin{center}
+\sf
+ L\'ogica Matem\'atica  (LMA)\\
+Professores: Claudio ($T_B$) e Rogério  ($T_A$) 
+\end{center}
+\end{minipage}
+} %% 
+\end{center}
+\end{large} 
+
+%\vskip1cm 
+\textbf{Aluno(a)}: \noindent\rule{0.7\textwidth}{1pt} TURMA: \noindent\rule{0.05\textwidth}{1pt} 
+%%%\noindent
+
+\begin{flushright}
+``{\em  Logic is a systematic method of coming to the wrong conclusion with confidence.}''\\
+Samuel Butler (1835--1902)
+\end{flushright}
+
+%\textbf{\textcolor{red}{Rogério: a prova está BEM DIMENSIONADA, contudo as questões precisam ser recicladas. No mais intocável. Há uma questão NOVA ... veja abaixo.}}
+
+\begin{enumerate}
+%\setlength{\itemsep}{-2pt}
+
+\item {\bf (2.0 pts)} Determinar as Formas Normais Disjuntiva e Conjuntiva para:
+
+\begin{description}
+\setlength{\itemsep}{-2pt}
+ \item [1.]  $( p \rightarrow q) \wedge  (\sim q \rightarrow \sim p) \wedge q $
+ \item [2.]  $(\sim p \rightarrow \:\: \sim q) \vee (q \rightarrow p) \vee p $
+\end{description}
+Qual o tipo dessas fórmulas? (contingência, contradição ou tautologia). Forneça as duais, da FNC ou  da FND.
+
+%% OK
+%\item {\bf (1.5 pt)} Efetuar a prova  direta (natural) para validade dos argumentos que se seguem: 
+
+\item {\bf (2.0 pts)} Aplique um método de prova indicado (natural, condicional ou absurdo--contradição), nas questões abaixo e resolva a validade dos argumentos que se seguem: 
+
+\begin{enumerate}
+\item $\{p\rightarrow  q \: , \:\:\: q \leftrightarrow s \: , \:\:\:
+ t \vee ( r \wedge \sim s)\: , \:\:\: p \} \vdash  t $ \hskip 1cm (absurdo ou natural)
+ %% pag 133 exercicio 8
+ 
+\item  $\{ ( \sim p \vee q) \rightarrow r \: ,
+  \:\: (r \vee s)  \rightarrow \sim t \: ,
+    \:\: t \:   \} \vdash \: \:  \sim  q $ \hskip 1cm (absurdo ou natural)
+ %% pag 136 exercicio 15
+
+\item $\{p\rightarrow \sim q \: , \:\:\: \sim p \rightarrow (r \rightarrow \sim q)  \: , \:\:\: (\sim s \vee \sim r)\rightarrow \sim \sim q  \: , \:\:\: \sim s  \} \vdash  \sim r $ \hskip 1cm (absurdo ou natural)
+
+\item $ \{ p \vee q \rightarrow r,~ s \rightarrow \sim r \wedge \sim t,~ s \vee u \} ~\vdash~ p \rightarrow u $ \hskip 1cm (condicional)
+\end{enumerate}
+
+\begin{comment}
+\begin{enumerate}
+
+ 
+\item  $\{ p \vee q \: ,
+  \:\: q \rightarrow r \: ,
+    \:\: p \rightarrow s \: ,
+     \:\: \sim s   \} \vdash r \wedge (p \vee q) $
+\end{enumerate}
+
+% Caso esse conjunto não derive um teorema, que mudanças
+% você faria nas premissas para derivar $r$?
+
+%% OK
+\item {\bf (1.0 pt)} Utilizando o método de  {\em demonstração por condicional}  a validade do   argumento $ p \rightarrow u $, a partir das premissas:
+%%%\rule{0.25\textwidth}{1pt}\\
+$$ \{ p \vee q \rightarrow r,~ s \rightarrow \sim r \wedge \sim t,~ s \vee u \} ~\vdash~ p \rightarrow u $$
+%pagina 153 -- 1l
+\end{comment}  
+
+
+\item {\bf (1.5 pts)} Considere o seguinte conjunto de f\'ormulas: 
+%%%{\bf \textcolor{red}{é boa esta questão ... manteria !}}
+
+\begin{tabular}{ll}
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+1 &  $\forall x\forall y (q(x,y) \wedge r(y) \rightarrow p(y)) $ \\
+2 &  $\forall x  (q(x,x) \rightarrow p(x))  $ \\
+3 &  $\forall x \exists y ( s(x) \rightarrow q(x,y)) $ \\
+4 &  $r(b)$ \\ 
+5 &  $s(a)$ \\
+6 &  $s(b)$ \\
+\end{tabular}\\
+Utilizando as propriedades da LPO (por exemplo: PU, GU, GE e PE), demonstre: $\sim p(a)$ ou $p(a)$ e $\sim p(b)$ ou $p(b)$.
+O domínio é dado por $D=\{a,b\}$. 
+
+
+\item {\bf (1.5 pts)} Considere a seguinte interpretação em um domínio dado por $D=\{a,b\}$. 
+
+\begin{tabular}{c |c | c | c } \hline \hline 
+p(a,a) & p(a,b)  & p(b,a) & p(b,b)  \\  \hline 
+ V & F & F & V \\ \hline \hline 
+\end{tabular}
+
+Determine o valor verdade ($f_{aval}$  ou $\Phi $), passo-a-passo, das seguintes fórmulas:
+
+\begin{enumerate}
+\itemsep -2pt
+\item $\forall x \exists y \:\: p(x,y) $
+\item $\forall x \forall y \:\: p(x,y) $
+\item $\exists x \forall y \:\: p(x,y) $
+\item $\exists y \:\: \sim p(a,y) $
+\item $\forall x \forall y \:\: (p(x,y) \rightarrow p(y,x)) $
+\item $\forall x  \:\: p(x,x) $
+\end{enumerate}
+Retirado do livro do Chang-Lee -- pagina 42
+
+
+%\textbf{\textcolor{red}{Rogério: inclui esta questão NOVA ... que poderia entrar no lugar desta de baixo???? Pois a anterior é próxima 4 a 6. Que tal?}}
+
+
+
+\item {\bf (1.5 pts)} No mundo do {\em faz de conta}, há uma
+companhia aérea que apresenta vôos entre diferentes
+aeroportos. Os vôos podem ser diretos ou com conexão.
+Seja o mapa de vôos diretos:
+
+\begin{center}
+\begin{tabular}{cc}
+1. voo\_direto(a,b) & \hskip 2cm 2. voo\_direto(a,c)\\
+3. voo\_direto(b,d) & \hskip 2cm 4. voo\_direto(c,e)\\
+5. voo\_direto(d,f) & \hskip 2cm 6. voo\_direto(e,f)\\
+7. voo\_direto(a,g) & \hskip 2cm 8. voo\_direto(g,h)\\
+9. voo\_direto(h,f) & \hskip 2cm 10. voo\_direto(h,e)\\
+\end{tabular}
+\end{center}
+
+Adicionando ao mapa acima  as regras de conexão abaixo, demonstre  que existe uma possível
+conexão  entre os aeroportos  $a$ até $f$.
+\begin{description}
+\setlength{\itemsep}{-2pt}
+  \item[11.]  $\forall x \forall y \forall z ( conexao(x,z) \wedge voo\_direto(z,y) \rightarrow  conexao(x,y) )$
+\item[12.] $\forall x \forall y (voo\_direto(x,y)  \rightarrow  conexao(x,y) )$
+\end{description}
+
+
+\item {\bf (1.5 pt)} Expresse {\bf em Prolog} o seguinte texto e resolva: 
+
+``\textit{Tweety  é um pássaro. Goldie  é um peixe. Molie é uma minhoca. Pássaros gostam de minhocas. Gatos gostam de peixes. Gatos gostam de pássaros.
+ O meu gato come tudo o que gosta. O meu gato chama-se Silvester.}''
+
+%``\textit{Laranja é uma fruta. Lisa é uma sabiá. Molie é uma minhoca. Todo sabiá é um pássaro. Todos os pássaros comem minhocas ou frutas.}''
+
+\begin{enumerate}
+  \item Escreva o texto acima em fórmulas de primeira ordem e, em seguida, um código equivalente em Prolog;
+   \item Use uma das formalizações do item anterior para determinar {\bf tudo} o que Silvester come, e calcule respectivamente em Prolog.
+% \item Use uma das formalizações do item anterior para determinar {\bf tudo} o que Silvester come.
+ % \item Da resposta do item anterior, a resposta é razoável? Se não for, verifique se o problema está na especificação original ou na sua tradução para Prolog, corrija o seu programa e veja uma nova resposta para o que Silvester come.
+\end{enumerate}
+
+\begin{comment}
+\item {\bf (1.0 pt)} Apresente \textbf{todas as saídas na ordem} para a execução do predicado {\texttt go}:
+\begin{verbatim}
+	t(*) .
+	t(#).
+	r(a).
+	r(b) .
+	r(c).
+	s(1).
+	s(2).
+	p(X, Y, Z) :- t( X ) , r( Y ) , s( Z ) .
+	go :- p(X, Y, Z), write(X), write(Y), write(Z).
+\end{verbatim}
+\end{comment}
+
+\end{enumerate}
+
+%%\makebox[\linewidth]{\rule{.8\paperwidth}{2pt}} \\
+
+\noindent\rule{0.8\textwidth}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\underline{{\large Equivalências Notáveis}}:
+
+{\small
+\begin{description}
+\setlength{\itemsep}{-2pt}
+
+\item[Idempotência (ID):] $P\Leftrightarrow P\wedge P$ ou $P\Leftrightarrow P\vee P$
+\item[Comutação (COM):] $P\wedge Q\Leftrightarrow Q\wedge P$ ou $P\vee Q\Leftrightarrow Q\vee P$
+\item[Associação (ASSOC):] $P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R$ ou $P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R$ 
+\item[Distribuição (DIST):] $P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+\item[Dupla Negação (DN):] $P\Leftrightarrow\sim\sim P$
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q$
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P\wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P\vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Negações para LPO:] $ \sim \forall px \Leftrightarrow \exists \sim px $
+
+\item[Negações para LPO:] $ \sim \exists px \Leftrightarrow \forall \sim px $
+
+\end{description}
+
+\underline{{\large Regras Inferencias Válidas (Teoremas)}}:
+\begin{description}
+\setlength{\itemsep}{-2pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+ \item \underline{Clareza e legibilidade};
+
+\end{enumerate}
+\end{flushleft}
+\noindent Boas férias!
+}
+%% detalhamento.
+%\noindent
+
+\end{document}

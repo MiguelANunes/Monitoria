@@ -1,0 +1,250 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=27mm,right=27mm,top=10mm,bottom=15mm]{geometry}
+\usepackage{graphicx,url}
+\usepackage{comment,color, fancybox} %%% 
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+
+
+\graphicspath{{/figures/}}   
+\DeclareGraphicsExtensions{{.jpg},{.png}}
+
+
+\begin{document}
+
+
+\begin{large}
+\begin{center}
+
+\shadowbox{
+\begin{minipage}[c]{10cm}
+\begin{center}
+{\sf $1^{\underline{a}}$ Avaliação de Lógica Matemática  (LMA)}\\
+Professores: Claudio ($T_A$) e Rogério  ($T_B$) \\
+Joinville, \today
+\end{center}
+\end{minipage}
+} %% 
+\end{center}
+\end{large} 
+%\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+%\date{\today}
+
+\vskip 0.2cm Acad\^emico(a) : \rule{10cm}{0.5pt} Turma:  \rule{1cm}{0.5pt}
+
+\pagestyle{empty}
+
+\begin{flushright}
+``\textit{Quando jovens, \/aprendemos.
+Quando velhos,  \/entendemos.}''\\ (Albert Einstein)
+\end{flushright}
+
+\begin{enumerate}
+\itemsep 15pt
+\item (1.0 pt) Determinar por tabela-verdade se a fórmula abaixo é uma {\bf tautologia}, {\bf contradição} (ou insatisfatível) ou {\bf contingência} (ou satisfatível, ou consistente): 
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+\item $(p \wedge \sim q) \leftrightarrow  (p \vee q) $
+
+\item $p \wedge q \rightarrow ~~(q \oplus p)$
+
+\item $ (\sim q \vee \sim p) \wedge \sim (p \wedge q \rightarrow p) $ 
+
+\item $(\sim p \wedge q) \leftrightarrow ( p \vee \sim q)$ 
+
+\end{enumerate}
+
+\item (0.5 pts) Desenhe a estrutura hierárquica de cada um das fórmulas acima.
+
+
+\item (2.5 pts) Determine as formas normais \underline{mais simples} (FNC e FND) equivalentes para as fórmulas abaixo: 
+%\textcolor{red}{inclui o r em duas formulas pequenas abaixo}
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+
+%\item $((p \wedge q) \vee (r \wedge s)) \vee (\sim q \wedge(p \vee t)) $ %%% 
+%\textcolor{red}{peguei de um site}
+\item $(p \rightarrow q)  \wedge 
+ (\sim p \wedge r) $
+% inclui o r
+
+%\item $(\sim p \wedge \sim q) \rightarrow (\sim p \rightarrow  q) \vee  ( p \rightarrow  \sim q)$
+
+\item $(\sim r \vee \sim q) \rightarrow p $
+% pag. 86 exerc. 7k
+
+%%\item $(\sim p \vee \sim q) \rightarrow (p \wedge  q) $
+
+\end{enumerate}
+
+\item (0.5 pt) Das 04 fórmulas
+encontradas no item anterior, escolha duas, uma 
+FNC ($\mathcal{P}_1$) e sua respectiva FND ($\mathcal{Q}_1$). Obviamente que: $\mathcal{P}_1 \Leftrightarrow \mathcal{Q}_1$. 
+Encontre as suas respectivas duais, $\mathcal{P}_2$ e $\mathcal{Q}_2$,  tal que obviamente  $\mathcal{P}_2 \Leftrightarrow \mathcal{Q}_2$. Qual o significado de fórmulas duais?
+
+
+\item (3.0 pts) Utilizando as propriedades e equivalências
+fornecidas na página seguinte
+e verifique  se essas fórmulas apresentam uma relaç\~ao de implicaç\~ao lógica  verdadeira:
+
+
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+
+%\item $q \Rightarrow p \wedge q \leftrightarrow q$
+
+%\item  $ (p \vee q) \wedge \sim q \Rightarrow p $
+
+\item $q \Rightarrow p \wedge q \leftrightarrow p$
+% pag. 54 exerc. 2b
+
+\item $(p \wedge q) \Rightarrow (p \vee q)$
+%% pagina 80 Ex 7
+
+%\item $(p \vee q) \Rightarrow (p \wedge q)$
+%% um falso da anterior...
+
+%\item $(p \vee q) \wedge \sim q \Rightarrow p$
+% adaptado do exerc. 5 pag. 54
+
+%\item $(p \rightarrow q) \Rightarrow p \wedge r \rightarrow q $
+%% pagina 80 Ex 10
+
+%\item $(p \rightarrow q)  \Rightarrow ((q \rightarrow r) \rightarrow (p \rightarrow r)) $
+
+%% RETIRADO DE http://www.cs.odu.edu/~cs381/cs381content/logic/prop_logic/implications/implication_proof.html
+
+%\item $[(p \leftrightarrow q) \wedge (q \leftrightarrow r)] \Rightarrow (p \leftrightarrow r)$
+%\textcolor{red}{DIFICIL ... prova passada}
+%http://www.cs.odu.edu/~cs381/cs381content/logic/prop_logic/implications/implication_proof.html
+
+
+%\item $(p \rightarrow q) \wedge (r \rightarrow s)  \Rightarrow (p \wedge r ) \rightarrow  (q \wedge s) $
+%\textcolor{red}{nova .... legal esta }
+%% RETIRADO DE http://www.cs.odu.edu/~cs381/cs381content/logic/prop_logic/implications/implication_proof.html
+
+\item $((p \rightarrow q) \wedge (p \rightarrow \sim q))  \Rightarrow  \sim p$
+%% MODIFICADO do exemplo 13 PAG 80
+
+\end{enumerate}
+
+
+\item (2.5 pts) Utilizando as propriedades e algumas equivalências
+fornecidas na página seguinte, demonstre as equivalências:
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+
+\item $p \rightarrow q \Leftrightarrow p \vee q \rightarrow  q$ %% Ex 12 da pag 80
+
+\item  $(p \rightarrow q) \vee (p \rightarrow r) \Leftrightarrow p  \rightarrow  (q \vee r) $ %% Ex 16 da pag 80
+
+%\item $P \uparrow Q \Leftrightarrow ((P\downarrow P)\downarrow (Q\downarrow Q)) \downarrow ((P\downarrow P)\downarrow(Q\downarrow Q))$
+
+%\item $p \wedge q \rightarrow r \Leftrightarrow p \rightarrow (q \rightarrow r) $  (Regra da Exportação e Importação) %% Ex 14 da pag 80
+
+%\item  $(p \rightarrow r) \wedge (q \rightarrow r) \Leftrightarrow (p \vee  q) \rightarrow r $ %% Ex 15 da pag 80
+
+%\item $(p \rightarrow q) \rightarrow r \Leftrightarrow p \wedge \sim r \rightarrow \sim q $
+% pag 64 exerc.2g
+
+\item $(p \rightarrow r)  \vee (q \rightarrow s) \Leftrightarrow p \wedge q \rightarrow  r \vee s $  %% Ex 17 da pag 81
+
+%\item $(p \rightarrow q) \wedge (p \rightarrow r) \Leftrightarrow p \rightarrow (q \wedge r)$
+%% pagina 86 exercicio f
+
+%\item $((p \rightarrow (q \rightarrow r)) \wedge (p \rightarrow q) \wedge p)  \rightarrow r \Leftrightarrow \blacksquare  $
+%% UM TEOREMA da pagina 113
+
+%\item $((p \rightarrow q) \wedge (p \wedge r)) \rightarrow q \Leftrightarrow \blacksquare  $
+%% UM TEOREMA da pagina 113 -- OK
+
+\end{enumerate}
+
+
+\newpage
+
+\underline{{\large Equivalências Notáveis}}:
+
+{\small
+\begin{description}
+\setlength{\itemsep}{-1pt}
+
+\item[Idempotência (ID):] $P \Leftrightarrow P\wedge P$ ou $P \Leftrightarrow P\vee P$
+
+\item[Comutação (COM):] $P \wedge Q \Leftrightarrow Q \wedge P$ ou $P\vee Q \Leftrightarrow Q \vee P$
+
+\item[Associação (ASSOC):] $P \wedge(Q \wedge R)\Leftrightarrow (P\wedge Q) \wedge R$ ou $P \vee (Q\vee R) \Leftrightarrow (P\vee Q) \vee R$ 
+
+\item[Distribuição (DIST):] $P\wedge(Q\vee R )\Leftrightarrow (P\wedge Q)\vee (P \wedge R)$ ou $P\vee(Q\wedge R)\:\: \Leftrightarrow (P\vee Q)\wedge (P\vee R)$
+
+\item[Dupla Negação (DN):] $P\Leftrightarrow \:\:  \sim\sim P$
+
+\item[De Morgan (DM):] $\sim(P \wedge Q) \Leftrightarrow  \:\: \sim P \vee\sim Q$ ou $\sim(P \vee Q) \Leftrightarrow \:\:  \sim P \wedge\sim Q$
+
+\item[Equivalência da Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+
+\item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+
+\item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+
+\item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+
+\item[Contradição:] $P \wedge \sim P \Leftrightarrow \square $
+
+\item[Tautologia:] $ P \vee \sim P \Leftrightarrow \blacksquare    $
+
+\item[Ou-exclusivo:] $ P \oplus Q \Leftrightarrow  \sim (P \leftrightarrow  Q) $
+
+\item[Conectivo de Sheffer (\textit{Not-And}):] $ P \uparrow Q \Leftrightarrow  \:\: \sim (P \wedge Q) $
+
+\item[Conectivo de  Sheffer (\textit{Not-Or}):] $ P \downarrow Q \Leftrightarrow \:\: \sim (P \vee  Q) $
+
+%\item[Negações para LPO:] $ \sim \forall px \Leftrightarrow \exists \sim px $
+
+%\item[Negações para LPO:] $ \sim \exists px \Leftrightarrow \forall \sim px $
+
+\end{description}
+
+\underline{{\large Regras de Inferências Válidas (Teoremas)}}:
+
+\begin{description}
+\setlength{\itemsep}{-1pt}
+\item[Adição (AD):] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+\item[Simplificação (SIMP):] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+\item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+\item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+\item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+\item[Silogismo Disjuntivo (SD):] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+\item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+\item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+\item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+\end{description}
+%\end{enumerate}
+
+\begin{flushleft}
+\underline{Observações}:
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+
+\item Nas questões 4 e 5, não é para usar a TV (apenas para verificação se for o caso)
+
+\item Qualquer dúvida, desenvolva a questão e deixe tudo
+explicado, detalhadamente, que avaliaremos o seu conhecimentos sobre
+ o assunto;
+
+ \item \underline{Clareza e legibilidade};
+
+\end{enumerate}
+\end{flushleft}
+}
+
+\end{enumerate}
+
+
+\end{document}

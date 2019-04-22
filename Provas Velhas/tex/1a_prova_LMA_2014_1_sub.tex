@@ -1,0 +1,216 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=27mm,right=27mm,top=10mm,bottom=15mm]{geometry}
+\usepackage{graphicx,url}
+\usepackage{color}
+\usepackage{amssymb,comment}
+\usepackage[utf8]{inputenc}
+\usepackage[brazilian]{babel}
+\usepackage[T1]{fontenc}
+
+% Setting configuration for the text format
+%\renewcommand{\contentsname}{Table of Contents}
+%\renewcommand{\bibname}{References}
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\filleft\chaptername\ \thechapter}{5pt}{\filleft\Huge}
+%\sloppy
+
+\title{Lógica Matemática -- $1^a$ Avaliação (sub.)}
+\author{Rogério Eduardo da Silva e Claudio Cesar de Sá}
+\date{\today}
+
+\graphicspath{{/figures/}}   
+\DeclareGraphicsExtensions{{.jpg},{.png}}
+
+\begin{document}
+
+
+\pagestyle{empty}
+\maketitle
+
+
+%\begin{LARGE}
+%
+%\textcolor{red}{Rogério ... a prova estah bem dimensionada ...
+%basta trocar alguns operadores das questoes 1 e 2 (para não repetir o semestre passado) e tudo pronto.... \textbf{já acertei as questões 4 e 5 -- confira do livro}}
+%\end{LARGE}
+
+
+\begin{flushright}
+``\textit{Obstáculo é aquilo que se vê quando se tira os olhos do objetivo que se quer alcançar.}''\\ (Bob Marley)
+\end{flushright}
+
+\begin{flushleft}
+\textbf{Nome}: \rule{10cm}{0.2mm} \textbf{Turma}: \rule{1cm}{0.2mm}
+\end{flushleft}
+%\textbf{Matrícula}: \rule{7cm}{0.3mm} 
+% %\rule{\linewidth}{1.
+
+
+\begin{enumerate}
+%\setlength{\itemsep}{-1pt}
+
+\begin{comment}
+\item (1.0 pt) Determina o valor lógico das fórmulas abaixo:
+
+\begin{itemize}
+\setlength{\itemsep}{-3pt}
+\item $-2 < 0 \leftrightarrow \pi^2 < 0 \wedge $ Roma é a capital da Itália
+\item $3+4=7 \vee 13 $ é um número primo $\rightarrow \sqrt 16 > 2$
+\item $3^2 + 4^2 = 5^2  ~\wedge $ Tóquio não fica no Japão $\rightarrow ( \pi > 2.04 \leftrightarrow 2 \neq 3 )$
+\item Na Espanha se fala português $\wedge~ 2^3 - 4 > 5^2 - 10 \vee 5 \neq 3+3$
+\end{itemize}
+\end{comment}
+
+\item (1.0 pt) Determinar por tabela-verdade se a fórmula abaixo é uma {\bf tautologia}, {\bf contradição} (ou insatisfatível) ou {\bf contingência} (ou satisfatível): 
+
+\begin{enumerate}
+\setlength{\itemsep}{-5pt}
+
+\item $(p \leftrightarrow q) \wedge (p \vee q)$
+
+\item $(p \vee q)\rightarrow (p \wedge  q)$
+
+%\item $(B \rightarrow A)\rightarrow (A \rightarrow  B)$
+
+\item $(p \rightarrow (p \rightarrow q)) \rightarrow  q $
+
+\item $(p \rightarrow q) \rightarrow (p \vee r \rightarrow q \vee r)$
+\end{enumerate}
+
+%\begin{enumerate}
+%\setlength{\itemsep}{-2pt}
+%
+%
+%\item $p \rightarrow (p \rightarrow q \wedge \sim q)$
+%% pag 48 ex.3(d) = CONTINGENCIA
+%
+%\item $\sim (X = 0) \rightarrow (X = 0)$
+%% insatisfativel
+%
+%% pag 48 ex. 2(d) = TAUTOLOGIA
+%
+%\item $\sim (p \wedge q) \rightarrow \sim p$ 
+%
+%\item $ p \rightarrow \sim p$ 
+%% insatisfativel
+%\end{enumerate}
+
+
+\item (3.0 pts) Determine as formas normais \underline{mais simples} (FNC e FND) equivalentes para as fórmulas abaixo: 
+
+\begin{enumerate}
+\setlength{\itemsep}{-5pt}
+
+\item $(\sim p\rightarrow q)\leftrightarrow (r \vee p)$
+\item $\sim(p\leftrightarrow q)\rightarrow (p\vee q)\wedge r$
+\end{enumerate}
+
+%\begin{enumerate}
+%\setlength{\itemsep}{-2pt}
+%
+%\item $(\sim p \wedge q)  \leftrightarrow  (q \vee \sim p) $
+%% pag 86 ex. 7(j)
+%
+%\item $(\sim p \vee \sim q) \leftrightarrow p$
+%
+%\item $(p \vee q) \leftrightarrow (p \wedge q) $
+%% pag 86 ex. 7(k)
+%\end{enumerate}
+
+\item (3.0 pts) Utilizando as propriedades e equivalências
+fornecidas na página seguinte verifique {\bf SE} 
+essas fórmulas apresentam uma relaç\~ao de implicaç\~ao lógica  
+verdadeira:
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+
+\item $q \Rightarrow p \wedge q \leftrightarrow q$
+
+\item  $ (p \vee q) \wedge \sim q \Rightarrow p $
+
+
+\item $(p \wedge q) \Rightarrow (p \vee q)$
+%% pagina 80 Ex 10
+
+\end{enumerate}
+
+
+\item (3.0 pts) Utilizando as propriedades e algumas equivalências
+fornecidas na página seguinte, demonstre {\bf SE} as equivalências abaixo 
+se aplicam:
+
+\begin{enumerate}
+\setlength{\itemsep}{-2pt}
+
+\item $p \rightarrow q \Leftrightarrow p \vee q \rightarrow  q$ %% Ex 12 da pag 80
+
+%\item  $(p \rightarrow q) \vee (p \rightarrow r) \Leftrightarrow p  \rightarrow  (q \vee r) $ %% Ex 16 da pag 80
+
+%\item $P \uparrow Q \Leftrightarrow ((P\downarrow P)\downarrow (Q\downarrow Q)) \downarrow ((P\downarrow P)\downarrow(Q\downarrow Q))$
+
+%\item $p \wedge q \rightarrow r \Leftrightarrow p \rightarrow (q \rightarrow r) $  {\scriptsize (sim, é para demonstrar a regra EI)}
+%%(Regra da Exportação e Importação) %% Ex 14 da pag 80
+
+\item  $(p \rightarrow r) \wedge (q \rightarrow r) \Leftrightarrow (p \vee  q) \rightarrow r $ %% Ex 15 da pag 80
+
+%\item $(p \rightarrow r)  \vee (q \rightarrow s) \Leftrightarrow p \wedge q \rightarrow  r \vee s $  %% Ex 17 da pag 81
+
+%\item $P \vee Q \Leftrightarrow (P \rightarrow Q) \rightarrow P$ % Ex 9 pag 66
+
+\item $(p \rightarrow q) \rightarrow r \Leftrightarrow p \wedge \sim r \rightarrow \sim q$ % Ex 3(g) pag 64
+
+
+\end{enumerate}
+
+
+
+
+
+
+\end{enumerate}
+\newpage
+
+%Argumentos válidos fundamentais:
+%\begin{description}
+%\item[Adição (AD)] $P \vdash P \vee Q$ ou $P \vdash Q \vee P$
+%\item[Simplificação (SIMP)] $P \wedge Q \vdash P$ ou $P \wedge Q \vdash Q$
+%\item[Conjunção (CONJ)] $P, Q \vdash P \wedge Q$ ou $P, Q \vdash Q \wedge P$
+%\item[Absorção (ABS)] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+%\item[Modus Ponens (MP)] $P \rightarrow Q, P \vdash Q$
+%\item[Modus Tollens (MT)] $P \rightarrow Q, \sim Q \vdash \sim P$
+%\item[Silogismo Disjuntivo (SD)] $P \vee Q, \sim P \vdash Q$ ou $P \vee Q, \sim Q \vdash P$
+%\item[Silogismo Hipotético (SH)] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+%\item[Dilema Construtivo (DC)] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+%\item[Dilema Destrutivo (DD)] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+%\end{description}
+%\end{enumerate}
+
+\underline{Equivalências Notáveis}:
+\begin{description}
+\item[Idempotência (ID):] $p\Leftrightarrow p\wedge p$ ou $p\Leftrightarrow p\vee p$
+\item[Comutação (COM):] $p\wedge q\Leftrightarrow q\wedge p$ ou $p\vee q\Leftrightarrow q\vee p$
+\item[Associação (ASSOC):] $p\wedge(q\wedge r)\Leftrightarrow (p\wedge q)\wedge r$ ou $p\vee(q\vee r)\Leftrightarrow (p\vee q)\vee r$ 
+\item[Distribuição (DIST):] $p\wedge(q\vee r)\Leftrightarrow (p\wedge q)\vee (p \wedge r)$ ou $p\vee(q\wedge r)\Leftrightarrow (p\vee q)\wedge (p\vee r)$
+\item[Dupla Negação (DN):] $p\Leftrightarrow\sim\sim p$
+\item[De Morgan (DM):] $\sim(p \wedge q) \Leftrightarrow \sim p \vee\sim q$ ou $\sim(p \vee q) \Leftrightarrow \sim p \wedge\sim q$
+\item[Condicional (COND):] $p\rightarrow q \Leftrightarrow\sim p \vee q$
+
+\item[Bicondicional (BICOND):] $p\leftrightarrow q \Leftrightarrow (p\rightarrow q)\wedge(q\rightarrow p)$
+
+\item[Contraposição (CP):] $p\rightarrow q \Leftrightarrow \sim q\rightarrow\sim p$
+
+\item[Exportação-Importação (EI):] $p\wedge q\rightarrow r \Leftrightarrow p\rightarrow(q\rightarrow r)$
+
+\item[Tautologia:] $p\vee \sim p \Leftrightarrow  \blacksquare  $
+
+\item[Contradição:] $ p\wedge \sim p \Leftrightarrow \square $
+
+\item[Conectivos de Scheffer:] $p \uparrow q \Leftrightarrow \sim p \vee \sim q$ e $p \downarrow q \Leftrightarrow \sim p \wedge \sim q$ 
+
+\item[Ou-exclusivo (X-or):] $p \veebar q \Leftrightarrow (p \vee q) \wedge\sim (p \wedge q)$ Obs.: $\veebar = \oplus$
+
+\end{description}
+%\bibliographystyle{ieeetr} % ieeetr or acm or apalike or alpha or splncs
+%\bibliography{LMArefs.bib}
+
+\end{document}
