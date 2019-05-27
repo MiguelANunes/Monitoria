@@ -1,0 +1,254 @@
+\documentclass[12pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges,brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment,color, fancybox}  
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{changepage}
+
+
+\topmargin       0cm 
+\headheight      0pt 
+\headsep         0cm
+\textheight      24cm
+\textwidth       16.7cm
+\oddsidemargin   -2mm
+\evensidemargin  -2mm
+\pagestyle{empty}
+
+\begin{document}
+    
+    \begin{large}
+    
+        \begin{center}
+        
+            \shadowbox{
+                    \begin{minipage}[c]{12cm}
+                        \begin{center}
+                            \sf
+                            2ª Lista de Exercícios de Lógica Matemática - LMA\\
+                            Professores: Jeferson L. R. S. e Kariston P.  \\ 
+                            Monitor: Miguel A. Nunes \\
+                            Joinville, \today
+                        \end{center}
+                    \end{minipage}
+                } %% 
+                
+        \end{center}
+    
+    \end{large}
+    
+    \vskip 1cm
+    
+    % ** = Iniciação a Lógica Matemática, Edgar de Alencar Filho Edição de 2003
+    % Todas as questões vieram de provas montadas pelo professor Cláudio
+    
+    \begin{enumerate}
+        \item Prove por Demonstração Direta os seguintes argumentos.
+        
+        \begin{enumerate}
+
+            \item $\{r  \rightarrow t, t \rightarrow \sim s,  (r \rightarrow \sim s) \rightarrow q,  p  \} \vdash p \wedge q $  % **pagina 153 -- 1c
+            
+            \item $\{\sim p  \vee \sim s, q \rightarrow \sim r,  t \rightarrow  (r \wedge s), t\} \vdash \sim (p \vee q) $  % **pagina 153 -- 1g
+            
+            \item $\{q \rightarrow p,  t \vee s,  q \vee \sim s, \sim(p \vee r)  \} \vdash t $  % **pagina 153 -- 1k
+            
+            \item $\{ p \vee q \rightarrow r, s \rightarrow \sim r \wedge \sim t, s \vee u \} \vdash p \rightarrow u$  % **pagina 153 -- 1l
+            
+            \item $\{ p \rightarrow q, r \rightarrow t, s \rightarrow r, p \vee s \} \vdash \sim q \rightarrow t $  % **pagina 153 -- 1m
+            
+            \item $\{ p \vee \sim q, \sim p, \sim (p \wedge r) \rightarrow q \} \vdash r$  % **pagina 110 -- 1h
+            
+            \item $\{ \sim (p \vee q), \sim p \wedge \sim q \rightarrow r \wedge s, s \rightarrow r \} \vdash r$  % **pagina 111 -- 4b modificado
+            
+            \item $\{ p \vee q, q \rightarrow r, \sim r \vee s, \sim p \} \vdash s$  % **pagina 110 -- 2c
+            
+            \item $\{ p \rightarrow q,    p \vee (\sim \sim r \wedge \sim \sim  q), s \rightarrow \sim r, \sim (p \wedge q) \}$ {\bf $\vdash $} $\sim (s \wedge q)$  % **pagina 116 -- 11
+            
+            \item $\{ p \rightarrow q,    \sim r \rightarrow (s \rightarrow t),   r \vee (p \vee s),    \sim r \}$ {\bf $\vdash $} $q \vee t$  % **pagina 115 -- 9
+            
+            \item $\{ p \rightarrow q,    q \rightarrow r,    r \rightarrow s,    \sim s,    p \vee t \}$ {\bf $\vdash $} $t$  % **pagina 117 -- 13
+            
+            \item $\{ p \rightarrow q,    q \rightarrow r,    p \vee s,    s \rightarrow t,    \sim t \}$ {\bf $\vdash $} $r$  % **pagina 118 -- 16 convertendo as comparações em letras
+            
+            \item $\{ p \vee q,    q \rightarrow r,    p \rightarrow s,     \sim s  \}$ {\bf $\vdash $} $r \wedge (p \vee q)$  % **pagina 126 -- D
+
+            \item $\{ p \wedge q, p \rightarrow r,  r \wedge s \rightarrow \sim t,  q \rightarrow s   \}$ {\bf $\vdash $} $\sim t$  % **pagina 121--  letra m
+            
+            \item $\{ p \wedge \sim q, r \rightarrow q,  r \vee s,  p \vee s \rightarrow t   \}$ {\bf $\vdash $} $ t $  % **pagina 122--  letra e
+            
+        \end{enumerate}
+        
+        \item Prove por Demonstração Condicional os seguintes argumentos.
+        
+        \begin{enumerate}
+
+            \item $\{(p \vee \sim q), q,   r \rightarrow  \sim s, p \rightarrow (\sim s \rightarrow t) \} \vdash \sim t \rightarrow \sim r $  % **pagina 154 -- 3G
+            
+            \item $\{r \vee s,  \sim t \rightarrow  \sim p,  r \rightarrow \sim q \} \vdash p \wedge q \rightarrow (s \wedge t) $ % **pagina 153 -- 1I
+            
+            \item $\{ q \rightarrow p,   t \vee s,   q \vee\sim s \} \vdash \sim (p \vee r) \rightarrow t$ % **pagina 153 -- 1k
+
+            \item $\{(p \rightarrow q) \vee r,  (s \vee t) \rightarrow  \sim r,    s \vee (t \wedge u) \} \vdash p \rightarrow q $ % **pagina 154 -- 3E
+            
+            \item $\{(p \rightarrow q) \wedge \sim(r \wedge \sim s),  s \rightarrow   (t \vee u),  \sim u \} \vdash r \rightarrow t $ % **pagina 154 -- 3F
+            
+            \item $\{(p \vee \sim q), q,   r \rightarrow  \sim s, p \rightarrow (\sim s \rightarrow t) \} \vdash \sim t \rightarrow \sim r $ % **pagina 154 -- 3G
+             
+            \item $\{p \wedge q \rightarrow \sim r, r \vee (s \wedge t), p \leftrightarrow  q \} \vdash  p \rightarrow s $ % **pagina 134 -- 11
+            
+            \item $\{r \rightarrow t,  t \rightarrow  \sim s,    (r \rightarrow \sim s) \rightarrow q \} \vdash  p \rightarrow (p \wedge q) $ % **pagina 153 -- 1c
+            
+            \item $\{p \rightarrow q,    q \leftrightarrow  s,    t \vee (r \wedge \sim s) \} \vdash p \rightarrow t $ % **pagina 148 -- 5
+            
+            \item $\{ \sim r \vee \sim s, q \rightarrow s \} \vdash r \rightarrow \sim q$ % ** pagina 153 1a
+            
+            \item $\{ q \rightarrow p,   t \vee s,   q \vee\sim s \} \vdash \sim (p \vee r) \rightarrow t$ % **pagina 153 -- 1k
+            
+            \item $\{ p \vee q \rightarrow r, s \rightarrow \sim r \wedge \sim t, s \vee u \} \vdash p \rightarrow u$ % **pagina 153 -- 1l
+            
+            \item $\{ p \rightarrow q, r \rightarrow t, s \rightarrow r, p \vee s \}  \vdash  \sim q \rightarrow t $ % **pagina 153 -- 1m
+            
+            \item $\{r \rightarrow s, s \rightarrow q, r \vee (s \wedge p)\} \vdash \sim q \rightarrow p \wedge s $ % **pagina 153 - 1h
+            
+            \item $\{ \sim p, \sim r \rightarrow q, \sim s \rightarrow p\} \vdash \sim (r \wedge s) \rightarrow q$ % **pagina 153 - 1e
+
+        \end{enumerate}
+        
+        \item Prove por Demonstração Indireta os seguintes argumentos.
+        
+        \begin{enumerate}
+
+            \item $\{ \sim (p \rightarrow q) \vee ( s  \rightarrow  \sim r), q\vee s, p \rightarrow \sim s  \} \vdash  \sim r \vee \sim s $ % **pagina 155 6 D
+            
+            \item $\{\sim (p \rightarrow \sim q) \rightarrow ((r \leftrightarrow s) \vee t), p, q, \sim t, r \} \vdash s $ % **pagina 155 6 G MODIFICADA
+            
+            \item $\{(p \wedge q) \leftrightarrow \sim r,     \sim r \rightarrow \sim p,    \sim q \rightarrow \sim r   \} \vdash   q $  % **pagina 154 -- 4I 
+            
+            \item $\{(p \rightarrow q) \wedge r,   q \vee s \rightarrow t \wedge u,   v \rightarrow s,   v \vee p \} \vdash  t \vee x $  % **pagina 147 -- 3 convertendo as comparações em letras
+            
+            \item $\{ (p \rightarrow q) \vee (r \wedge s), \sim q \} \vdash p \rightarrow s$ % **pagina 155 - 6a
+            
+            \item $\{\sim p \rightarrow \sim q \vee r, s \vee (r \rightarrow t), p \rightarrow s, \sim s \} \vdash q \rightarrow t$  % **pagina 155 -- 6c
+            
+            \item $\{ \sim p \vee \sim q, r \vee s \rightarrow p, q \vee\sim s, \sim r \vdash \sim(r \vee s)$  % **pagina 154 -- 4I
+            
+            \item $\{ p \vee q \rightarrow r, s \rightarrow \sim r \wedge \sim t, s \vee u,   p   \} \vdash p \rightarrow u$  % **pagina 153 -- 1l  MODIFICADA
+            
+            \item $\{ p \rightarrow q, r \rightarrow t, s \rightarrow r, p \vee s, \sim q  \} \vdash  t $ % **pagina 153 -- 1m
+            
+            \item $\{ ( p \rightarrow q),  q \leftrightarrow s, t\vee (r \wedge \sim s) \} \vdash  p \rightarrow t $ % **pagina 155 6 B
+
+            \item $\{(p \rightarrow q) \vee r,    s \vee t \rightarrow \sim r,    s \vee (t \wedge u)  \} \vdash p \rightarrow q $ % **pagina 155 -- 4L
+
+            \item $ \{ \sim p \rightarrow \sim q, \sim p \vee r, r \rightarrow \sim s \} \vdash \sim q \vee \sim s $ % **pagina 154 4h
+            
+            \item $\{ p \rightarrow q \vee r, q \rightarrow \sim p, s \rightarrow \sim r \} \vdash \sim (p \wedge s) $ % **pagina 154 4d
+            
+            \item $\{ \sim (p \rightarrow \sim q) \rightarrow ((r \leftrightarrow s) \vee t), p, q, \sim t \} \vdash r \rightarrow s$ % **pagina 155 6g
+            
+            \item $\{ (\sim p \rightarrow q) \wedge (r \rightarrow s), p \leftrightarrow t \vee \sim s, r, \sim t \} \vdash q$ % **pagina 155 6e
+            
+        \end{enumerate}
+        
+        \item Encontre a Forma Normal Conjuntiva das seguintes proposições e então prove o argumento gerado usando o método pedido.
+        
+        \begin{adjustwidth}{1.25cm}{1cm}
+            Lembrando que uma formula na FNC é do tipo: $P_1 \wedge P_2 \wedge P_3 \wedge P_4 \wedge ... \wedge P_n$, onde cada $P_i$ é uma proposição simples ou composta.\\ 
+            Logo, é possível transformá-la em um  argumento do tipo\\ $P_1, P_2, P_3, ..., P_n \vdash Q$, onde $Q$ é uma conclusão qualquer que pode ser provada a partir das premissas dadas. %(Lembre que $P_n, P_m$ equivale à $P_n \wedge P_m$)
+        \end{adjustwidth}
+        
+        \begin{enumerate}
+            \item $(p \rightarrow q) \wedge (\sim p \wedge r)$ \\ Prove $q$ Usando Demonstração Direta
+            
+            \item $(\sim r \vee \sim q) \leftrightarrow p$ \\ Prove $p \wedge r$ Usando Demonstração por Absurdo
+            
+            \item $(\sim r \vee \sim q) \leftrightarrow p$ \\ Prove $r \rightarrow (p \vee q)$ Usando Demonstração Condicional
+
+        \end{enumerate}
+        
+    \end{enumerate}
+
+
+% ---------------------------------------------------------------
+
+
+\newpage
+
+    \underline{{\Large Equivalências Notáveis}}:
+    
+    \begin{description}
+        \setlength{\itemsep}{-1pt}
+        
+         \item[Identidade (IDENT):] $\begin{array}{l} P \vee \blacksquare \Leftrightarrow \blacksquare \\ P \vee \square \Leftrightarrow P \\ P \wedge \blacksquare \Leftrightarrow P \\ P \wedge \square \Leftrightarrow \square \end{array}$
+        
+        \item[Idempotência (ID):] $\begin{array}{l} P\Leftrightarrow P\wedge P \\ P\Leftrightarrow P\vee P\end{array}$
+        
+        \item[Comutação (COM):] $\begin{array}{l} P\wedge Q\Leftrightarrow Q\wedge P \\ P\vee Q\Leftrightarrow Q\vee P\end{array}$
+        
+        \item[Associação (ASSOC):] $\begin{array}{l}P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R\\ P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R \end{array}$ 
+        
+        \item[Distribuição (DIST):] $\begin{array}{l}P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)\\P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)\end{array}$
+        
+        \item[De Morgan (DM):] $\begin{array}{l}\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q\\\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q\end{array}$
+        
+        \item[Contradição:] $\begin{array}{l} P\wedge \sim P \Leftrightarrow \square \\ P \leftrightarrow \sim P \Leftrightarrow \square \\ \end{array}$
+        
+        \item[Tautologia:] $ \begin{array}{l} P\vee \sim P \Leftrightarrow \blacksquare \\ P \rightarrow P \Leftrightarrow \blacksquare \\ P \leftrightarrow P \Leftrightarrow \blacksquare \end{array}$
+        
+        \item [Absorção:] $\begin{array}{l}P \wedge (P \vee Q) \Leftrightarrow P\\P \vee (P \wedge Q) \Leftrightarrow P\end{array}$
+        
+        \item[Conectivos de Scheffer] $\begin{array}{l} P \uparrow Q \Leftrightarrow \sim P \vee \sim Q \\  P \downarrow Q \Leftrightarrow \sim P \wedge \sim Q \end{array}$
+        
+        \item[Dupla Negação (DN):] $P\Leftrightarrow  P$ 
+        
+        \item[Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+        
+        \item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+        
+        \item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+        
+        \item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+        
+        \item[Ou-Exclusivo (X-or)] $P \veebar Q \Leftrightarrow (P \vee Q) \wedge \sim (P \wedge Q)$
+        
+    \end{description}
+    
+    
+    \newpage
+
+    \underline{{\Large Regras de Inferência Válidas (Teoremas)}}:
+
+    \begin{description}
+
+        \setlength{\itemsep}{-1pt}
+        \item[Adição (AD):] $\begin{array}{l} P \vdash P \vee Q \\ P \vdash Q \vee P\end{array}$
+        
+        \item[Simplificação (SIMP):] $\begin{array}{l} P \wedge Q \vdash P\\P \wedge Q \vdash Q \end{array}$
+        
+        \item[Conjunção (CONJ)] $\begin{array}{l}P, Q \vdash P \wedge Q\\P, Q \vdash Q \wedge P\end{array}$
+        
+        \item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+        
+        \item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+        
+        \item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+        
+        \item[Silogismo Disjuntivo (SD):] $\begin{array}{l}P \vee Q, \sim P \vdash Q\\P \vee Q, \sim Q \vdash P\end{array}$
+       
+        \item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+       
+        \item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+       
+        \item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+
+ \end{description}
+
+\end{document}
