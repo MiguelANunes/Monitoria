@@ -1,0 +1,1184 @@
+\documentclass[12pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges,brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment,color, fancybox}  
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{changepage}
+\usepackage{booktabs}
+\newcounter{numero_coluna}
+\newcommand\rowstyle{\stepcounter{numero_coluna}\arabic{numero_coluna}}
+\newcommand \rownumber{(\rowstyle) }
+
+\topmargin       0cm 
+\headheight      0pt 
+\headsep         0cm
+\textheight      24cm
+\textwidth       16.7cm
+\oddsidemargin   -2mm
+\evensidemargin  -2mm
+\pagestyle{empty}
+
+\begin{document}
+
+    \begin{large}
+    
+        \begin{center}
+        
+            \shadowbox{
+                    \begin{minipage}[c]{12cm}
+                        \begin{center}
+                            \sf
+                            $2^{\underline{a}}$ Lista de Exercícios de Lógica Matemática - LMA\\
+                            \textbf{Gabarito} \\
+                            Professores: Jeferson L. r. s. e Kariston p.  \\ 
+                            Monitor: Miguel A. Nunes \\
+                            Joinville, \today
+                        \end{center}
+                    \end{minipage}
+                } %% 
+                
+        \end{center}
+    
+    \end{large}
+    
+    \vskip 1cm
+    
+    \begin{enumerate}
+        \item Na prova por demonstração direta, basta operar os argumentos para chegar na conclusão.
+        
+        \begin{enumerate}
+        \setlength \itemsep{1em}
+        
+            \item $\vdash p \wedge q$   
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $r \rightarrow t$ \\
+                    $t \rightarrow \sim s$ \\
+                    $(r \rightarrow \sim s) \rightarrow q$ \\
+                    $p$ \\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \rightarrow \sim s$ & \textbf{SH 1,2}\\
+                    $q$ & \textbf{MP 5,3}\\
+                    $p \wedge q$ & \textbf{CONJ 4,6}\\
+                \end{tabular}
+            
+            \item $\vdash \sim (p \vee q)$ 
+            \phantom{\setcounter{numero_coluna}{0}} % gambiarra para esconder o contador
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $\sim p \vee \sim s$ \\
+                    $q \rightarrow \sim r$ \\
+                    $t \rightarrow (r \wedge s)$\\
+                    $t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \wedge s $ & \textbf{MP 1,4} \\
+                    $r$ & \textbf{SIMP 5} \\
+                    $\sim q$ & \textbf{MT 6,2} \\
+                    $s$ & \textbf{SIMP 5} \\
+                    $\sim p$ & \textbf{SD 8,1} \\
+                    $\sim p \wedge \sim q$ & \textbf{CONJ 7,9} \\
+                    $\sim (p \vee q)$ & \textbf{DM 10}
+                \end{tabular}
+                
+            \item $\vdash t$
+            \phantom{\setcounter{numero_coluna}{0}} % gambiarra para esconder o contador
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $q \rightarrow p$\\
+                    $t \vee s$\\
+                    $q \vee \sim s$\\
+                    $\sim (p \vee r)$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \wedge \sim r$ & \textbf{DM 4}\\
+                    $\sim p$ & \textbf{SIMP 5}\\
+                    $\sim q$ & \textbf{MT 6,1} \\
+                    $\sim s$ & \textbf{SD 7,3} \\
+                    $t$ & \textbf{SD 8,2}\\
+                \end{tabular}
+                
+            \item $\vdash p \rightarrow u$
+            \phantom{\setcounter{numero_coluna}{0}} % gambiarra para esconder o contador
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \vee q \rightarrow r$\\
+                    $s \rightarrow \sim r \wedge \sim t$\\
+                    $s \vee u$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $s \rightarrow \sim (r \vee t)$ & \textbf{DM 2} \\
+                    $\sim s \rightarrow u$ & \textbf{COND 3}\\
+                    $\sim (p \vee q) \vee r$ & \textbf{COND 1} \\
+                    $\sim (p \vee q) \vee (r \vee t)$ & \textbf{AD 6}\\
+                    $(\sim p \wedge \sim q) \vee (r \vee t)$ & \textbf{DM 7} \\
+                    $(\sim p \vee (r \vee t)) \wedge (\sim q \vee (r \vee t))$ & \textbf{DIST 8}\\
+                    $\sim p \vee (r \vee t)$ & \textbf{SIMP 9}\\
+                    $p \rightarrow r \vee t$ & \textbf{COND 10}\\
+                    $\sim(\sim (r \vee t)) \rightarrow \sim s$ & \textbf{CP 4} \\
+                    $(r \vee t) \rightarrow \sim s$ & \textbf{DN 12}\\
+                    $p \rightarrow \sim s$ & \textbf{SH 11,13}\\
+                    $p \rightarrow u$ & \textbf{SH 14,5}\\
+                \end{tabular}
+                
+            \item $\vdash \sim q \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} % gambiarra para esconder o contador
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \rightarrow q$\\
+                    $r \rightarrow t$ \\
+                    $s \rightarrow r$ \\
+                    $p \vee s$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \rightarrow s$ & \textbf{COND 4} \\
+                    $\sim p \rightarrow r$ & \textbf{SH 5,3}\\
+                    $\sim p \rightarrow t$ & \textbf{SH 6,2}\\
+                    $\sim q \rightarrow \sim p$ & \textbf{CP 1}\\
+                    $\sim q \rightarrow t$ & \textbf{SH 8,7}
+                \end{tabular}   
+                
+                
+            \item $\vdash r$
+            \phantom{\setcounter{numero_coluna}{0}}
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \vee \sim q$\\
+                    $\sim p$\\
+                    $\sim(p \wedge r) \rightarrow q$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim q$ & \textbf{SD 2,1}\\
+                    $\sim \sim (p \wedge r)$ & \textbf{MT 4,3}\\
+                    $p \wedge r$ & \textbf{DN 5}\\
+                    $r$ & \textbf{SIMP 6}\\
+                \end{tabular}
+            
+            \item $\vdash r$
+            \phantom{\setcounter{numero_coluna}{0}}
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $\sim (p \vee q)$ \\
+                    $\sim p \wedge \sim q \rightarrow r \wedge s$ \\
+                    $s \rightarrow r$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \wedge \sim q$ & \textbf{DM 1}\\
+                    $r \wedge s$ & \textbf{MP 5,2} \\
+                    $r$ & \textbf{SIMP 5}\\
+                \end{tabular}
+            
+            \item $\vdash s$
+            \phantom{\setcounter{numero_coluna}{0}}
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \vee q$ \\
+                    $q \rightarrow r$ \\
+                    $\sim r \vee s$ \\
+                    $\sim p$ \\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $q$ & \textbf{SD 4,1} \\
+                    $r$ & \textbf{MP 5,2} \\
+                    $s$ & \textbf{SD 6,3} \\
+                \end{tabular}
+
+            \item $\vdash \sim(s \wedge q)$
+            \phantom{\setcounter{numero_coluna}{0}} 
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \rightarrow q$ \\
+                    $p \vee (\sim \sim r \wedge \sim \sim q)$ \\
+                    $s \rightarrow \sim r$ \\
+                    $\sim (p \wedge q)$ \\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \rightarrow (p \wedge q)$ & \textbf{ABS 1} \\
+                    $\sim p$ & \textbf{MT 4,3} \\
+                    $\sim \sim r \wedge \sim \sim q$ & \textbf{SD 6,2} \\
+                    $\sim \sim r$ & \textbf{SIMP 7} \\
+                    $\sim s$ & \textbf{MT 8,3} \\
+                    $\sim s \vee \sim q$ & \textbf{AD 9} \\
+                    $\sim (s \wedge q)$ & \textbf{DM 10} \\
+                \end{tabular}
+            
+            \item $\vdash q \vee t$
+            \phantom{\setcounter{numero_coluna}{0}} % gambiarra para esconder o contador
+            
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \rightarrow q$ \\
+                    $\sim r \rightarrow (s \rightarrow t)$ \\
+                    $r \vee (p \vee s)$ \\
+                    $\sim r$ \\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $s \rightarrow t$ & \textbf{MP 4,2}\\
+                    $p \vee s$ & \textbf{SD 4,3}\\
+                    $\sim p \rightarrow s$ & \textbf{COND 6}\\
+                    $\sim p \rightarrow t$ & \textbf{SH 7,5}\\
+                    $\sim q \rightarrow \sim p$ & \textbf{CP 1}\\
+                    $\sim q \rightarrow t$ & \textbf{SH 9,8}\\
+                    $\sim \sim q \vee t$ & \textbf{COND 10}\\
+                    $q \vee t$ & \textbf{DN 11}\\
+                \end{tabular}
+                
+            \newpage
+
+            \item $\vdash t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \rightarrow q$\\
+                    $q \rightarrow r$\\
+                    $r \rightarrow s$\\
+                    $\sim s$\\
+                    $p \vee t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim r$ & \textbf{MT 4,3}\\
+                    $\sim q$ & \textbf{MT 6,2}\\
+                    $\sim p$ & \textbf{MT 7,1}\\
+                    $t$ & \textbf{SD 8,5}\\
+                \end{tabular}
+            
+            \item $\vdash r$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \rightarrow q$\\
+                    $q \rightarrow r$\\
+                    $p \vee s$\\
+                    $s \rightarrow t$\\
+                    $\sim t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \rightarrow s$ & \textbf{COND 3}\\
+                    $\sim s$ & \textbf{MT 5,4}\\
+                    $\sim \sim p$ & \textbf{MT 7,6}\\
+                    $p$ & \textbf{DN 8}\\
+                    $q$ & \textbf{MP 9,1}\\
+                    $r$ & \textbf{MP 10,2}\\
+                \end{tabular}
+            
+            \item $\vdash r \wedge (p \vee q)$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \vee q$\\
+                    $q \rightarrow r$\\
+                    $p \rightarrow s$\\
+                    $\sim s$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p$ & \textbf{MT 4,3}\\
+                    $q$ & \textbf{SD 5,1}\\
+                    $r$ & \textbf{MP 6,2}\\
+                    $r \wedge (p \vee q)$ & \textbf{CONJ 7,1}\\
+                \end{tabular}
+            
+            \item $\vdash \sim t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \wedge q$\\
+                    $p \rightarrow r$\\
+                    $r \wedge (s \rightarrow \sim t)$\\
+                    $q \rightarrow s$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $s \rightarrow \sim t$ & \textbf{SIMP 3}\\
+                    $q$ & \textbf{SIMP 1}\\
+                    $s$ & \textbf{MP 6,4}\\
+                    $\sim t$ & \textbf{MP 7,3}\\ 
+                \end{tabular}
+            
+            \item $\vdash t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}l}
+                    $p \wedge \sim q$\\
+                    $r \rightarrow q$\\
+                    $r \vee s$\\
+                    $p \vee s \rightarrow t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.35\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim q$ & \textbf{SIMP 1}\\
+                    $\sim r$ & \textbf{MT 2,5}\\
+                    $s$ & \textbf{SD 6,3}\\
+                    $s \vee p$ & \textbf{AD 7}\\
+                    $p \vee s$ & \textbf{ASSOC 8}\\
+                    $t$ & \textbf{MP 9,4}\\
+                \end{tabular}
+            
+        \end{enumerate}
+        
+        \item Na prova por demonstração condicional, o antecedente da conclusão (relembrando que para fazer uma prova por demonstração condicional a conclusão deve, obrigatoriamente, ser uma condicional) é tomado como argumento, e tenta-se provar o consequente por demonstração direta.
+        
+        \begin{enumerate}
+        \setlength \itemsep{1em}
+        
+            \item $\vdash \sim t \rightarrow \sim r$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \vee \sim q$ &\\
+                    $q$ &\\
+                    $r \rightarrow \sim s$ &\\
+                    $p \rightarrow (\sim s \rightarrow t)$ &\\
+                    $\sim t$ & \textbf{por Dem. C} $\vdash \sim r$
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p$ & \textbf{SD 2,1}\\
+                    $\sim s \rightarrow t$ & \textbf{MP 6,4}\\
+                    $\sim \sim s$ & \textbf{MT 5,7}\\
+                    $s$ & \textbf{DN 8}\\
+                    $\sim r$ & \textbf{MT 9,3}\\
+                \end{tabular}
+                
+            \item $\vdash (p \wedge q) \rightarrow (s \wedge t)$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \vee s$ &\\
+                    $\sim t \rightarrow \sim p$ &\\
+                    $r \rightarrow \sim q$ &\\
+                    $(p \wedge q)$ & \textbf{por Dem. C} $\vdash (s \wedge t)$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $q$ & \textbf{SIMP 4}\\
+                    $\sim r$ & \textbf{MT 5,3}\\
+                    $s$ & \textbf{SD 6,1}\\
+                    $p$ & \textbf{SIMP 1}\\
+                    $\sim \sim t$ & \textbf{MT 2,8}\\
+                    $t$ & \textbf{DN 9}\\
+                    $s \wedge t$ & \textbf{CONJ 7,10}\\
+                \end{tabular}
+                
+                \newpage
+                
+            \item $\vdash \sim (p \vee r) \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $q \rightarrow p$ & \\
+                    $t \vee s$ & \\
+                    $q \vee \sim s$ & \\
+                    $\sim (p \vee r)$ & \textbf{por Dem. C} $t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \wedge \sim r$ & \textbf{DM 4}\\
+                    $\sim p$ & \textbf{SIMP 5}\\
+                    $\sim q$ & \textbf{MT 1,6}\\
+                    $\sim s$ & \textbf{SD 7,3}\\
+                    $t$ & \textbf{SD 8,2}\\
+                \end{tabular}
+                
+            \item $\vdash p \rightarrow q$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(p \rightarrow q) \vee r$ &\\
+                    $(s \vee t) \rightarrow \sim r$ &\\
+                    $s \vee (t \wedge u)$ &\\
+                    $p$ & \textbf{por Dem. C} $\vdash q$
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(s \vee t) \wedge (s \vee u)$ & \textbf{DIST 3}\\
+                    $s \vee t$ & \textbf{SIMP 5}\\
+                    $\sim r$ & \textbf{MP 6,2}\\
+                    $p \rightarrow q$ & \textbf{SD 7,1}\\
+                    $q$ & \textbf{MP 4,8}\\
+                \end{tabular}
+                
+            \item $\vdash r \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(p \rightarrow q) \wedge \sim(r \wedge \sim s)$ &\\
+                    $s \rightarrow (t \vee u)$ &\\
+                    $\sim u$ &\\
+                    $r$ & \textbf{por Dem. C} $\vdash t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.5\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim (r \wedge \sim s)$ & \textbf{SIMP 1}\\
+                    $\sim r \vee \sim \sim s$ & \textbf{DM 5}\\
+                    $\sim r \vee s$ & \textbf{DN 6}\\
+                    $s$ & \textbf{SD 4,7}\\
+                    $t \vee u$ & \textbf{MP 8,2}\\
+                    $t$ & \textbf{SD 9,3}\\
+                \end{tabular}
+            
+            \item $\vdash \sim t \rightarrow \sim r$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \vee \sim q$ &\\
+                    $q$ &\\
+                    $r \rightarrow \sim s$ &\\
+                    $p \rightarrow (\sim s \rightarrow t)$ &\\
+                    $\sim t$ & \textbf{por Dem. C} $\vdash \sim r$
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p$ & \textbf{SD 2,1}\\
+                    $\sim s \rightarrow t$ & \textbf{MP 6,4}\\
+                    $r \rightarrow t$ & \textbf{SH 3,7}\\
+                    $\sim r$ & \textbf{MT 8,5}\\
+                \end{tabular}
+            
+            \item $\vdash p \rightarrow s$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \wedge q \rightarrow \sim r$ &\\
+                    $r \vee (s \wedge t)$ &\\
+                    $p \leftrightarrow q$ &\\
+                    $p$ & \textbf{por Dem. C} $\vdash s$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(p \rightarrow q) \wedge (q \rightarrow p)$ & \textbf{BICOND 3}\\
+                    $p \rightarrow q$ & \textbf{SIMP 5}\\
+                    $q$ & \textbf{MP 6,4}\\
+                    $p \wedge q$ & \textbf{CONJ 4,7}\\
+                    $\sim r $ & \textbf{MP 8,1}\\
+                    $s \wedge t$ & \textbf{SD 9,2}\\
+                    $s$ & \textbf{SIMP 10}\\
+                \end{tabular}
+            
+            \item $\vdash p \rightarrow (p \wedge q)$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \rightarrow t$ &\\
+                    $t \rightarrow \sim s$ &\\
+                    $(r \rightarrow \sim s) \rightarrow q$ &\\
+                    $p$ & \textbf{por Dem. C} $\vdash p \wedge q$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \rightarrow \sim t$ & \textbf{SH 1,2}\\
+                    $q$ & \textbf{MP 5,3}\\
+                    $p \wedge q$ & \textbf{CONJ 4,6}\\
+                \end{tabular}
+            
+            \item $\vdash p \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \rightarrow q$ &\\
+                    $q \leftrightarrow s$ &\\
+                    $t \vee (r \wedge \sim s)$ &\\
+                    $p$ & \textbf{por Dem. C} $\vdash t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(q \rightarrow s) \wedge (s \rightarrow q)$ & \textbf{BICOND 2}\\
+                    $q$ & \textbf{MP 1,4}\\
+                    $q \rightarrow s$ & \textbf{SIMP 5}\\
+                    $s$ & \textbf{MP 6,7}\\
+                    $s \vee \sim r$ & \textbf{AD 8}\\
+                    $\sim (\sim s \wedge \sim \sim r)$ & \textbf{DM 9}\\
+                    $\sim (\sim s \wedge r)$ & \textbf{DN 10}\\
+                    $\sim (r \wedge \sim s)$ & \textbf{ASSOC 11}\\
+                    $t$ & \textbf{SD 12,3}\\
+                \end{tabular}
+            
+            \item $\vdash r \rightarrow \sim q$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim r \vee \sim s$ &\\
+                    $q \rightarrow s$&\\
+                    $r$ & \textbf{por Dem. C} $\vdash \sim q$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim s$ & \textbf{SD 3, 1}\\
+                    $\sim q$ & \textbf{MT 4, 2}\\
+                \end{tabular}
+            
+            \item $\vdash \sim (p \vee r) \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $q \rightarrow p$ &\\
+                    $t \vee s$ &\\
+                    $q \vee \sim s$ &\\
+                    $\sim (p \vee r)$ & \textbf{por Dem. C} $\vdash t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \wedge \sim r$ & \textbf{DM 4}\\
+                    $p$ & \textbf{SIMP 5}\\
+                    $\sim q$ & \textbf{MT 6,1}\\
+                    $\sim s$ & \textbf{SD 7,3} \\
+                    $t$ & \textbf{SD 8,2}\\
+                \end{tabular}
+            
+            \item $\vdash p \rightarrow u$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \vee u \rightarrow r$ &\\
+                    $s \rightarrow \sim r \wedge \sim t$ &\\
+                    $s \vee u$ &\\
+                    $p$ & \textbf{por Dem. C} $ \vdash u$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \vee q$ & \textbf{AD 4}\\
+                    $r$ & \textbf{MP 1,5}\\
+                    $r \vee t$ & \textbf{AD 6}\\
+                    $\sim (\sim r \wedge \sim t)$ & \textbf{DM 7}\\
+                    $\sim s$ & \textbf{MT 8,2}\\
+                    $u$ & \textbf{SD 3,9}\\
+                \end{tabular}
+            
+            \item $ \vdash \sim q \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \rightarrow q$ &\\
+                    $r \rightarrow t$ &\\
+                    $s \rightarrow r$ &\\
+                    $p \vee s$ & \\
+                    $\sim q$ & \textbf{por Dem. C} $\vdash t$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $q \vee r$ & \textbf{DC 1,3,4}\\
+                    $r$ & \textbf{SD 5,6}\\
+                    $t$ & \textbf{MP 7,2}\\
+                \end{tabular}
+            
+            \item $\vdash \sim q \rightarrow p \wedge s$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \rightarrow s$ &\\
+                    $s \rightarrow q$ &\\
+                    $r \vee (s \wedge p)$ &\\
+                    $\sim q$ & \textbf{por Dem. C} $\vdash p \wedge s$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \rightarrow q$ & \textbf{SH 1,2}\\
+                    $\sim r$ & \textbf{MT 4,5}\\
+                    $s \wedge p$ & \textbf{SD 6,3}\\
+                    $p \wedge s$ & \textbf{ASSOC 7}\\
+                \end{tabular}
+            
+            \newpage
+            
+            \item $\vdash \sim (r \wedge s) \rightarrow q$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p$ &\\
+                    $\sim r \rightarrow q$ &\\
+                    $\sim s \rightarrow p$ &\\
+                    $\sim (r \wedge s)$ & \textbf{por Dem. C} $\vdash q$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim r \vee \sim s$ & \textbf{DM 4}\\
+                    $\sim \sim s$ & \textbf{MT 1,3}\\
+                    $s$ & \textbf{DN 6}\\
+                    $\sim r$ & \textbf{SD 5,7}\\
+                    $q$ & \textbf{MP 2,8}\\
+                \end{tabular}
+            
+        \end{enumerate}
+        
+        \item Na prova por demonstração indireta, assume-se a negação da conclusão como um argumento, e tenta-se provar uma contradição.
+        
+        \begin{enumerate}
+        \setlength \itemsep{1em}
+            
+            \item $\vdash \sim r \vee \sim s$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim (p \rightarrow q) \vee (s \rightarrow \sim r)$ &\\
+                    $q \vee s$ &\\
+                    $p \rightarrow \sim s$ &\\
+                    $\sim (\sim r \vee \sim s)$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.55\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim \sim r \wedge \sim \sim s$ & \textbf{DM 4}\\
+                    $r \wedge s$ & \textbf{DN 5}\\
+                    $s \vee q$ & \textbf{ASSOC 2}\\
+                    $\sim s \rightarrow q$ & \textbf{COND 7}\\
+                    $p \rightarrow q$ & \textbf{SH 3,8}\\
+                    $s \rightarrow \sim r$ & \textbf{SD 1,9}\\
+                    $s$ & \textbf{SIMP 6}\\
+                    $\sim r$ & \textbf{MP 10,11}\\
+                    $r$ & \textbf{SIMP 6}\\
+                    $r \wedge \sim r$ & \textbf{CONJ 12, 13}\\
+                    $\square$ & \textbf{Contradição 14}\\
+                \end{tabular}
+            
+            \newpage
+            
+            \item $\vdash s$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim (p \rightarrow \sim q) \rightarrow ((r \leftrightarrow s) \vee t)$ &\\
+                    $p$ &\\
+                    $q$ &\\
+                    $\sim t$ &\\
+                    $r$ &\\
+                    $\sim s$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.62\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \wedge q$ & \textbf{CONJ 2,3}\\
+                    $\sim (\sim p \vee \sim q)$ & \textbf{DM 7}\\
+                    $\sim (p \rightarrow \sim q)$ & \textbf{COND 8}\\
+                    $(r \leftrightarrow s) \vee t$ & \textbf{MP 9,1}\\
+                    $r \leftrightarrow s$ & \textbf{SD 4,10}\\
+                    $(r \rightarrow s) \wedge (s \rightarrow r)$ & \textbf{BICOND 11}\\
+                    $r \rightarrow s$ & \textbf{SIMP 12}\\
+                    $\sim r$ & \textbf{MT 6,13}\\
+                    $r \wedge \sim r$ & \textbf{CONJ 5,14}\\
+                    $\square$ & \textbf{Contradição 16}\\
+                \end{tabular}
+            
+            \item $\vdash q$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(p \wedge q) \leftrightarrow \sim r$ &\\
+                    $\sim r \rightarrow \sim p$ &\\
+                    $\sim q\rightarrow \sim r$ &\\
+                    $\sim q$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.55\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim r$ & \textbf{MP 4,3}\\
+                    $\sim p$ & \textbf{MP 5,2}\\
+                    $((p \wedge q) \rightarrow \sim r) \wedge (\sim r \rightarrow (p \wedge q))$ & \textbf{BICOND 1}\\
+                    $\sim r \rightarrow (p \wedge q)$ & \textbf{SIMP 7}\\
+                    $p \wedge q$ & \textbf{MP 5,8}\\
+                    $p$ & \textbf{SIMP 9}\\
+                    $p \wedge \sim p$ & \textbf{CONJ 10,6}\\
+                    $\square$ & \textbf{Contradição 11}\\
+                \end{tabular}
+            
+            \newpage 
+            
+            \item $\vdash t \vee x$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(p \rightarrow q) \wedge r$ &\\
+                    $q \vee s \rightarrow t \wedge u$ &\\
+                    $v \rightarrow s$ &\\
+                    $v \vee p$ & \\
+                    $\sim (t \vee x)$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \rightarrow q$ & \textbf{SIMP 1}\\
+                    $q \vee s$ &\textbf{DC 6,3,4}\\
+                    $t \wedge u$ & \textbf{MP 7,2} \\
+                    $t$ & \textbf{SIMP 8}\\
+                    $\sim t \wedge \sim x$ & \textbf{DM 5}\\
+                    $\sim t$ & \textbf{SIMP 10}\\
+                    $t \wedge \sim t$ &\textbf{CONJ 11,9}\\
+                    $\square$ & \textbf{Contradição 12}\\
+                \end{tabular}
+            
+            \item $\vdash p \rightarrow s$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(p \rightarrow q) \vee (r \wedge s)$ &\\
+                    $\sim q$ &\\
+                    $\sim (p \rightarrow s)$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.5\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim (\sim p \vee s)$ & \textbf{COND 3}\\
+                    $\sim \sim p \wedge \sim s$ & \textbf{DM 4}\\
+                    $p \wedge \sim s$ & \textbf{DN 5}\\
+                    $\sim s$ & \textbf{SIMP 6}\\
+                    $p$ & \textbf{SIMP 6}\\
+                    $p \wedge \sim q$ & \textbf{CONJ 8,2}\\
+                    $\sim (\sim p \vee q)$ & \textbf{DM 9}\\
+                    $\sim (p \rightarrow q)$ & \textbf{COND 10}\\
+                    $r \wedge s$ & \textbf{SD 11,1}\\
+                    $s$ & \textbf{SIMP 12}\\
+                    $s \wedge \sim s$ & \textbf{CONJ 13,7}\\
+                    $\square$ & \textbf{Contradição 14}\\
+                \end{tabular}
+            
+            \item $\vdash q \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \rightarrow \sim q \vee r$ &\\
+                    $s \vee (r \rightarrow t)$ &\\
+                    $p \rightarrow s$ &\\
+                    $\sim s$ &\\
+                    $\sim (q \rightarrow t)$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p$ & \textbf{MT 4,3}\\
+                    $\sim q \vee r$ & \textbf{MP 6,1}\\
+                    $q \rightarrow r$ & \textbf{COND 7}\\
+                    $r \rightarrow t$ & \textbf{SD 4,2}\\
+                    $q \rightarrow t$ & \textbf{SH 8,9}\\
+                    $(q \rightarrow t) \wedge \sim (q \rightarrow t)$ & \textbf{CONJ 10,5}\\
+                    $\square$ & \textbf{Contradição 12}\\
+                \end{tabular}
+                
+            \item $\vdash \sim (r \vee s)$
+                \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \vee \sim q$ &\\
+                    $r \vee s \rightarrow p$ &\\
+                    $q \vee \sim s$ &\\
+                    $\sim r$ &\\
+                    $\sim (\sim (r \vee s))$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \vee s$ & \textbf{DN 5}\\
+                    $p$ & \textbf{MP 6,2}\\
+                    $\sim q$ & \textbf{SD 7,1}\\
+                    $\sim s$ & \textbf{SD 8,3}\\
+                    $r$ & \textbf{SD 9,6}\\
+                    $r \wedge \sim r$ & \textbf{CONJ 10,4}\\
+                    $\square$ & \textbf{Contradição 11}\\
+                \end{tabular}
+            
+            \item $\vdash p \rightarrow u$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \vee q \rightarrow r$ &\\
+                    $s \rightarrow \sim r \wedge \sim t$ &\\
+                    $s \vee u$ &\\
+                    $p$ &\\
+                    $\sim (p \rightarrow u)$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \vee q$ & \textbf{AD 4}\\
+                    $r$ & \textbf{MP 6,1}\\
+                    $\sim (\sim p \vee u)$ & \textbf{COND 5}\\
+                    $\sim \sim p \wedge \sim u$ & \textbf{DM 8}\\
+                    $\sim u$ & \textbf{SIMP 9}\\
+                    $s$ & \textbf{SD 10,3}\\
+                    $\sim r \wedge \sim t$ & \textbf{MP 11,2}\\
+                    $\sim r$ & \textbf{SIMP 12}\\
+                    $\sim r \wedge r$ & \textbf{CONJ 13,7}\\
+                    $\square$ & \textbf{Contradição 14}\\
+                \end{tabular}
+                
+            \item $\vdash t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \rightarrow q$ &\\
+                    $r \rightarrow t$&\\
+                    $s \rightarrow r$&\\
+                    $p \vee s$ &\\
+                    $\sim q$&\\
+                    $\sim t$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim r$ & \textbf{MT 2,6}\\
+                    $\sim s$ & \textbf{MT 7,3}\\
+                    $p$ & \textbf{SD 8,4}\\
+                    $q$ & \textbf{MP 9,1}\\
+                    $q \wedge \sim q$ & \textbf{CONJ 10,5}\\
+                    $\square$ & \textbf{Contradição 11}\\
+                \end{tabular}
+            
+            \item $p \rightarrow t$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \rightarrow q$&\\
+                    $q \leftrightarrow s$&\\
+                    $t \vee (r \wedge \sim s)$&\\
+                    $\sim (p \rightarrow t$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim (\sim p \vee t)$ & \textbf{COND 4}\\
+                    $\sim \sim p \wedge \sim t$ & \textbf{DM 5}\\
+                    $\sim t$ & \textbf{SIMP 6}\\
+                    $r \wedge \sim s$ & \textbf{SD 7,3}\\
+                    $\sim s$ & \textbf{SIMP 8}\\
+                    $(q \rightarrow s) \wedge (s \rightarrow q)$ & \textbf{BICOND 2}\\
+                    $q \rightarrow s$ & \textbf{SIMP 10}\\
+                    $\sim q$ & \textbf{MT 9,11}\\
+                    $\sim p$ & \textbf{MT 12,1}\\
+                    $\sim \sim p$ & \textbf{SIMP 6}\\
+                    $p$ & \textbf{DN 14}\\
+                    $p \wedge \sim p$ & \textbf{CONJ 15,13}\\
+                    $\square$ & \textbf{Contradição 16}\\
+                \end{tabular}
+                
+            \item $p \rightarrow q$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(p \rightarrow q) \vee r$ &\\
+                    $s \vee t \rightarrow \sim r$&\\
+                    $s \vee (t \wedge u)$ &\\
+                    $\sim (p \rightarrow q)$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r$ & \textbf{SD 4,1}\\
+                    $s \vee t$ & \textbf{SD 2,5}\\
+                    $\sim r$ & \textbf{MP 6,2}\\
+                    $r \wedge \sim r$ & \textbf{CONJ 5,7}\\
+                    $\square$ & \textbf{Contradição 8}\\
+                \end{tabular}
+            
+            \item $\sim q \vee \sim s$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim p \rightarrow \sim q$ &\\
+                    $\sim p \vee r$ &\\
+                    $r \rightarrow \sim s$ &\\
+                    $\sim (\sim q \vee \sim s)$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim \sim q \wedge \sim \sim s$ & \textbf{DM 4}\\
+                    $q \wedge s$ & \textbf{DN 5}\\
+                    $q$ & \textbf{SIMP 6}\\
+                    $\sim \sim p$ & \textbf{MT 7,1}\\
+                    $p$ & \textbf{DN 8}\\
+                    $r$ & \textbf{SD 9,2}\\
+                    $\sim s$ & \textbf{MP 10,3}\\
+                    $s$ & \textbf{SIMP 6}\\
+                    $s \wedge \sim s$ & \textbf{CONJ 12,11}\\
+                    $\square$ & \textbf{Contradição 13}\\
+                \end{tabular}
+            
+            \item $\vdash \sim(p \wedge s)$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \rightarrow q \vee r$ &\\
+                    $q \rightarrow \sim p$&\\
+                    $s \rightarrow \sim r$&\\
+                    $\sim (\sim (p \wedge s))$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.45\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \wedge s$ & \textbf{DN 4}\\
+                    $p$ & \textbf{SIMP 5}\\
+                    $q \vee r$ & \textbf{MP 6,1}\\
+                    $\sim q$ & \textbf{MT 6,2}\\
+                    $s$ & \textbf{SIMP 5}\\
+                    $\sim r$ & \textbf{MP 9,3}\\
+                    $q$ & \textbf{SD 7,10}\\
+                    $q \wedge \sim q$ & \textbf{CONJ 11,8}\\
+                    $\square$ & \textbf{Contradição 12}\\
+                \end{tabular}
+            
+            \item $r \rightarrow s$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $\sim (p \rightarrow \sim q) \rightarrow ((r \leftrightarrow s) \vee t)$ &\\
+                    $p$ &\\
+                    $q$ &\\
+                    $\sim t$ &\\
+                    $\sim(r \rightarrow s)$ & \textbf{por Dem. Ind} $ \vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.6\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $p \wedge q$ & \textbf{CONJ 2,3}\\
+                    $\sim (\sim p \vee q)$ & \textbf{DM 6}\\
+                    $\sim (p \rightarrow \sim q)$ & \textbf{COND 7}\\
+                    $(r \leftrightarrow s) \vee t$ & \textbf{MP 8,1}\\
+                    $r \leftrightarrow s$ & \textbf{SD 9,4}\\
+                    $(r \rightarrow s) \wedge (s \rightarrow r)$ & \textbf{BICOND 10}\\
+                    $r \rightarrow s$ & \textbf{SIMP 11}\\
+                    $\sim (r \rightarrow s) \wedge (r \rightarrow s)$ & \textbf{CONJ 12,5}\\
+                    $\square$ & \textbf{Contradição 13}\\
+                \end{tabular}
+            \newpage
+            
+            \item $\vdash q$
+            \phantom{\setcounter{numero_coluna}{0}} 
+                
+                \vskip .25cm
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $(\sim p \rightarrow q) \wedge (r \rightarrow s)$ &\\
+                    $p \leftrightarrow t \vee \sim s$ &\\
+                    $r$ &\\
+                    $\sim t$ &\\
+                    $\sim q$ & \textbf{por Dem. Ind} $\vdash \square$\\
+                \end{tabular}
+                \\
+                \hspace*{-.1cm}\rule{0.525\textwidth}{0.4pt}
+                \\
+                \hspace*{-.1cm}\begin{tabular}{@{\rownumber}ll}
+                    $r \rightarrow s$ & \textbf{SIMP 1}\\
+                    $s$ & \textbf{MP 3,6}\\
+                    $p \leftrightarrow t$ & \textbf{SD 7,2}\\
+                    $(p \rightarrow t) \wedge (t \rightarrow p)$ & \textbf{BICOND 8}\\
+                    $p \rightarrow t$ & \textbf{SIMP 9}\\
+                    $\sim p$ & \textbf{MT 10,4}\\
+                    $\sim p \rightarrow q$ & \textbf{SIMP 1}\\
+                    $q$ & \textbf{MP 11,12}\\
+                    $q \wedge \sim q$ & \textbf{CONJ 13,5}\\
+                    $\square$ & \textbf{Contradição 14}\\
+                \end{tabular}
+            
+        \end{enumerate}
+        
+    \end{enumerate}
+    
+% ---------------------------------------------------------------
+% "Nada é mais permanente que uma gambiarra temporária"
+
+\newpage
+
+    \underline{{\Large Equivalências Notáveis}}:
+    
+    \begin{description}
+        \setlength{\itemsep}{-1pt}
+        
+         \item[Identidade (IDENT):] $\begin{array}{l} P \vee \blacksquare \Leftrightarrow \blacksquare \\ P \vee \square \Leftrightarrow P \\ P \wedge \blacksquare \Leftrightarrow P \\ P \wedge \square \Leftrightarrow \square \end{array}$
+        
+        \item[Idempotência (ID):] $\begin{array}{l} P\Leftrightarrow P\wedge P \\ P\Leftrightarrow P\vee P\end{array}$
+        
+        \item[Comutação (COM):] $\begin{array}{l} P\wedge Q\Leftrightarrow Q\wedge P \\ P\vee Q\Leftrightarrow Q\vee P\end{array}$
+        
+        \item[Associação (ASSOC):] $\begin{array}{l}P\wedge(Q\wedge R)\Leftrightarrow (P\wedge Q)\wedge R\\ P\vee(Q\vee R)\Leftrightarrow (P\vee Q)\vee R \end{array}$ 
+        
+        \item[Distribuição (DIST):] $\begin{array}{l}P\wedge(Q\vee R)\Leftrightarrow (P\wedge Q)\vee (P \wedge R)\\P\vee(Q\wedge R)\Leftrightarrow (P\vee Q)\wedge (P\vee R)\end{array}$
+        
+        \item[De Morgan (DM):] $\begin{array}{l}\sim(P \wedge Q) \Leftrightarrow \sim P \vee\sim Q\\\sim(P \vee Q) \Leftrightarrow \sim P \wedge\sim Q\end{array}$
+        
+        \item[Contradição:] $\begin{array}{l} P\wedge \sim P \Leftrightarrow \square \\ P \leftrightarrow \sim P \Leftrightarrow \square \\ \end{array}$
+        
+        \item[Tautologia:] $ \begin{array}{l} P\vee \sim P \Leftrightarrow \blacksquare \\ P \rightarrow P \Leftrightarrow \blacksquare \\ P \leftrightarrow P \Leftrightarrow \blacksquare \end{array}$
+        
+        \item [Absorção:] $\begin{array}{l}P \wedge (P \vee Q) \Leftrightarrow P\\P \vee (P \wedge Q) \Leftrightarrow P\end{array}$
+        
+        \item[Conectivos de Scheffer] $\begin{array}{l} P \uparrow Q \Leftrightarrow \sim P \vee \sim Q \\  P \downarrow Q \Leftrightarrow \sim P \wedge \sim Q \end{array}$
+        
+        \item[Dupla Negação (DN):] $P\Leftrightarrow  P$ 
+        
+        \item[Condicional (COND):] $P\rightarrow Q \Leftrightarrow\sim P \vee Q$
+        
+        \item[Bicondicional (BICOND):] $P\leftrightarrow Q \Leftrightarrow (P\rightarrow Q)\wedge(Q\rightarrow P)$
+        
+        \item[Contraposição (CP):] $P\rightarrow Q \Leftrightarrow \sim Q\rightarrow\sim P$
+        
+        \item[Exportação-Importação (EI):] $P\wedge Q\rightarrow R \Leftrightarrow P\rightarrow(Q\rightarrow R)$
+        
+        \item[Ou-Exclusivo (X-or)] $P \veebar Q \Leftrightarrow (P \vee Q) \wedge \sim (P \wedge Q)$
+        
+    \end{description}
+    
+    
+    \newpage
+
+    \underline{{\Large Regras de Inferência Válidas (Teoremas)}}:
+
+    \begin{description}
+
+        \setlength{\itemsep}{-1pt}
+        \item[Adição (AD):] $\begin{array}{l} P \vdash P \vee Q \\ P \vdash Q \vee P\end{array}$
+        
+        \item[Simplificação (SIMP):] $\begin{array}{l} P \wedge Q \vdash P\\P \wedge Q \vdash Q \end{array}$
+        
+        \item[Conjunção (CONJ)] $\begin{array}{l}P, Q \vdash P \wedge Q\\P, Q \vdash Q \wedge P\end{array}$
+    
+        \item[Absorção (ABS):] $P \rightarrow Q \vdash P \rightarrow (P \wedge Q)$
+        
+        \item[Modus Ponens (MP):] $P \rightarrow Q, P \vdash Q$
+        
+        \item[Modus Tollens (MT):] $P \rightarrow Q, \sim Q \vdash \sim P$
+        
+        \item[Silogismo Disjuntivo (SD):] $\begin{array}{l}P \vee Q, \sim P \vdash Q\\P \vee Q, \sim Q \vdash P\end{array}$
+       
+        \item[Silogismo Hipotético (SH):] $P \rightarrow Q, Q\rightarrow R \vdash P\rightarrow R$
+       
+        \item[Dilema Construtivo (DC):] $P\rightarrow Q, R\rightarrow S, P \vee R \vdash Q\vee S$
+       
+        \item[Dilema Destrutivo (DD):] $P\rightarrow Q, R\rightarrow S, \sim Q\vee\sim S \vdash \sim P \vee\sim R$
+
+ \end{description}
+
+\end{document}

@@ -1,0 +1,923 @@
+\documentclass[12pt, a4paper,final]{article}
+\usepackage{t1enc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuges,brazilian]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{comment,color, fancybox}  
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{changepage}
+%\usepackage{minipage}
+
+\topmargin       0cm 
+\headheight      0pt 
+\headsep         0cm
+\textheight      24cm
+\textwidth       16.7cm
+\oddsidemargin   -2mm
+\evensidemargin  -2mm
+\pagestyle{empty}
+
+\begin{document}
+    
+    \begin{large}
+    
+        \begin{center}
+        
+            \shadowbox{
+                    \begin{minipage}[c]{12cm}
+                        \begin{center}
+                            \sf
+                            $1^{\underline{a}}$ Lista de Exercícios de Lógica Matemática - LMA\\
+                            \textbf{Gabarito} \\
+                            Professores: Jeferson L. r. s. e Kariston p.  \\ 
+                            Monitor: Miguel A. Nunes \\
+                            Joinville, \today
+                        \end{center}
+                    \end{minipage}
+                } %% 
+                
+        \end{center}
+    
+    \end{large}
+    
+    \vskip 1cm
+
+    \begin{enumerate}
+        \setlength {\itemindent}{-2cm}
+        
+        \item A maioria das provas será feita da esquerda para a direita, ou seja, à partir da proposição da esquerda, chegar na proposição da direita. Caso não seja, estará anotado na questão.
+        
+        \begin{enumerate}[label=(\alph*)]
+            \setlength \itemsep{1em}
+            \setlength {\itemindent}{-2cm}
+        
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \wedge \sim q) $ & Equivalência do Conectivo de Scheffer \\
+                    2. $(\sim q \wedge \sim p) $ & Comutatividade do $\wedge$ \\
+                    3. $(q \downarrow p) $ & Equivalência do Conectivo de Scheffer \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \vee \sim q)$ & Equivalência do Conectivo de Scheffer \\
+                    2. $(\sim q \vee \sim p)$ & Comutatividade do $\vee$ \\
+                    3. $(q \uparrow p)$ & Equivalência do Conectivo de Scheffer
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \vee r) \wedge (\sim q \vee r)$ & Equivalência da Condicional x2 \\
+                    2. $((\sim p \vee r)\wedge r) \vee ((\sim p \vee r)\wedge \sim q)$ & Distributiva \\
+                    3. $r \vee ((\sim p \vee r)\wedge \sim q)$ & Absorção \\
+                    4. $r \vee (\sim p \wedge \sim q) \vee (r \wedge \sim q)$ & Distributiva\\
+                    5. $(\sim p \wedge \sim q) \vee (\sim q \wedge r) \vee r$ & Associatividade\\
+                    6. $(\sim p \wedge \sim q) \vee r $ & Absorção \\
+                    7. $(\sim(\sim p \wedge \sim q))\rightarrow r$ & Equivalência da Condicional\\
+                    8. $(p \vee q) \rightarrow r$ & De Morgan\\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \vee r) \vee (\sim q \vee r)$ & Equivalência da Condicional x2 \\
+                    2. $(\sim p \vee \sim q) \vee (r \vee s)$ & Associatividade \\
+                    3. $(\sim(\sim p \vee \sim q)) \rightarrow (r \vee s)$ & Equivalência da Condicional\\
+                    4. $(p \wedge q) \rightarrow (r \vee s)$ & De Morgan\\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $\sim(p \wedge q) \vee r$ & Equivalência da Condicional \\
+                    2. $(\sim p \vee \sim q) \vee r$ & De Morgan \\
+                    3. $\sim p \vee (\sim q \vee r)$ & Comutativa \\
+                    4. $p \rightarrow (q \rightarrow r)$ & Equivalência da Condicional \\
+                \end{tabular}
+            
+            \item %melhorar
+                
+                \begin{minipage}[t]{\textwidth}
+                    Tentando provar esta equivalência pela esquerda temos:
+                    
+                    \begin{tabular}{ll}
+                        1. $\sim(\sim p \vee q) \vee r$ & Equivalência da Condicional x2 \\
+                        2. $(p \wedge \sim q) \vee r$ & De Morgan \\
+                        3. $(p \vee r) \wedge (\sim q \vee r)$ & Distributiva \\
+                    \end{tabular}
+                
+                    \vskip .5cm
+                    
+                    Como podemos ver, é impossível chegar na direita a partir da esquerda, qualquer operação que fizesse retornaria a esta forma, ou uma equivalente à ela.\\Tentando fazer o lado oposto da equivalência temos:
+                    
+                    \vskip .5cm
+                
+                    \begin{tabular}{ll}
+                        1. $\sim(p \wedge \sim r) \vee \sim q$ & Equivalência da Condicional \\
+                        2. $(\sim p \vee r) \vee \sim q$ & De Morgan \\
+                        3. $(\sim p \vee \sim q) \vee r$ & Associatividade \\
+                        4. $\sim(\sim p \vee \sim q) \rightarrow r$ & Equivalência da Condicional \\
+                        5. $(p \wedge q) \rightarrow r$ & De Morgan\\
+                    \end{tabular}
+                    
+                    \vskip .5cm
+                    
+                    Tentando provar a equivalência a partir da definição da equivalência lógica (a bicondicional de ambos os lados da proposição)
+                    
+                    \vskip .5cm
+                    
+                    \begin{tabular}{l} % arrumar parenteses e terminar
+                        1. $(((p \rightarrow q) \rightarrow r) \rightarrow ((p\wedge \sim r) \rightarrow \sim q)) \wedge (((p\wedge \sim r) \rightarrow \sim q) \rightarrow ((p \rightarrow q) \rightarrow r))$ \\ % eq bicond
+                        2. $((\sim (\sim p \vee q) \vee r) \rightarrow (\sim (p\wedge \sim r) \vee \sim q) \wedge ((\sim(p\wedge \sim r) \vee \sim q) \rightarrow ((\sim (\sim p \vee q) \vee r)))$ \\ % eq cond
+                        3. $(\sim(\sim (\sim p \vee q) \vee r) \vee (\sim (p\wedge \sim r) \vee \sim q)) \wedge (\sim(\sim(p\wedge \sim r) \vee \sim q)) \vee ((\sim (\sim p \vee q) \vee r))$ \\ % eq cond
+                        4. $(\sim((\sim \sim p \wedge \sim q) \vee r) \vee ((\sim p \vee \sim \sim r) \vee \sim q)) \wedge (\sim((\sim p\vee \sim \sim r) \vee \sim q)) \vee (((\sim \sim p \wedge \sim q) \vee r))$ \\ % de morgan
+                        5. $(\sim((p \wedge \sim q) \vee r) \vee ((\sim p \vee r) \vee \sim q)) \wedge (\sim((\sim p\vee r) \vee \sim q)) \vee (((p \wedge \sim q) \vee r))$ \\ % dn
+                        6. $(((\sim p \vee \sim \sim q) \wedge \sim r) \vee ((\sim p \vee r) \vee \sim q)) \wedge (((\sim \sim p \wedge \sim r) \wedge \sim \sim q)) \vee (((p \wedge \sim q) \vee r))$ \\ % de morgan
+                        7. $(((\sim p \vee q) \wedge \sim r) \vee ((\sim p \vee r) \vee \sim q))) \wedge (((p \wedge \sim r) \wedge q)) \vee (p \wedge \sim q) \vee r))$ \\ % dn
+                        %8. $(((\sim p \vee q) \wedge \sim r) \vee ((\sim p \vee r) \vee \sim q)) \wedge (((p \wedge \sim r) \wedge q)) \vee (p \wedge \sim q) \vee r))$ \\
+                    \end{tabular}
+                    
+                    \vskip .5cm
+                    
+                    Novamente, é impossível chegar em um lado a partir do outro, vamos ver a tabela verdade dessa formula para verificar se de fato existe equivalência.
+                    
+                    \vskip .5cm
+                
+                    \begin{tabular}{|c|c|c|c|c|c|>{\bfseries}c||c| >{\bfseries}c|}
+                        \hline
+                        p & q & r & $\sim q$ & $\sim r$ & $p \rightarrow q$ & $\boldsymbol{(p \rightarrow q) \rightarrow r}$ & $p \wedge \sim r$ & $\boldsymbol{(p \wedge \sim r) \rightarrow \sim q}$ \\
+                        \hline
+                        V & V & V & F & F & V & V & F & V \\
+                        V & V & F & F & V & V & F & V & F \\
+                        V & F & V & V & F & F & V & F & V \\
+                        V & F & F & V & V & F & V & V & V \\
+                        F & V & V & F & F & V & V & F & V \\
+                        F & V & F & F & V & V & F & F & V \\
+                        F & F & V & V & F & V & V & F & V \\
+                        F & F & F & V & V & V & F & F & V \\
+%                       p   q   r  ~q  ~r
+                        \hline
+                    \end{tabular}
+                    
+                    \vskip 5mm
+                    
+                    Fazendo a tabela verdade da bicondicional das duas últimas proposições de cada formula:
+                    
+                    \vskip 5mm
+                    
+                    \begin{tabular}{|c|}
+                        \hline
+                        $(p \rightarrow q) \rightarrow r \leftrightarrow ((p\wedge \sim r) \rightarrow \sim q)$\\
+                        \hline
+                        V \\
+                        V \\
+                        V \\
+                        V \\
+                        V \\
+                        F \\
+                        V \\
+                        F \\
+                        \hline
+                    \end{tabular}
+                    
+                    \vskip 5mm
+                    
+                    Como podemos ver, essa bi-implicação não é tautológica, portanto não há equivalência entre as formulas.
+
+                \end{minipage}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \vee q) \vee (\sim p \vee r)$ & Equivalência da Condicional x2 \\
+                    2. $(\sim p \vee \sim p \vee q \vee r)$ & Associatividade + Comutatividade \\
+                    3. $(\sim p \vee q \vee r)$ & Idempotência \\
+                    4. $\sim p \vee (q \vee r)$ & Comutatividade \\
+                    5. $(\sim \sim p \rightarrow (q \vee r))$ & Equivalência da Condicional \\
+                    6. $p \rightarrow (q \vee r)$ & Dupla Negação 
+                \end{tabular}
+
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $\sim(\sim p \vee q) \vee q$ & Equivalência da Condicional x2 \\
+                    2. $(p \wedge \sim q) \vee q$ & De Morgan \\
+                    3. $(p\vee q) \wedge (\sim q \vee q)$ & Distributiva \\
+                    4. $(p \vee q) \wedge \blacksquare$ & Tautologia \\
+                    5. $(p \vee q)$ & Identidade \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \wedge \sim q) \downarrow (\sim p \wedge \sim q)$ & Equivalência de Scheffer x2\\
+                    2. $\sim (\sim p \wedge \sim q) \wedge \sim(\sim p \wedge \sim q)$ & Equivalência de Schffer \\
+                    3. $(\sim \sim p \vee \sim \sim q) \wedge (\sim \sim p \wedge \sim \sim q)$ & De Morgan x2 \\
+                    4. $(p \vee q) \wedge (p \vee q)$ & Dupla Negação x4 \\
+                    5. $p \vee q$ & Idempotência \\
+                \end{tabular}
+                
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(p \rightarrow q) \wedge (q \rightarrow p)$ & Equivalência da Bicondicional \\
+                    2. $(\sim p \vee q) \wedge (\sim q \vee p)$ & Equivalência da Condicional x2 \\ 
+                    3. $((\sim p \vee q) \wedge \sim q) \vee ((\sim p \vee q) \wedge p)$ & Distributiva \\
+                    4. $(\sim p \wedge \sim q) \vee (q \wedge \sim q) \vee (\sim p \wedge p) \vee (p \wedge q)$ & Distributiva \\
+                    5. $(\sim p \wedge \sim q) \vee \square \vee \square \vee (p \wedge q)$ & Contradição x2 \\
+                    6. $(\sim p \wedge \sim q) \vee (p \wedge q)$ & Identidade x2 \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \vee (p \rightarrow (p \rightarrow q)))$ & Equivalência da Condicional \\
+                    2. $(\sim p \vee (\sim p \vee (p \rightarrow q)))$ & Equivalência da Condicional \\
+                    3. $(\sim p \vee (\sim p \vee (\sim p \vee q)))$ & Equivalência da Condicional \\
+                    4. $\sim p \vee \sim p \vee \sim p \vee q$ & Associatividade \\
+                    5. $\sim p \vee q$ & Idempotência \\
+                    6. $p \rightarrow q$ & Equivalência da Condicional \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $\sim p \vee \sim q \vee \sim r$ & De Morgan \\
+                \end{tabular}
+            
+            \item 
+                
+                \begin{tabular}{ll}
+                    1. $\sim p \vee \sim q \vee \sim r $ & De Morgan \\
+                    2. $\sim p \vee (\sim q \vee \sim r)$ & Associatividade \\
+                    3. $(\sim p \vee (q \rightarrow \sim r))$ & Equivalência da Condicional \\
+                    4. $p \rightarrow (q \rightarrow \sim r)$ & Equivalência da Condicional \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \vee \sim q) \downarrow (\sim q \vee \sim p)$ & Equivalência de Scheffer \\
+                    2. $\sim(\sim p \vee \sim q) \wedge \sim (\sim q \vee \sim p)$ & Equivalência de Scheffer \\
+                    3. $(\sim \sim p \wedge \sim \sim q) \wedge (\sim \sim q \wedge \sim \sim p)$ & De Morgan \\
+                    4. $(p \wedge q) \wedge (q \wedge p)$ & Dupla Negação \\
+                    5. $(p \wedge q) \wedge (p \wedge q)$ & Comutatividade \\
+                    6. $(p \wedge q)$ & Idempotência \\
+                \end{tabular}
+            
+        \end{enumerate}
+        
+        \vskip 1cm
+        
+        \item Como no exercício anterior, as provas serão feitas da esquerda para a direita. Para as provas desta questão será utilizada a definição da implicação lógica (a condicional das proposições deve ser tautológica):
+        
+        \begin{enumerate}[label=(\alph*)]
+            \setlength \itemsep{1em}
+            \setlength {\itemindent}{-2cm}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $q \rightarrow ((p \wedge q) \leftrightarrow q)$& Definição da Implicação Lógica \\
+                    2. $q \rightarrow (((p \wedge q)\rightarrow q) \wedge (q \rightarrow (p \wedge q)))$ & Equivalência da Bicondicional \\
+                    3. $q \rightarrow ((\sim(p \wedge q) \vee q) \wedge (\sim q \vee (p \wedge q)))$ & Equivalência da Condicional x2 \\
+                    4. $q \rightarrow ((\sim p \vee \sim q \vee q) \wedge (\sim q \vee (p \wedge q)))$ & De Morgan \\
+                    5. $q \rightarrow ((\sim p \vee \sim q \vee q) \wedge (\sim q \vee p) \wedge (\sim q \vee q))$ & Distributividade \\
+                    6. $q \rightarrow ((\sim p \vee \blacksquare) \wedge (\sim q \vee p) \wedge \blacksquare)$ & Tautologia x2 \\
+                    7. $q \rightarrow (\blacksquare \wedge (\sim q \vee p))$ & Identidade x2 \\
+                    8. $q \rightarrow (\sim q \vee p)$ & Identidade \\
+                    9. $\sim q \vee (\sim q \vee p)$ & Equivalência da Condicional \\
+                    10. $(\sim q \vee \sim q \vee p)$ & Associatividade \\
+                    11. $(\sim q \vee p)$ & Idempotência \\
+                \end{tabular}
+            
+            \vskip 5mm
+            
+            Deste ponto em diante não há mais operações não redundantes que possam ser feitas, portanto não há implicação.\\
+            Exercício Bônus: Prove por tabela verdade que, de fato, não há implicação.
+            
+            \vskip 5mm
+
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $((p \vee q) \wedge \sim q) \rightarrow p$ &  Definição da Implicação Lógica \\
+                    2. $((p \wedge \sim q) \vee (\sim q \wedge q)) \rightarrow p$ & Distributividade \\
+                    3. $((p \wedge \sim q) \vee \square) \rightarrow p$ & Identidade \\
+                    4. $(p \wedge \sim q) \rightarrow p$ & Identidade \\
+                    5. $\sim (p \wedge \sim q) \vee p$ & Equivalência Condicional \\
+                    6. $\sim p \vee \sim \sim q \vee p$ & De Morgan \\
+                    7. $\sim p \vee p \vee q$ & Associatividade \\
+                    8. $\blacksquare \vee q$ & Tautologia \\
+                    9. $\blacksquare$ & Identidade \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(p \wedge q) \rightarrow (p \vee q)$ & Definição da Implicação Lógica \\
+                    2. $\sim(p \wedge q) \vee (p \vee q)$ & Equivalência da Condicional \\
+                    3. $\sim p \vee \sim q \vee p \vee q$ & De Morgan + Associatividade \\ 
+                    4. $\sim p \vee p \vee \sim q \vee q$ & Comutatividade x2 \\
+                    5. $\blacksquare \vee \blacksquare$ & Tautologia x2 \\
+                    6. $\blacksquare$ & Identidade \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(p \vee q) \rightarrow (p \wedge q)$ & Definição da Implicação Lógica \\
+                    2. $\sim (p \vee q) \vee (p \wedge q)$ & Equivalência da Condicional \\
+                    3. $(\sim p \wedge \sim q) \vee (p \wedge q)$ & De Morgan \\
+                    4. $((\sim p \wedge \sim q) \vee p) \wedge ((\sim p \wedge \sim q) \vee q)$ & Distributividade \\
+                    5. $(\sim p \vee p) \wedge (\sim q \vee p) \wedge (\sim p \vee q) \wedge (\sim q \vee q)$ & Distributividade \\
+                    6. $\blacksquare \wedge (\sim q \vee p) \wedge (\sim p \vee q) \wedge \blacksquare $ & Tautologia x2 \\
+                    7. $(\sim q \vee p) \wedge (\sim p \vee q)$ & Identidade \\
+                    8. $(p \vee \sim q) \wedge (\sim p \vee q)$ & Comutatividade x3 \\
+                    9. $(p \wedge \sim p) \vee (\sim q \wedge \sim p) \vee (p \wedge q) \vee (\sim q \wedge q)$ & Distributividade \\
+                    10. $\square \vee (\sim p \wedge \sim q) \vee (p \wedge q) \vee \square$ & Identidade \\
+                    11. $(\sim p \wedge \sim q) \vee (p \wedge q)$ & Identidade \\
+                \end{tabular}
+                
+                \vskip 5mm
+                
+                Deste ponto em diante, todas as operações que fizermos resultarão em proposições equivalentes a proposição 11, portanto não há implicação.\\
+                Perceba que a proposição 11 é a FND de $(p \vee q) \rightarrow (p \wedge q)$ e que a proposição 7 é sua FNC.\\
+                Exercício Bônus: Prove por tabela verdade que não há implicação.
+                
+                \vskip 5mm
+            
+            \item 
+
+                \begin{tabular}{ll}
+                    1. $(p \rightarrow q) \rightarrow ((p \wedge r) \rightarrow q)$ & \begin{tabular}{@{}l@{}}Definição da Implicação Lógica \\ Perceba os parênteses do lado direito\end{tabular} \\ % eu não sei oq é isso nem oq faz precisamente, mas funciona
+                    2. $(\sim p \vee q) \rightarrow ((p \wedge r) \rightarrow q)$ & Equivalência da Condicional \\
+                    3. $(\sim p \vee q) \rightarrow (\sim(p \wedge r) \vee q)$ & Equivalência da Condicional \\
+                    4. $(\sim p \vee q) \rightarrow (\sim p \vee \sim r \vee q)$ & De Morgan + Associatividade \\
+                    5. $\sim(\sim p \vee q) \vee (\sim p \vee \sim r \vee q)$ & Equivalência da Condicional \\
+                    6. $(\sim \sim p \wedge \sim q) \vee \sim p \vee \sim r \ q$ & De Morgan + Associatividade \\
+                    7. $(p \wedge \sim q) \vee \sim p \vee \sim r \vee q$ & Dupla Negação \\
+                    8. $((p \wedge \sim q)\vee \sim p) \vee (\sim r \vee q)$ & Associatividade \\
+                    9. $((p \vee \sim p) \wedge (\sim q \vee \sim p)) \vee (\sim r \vee q)$ & Distributividade \\
+                    10. $(\blacksquare \wedge (\sim q \vee \sim p)) \vee (\sim r \vee q)$ & Tautologia \\
+                    11. $(\sim q \vee \sim p) \vee (\sim r \vee q)$ & Identidade \\
+                    12. $\sim q \vee q \vee \sim p \vee \sim r$ & Comutatividade \\
+                    13. $\blacksquare \vee \sim p \vee \sim r$ & Identidade \\
+                    14. $\blacksquare$ & Identidade \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(p \rightarrow q) \rightarrow ((q \rightarrow r) \rightarrow (p \rightarrow r))$ & Definição da Implicação Lógica \\
+                    2. $(\sim p \vee q) \rightarrow ((\sim q \vee r) \rightarrow (\sim p \vee r))$ & Equivalência da Condicional x3 \\ 
+                    3. $(\sim p \vee q) \rightarrow (\sim(\sim q \vee r) \vee (\sim p \vee r))$ & Equivalência da Condicional \\
+                    4. $(\sim p \vee q) \rightarrow ((\sim \sim q \wedge \sim r) \vee (\sim p \vee r))$ & De Morgan \\
+                    5. $(\sim p \vee q) \rightarrow ((q \wedge \sim r) \vee (\sim p \vee r))$ & Dupla Negação \\
+                    6. $\sim(\sim p \vee q) \vee (q \wedge \sim r) \vee (\sim p \vee r)$ & Equivalência da Condicional \\
+                    7. $(\sim \sim p \wedge \sim q) \vee (q \wedge \sim r) \vee (\sim p \vee r)$ & De Morgan \\
+                    8. $(p \wedge \sim q) \vee (q \wedge \sim r) \vee (\sim p \vee r)$ & Dupla Negação \\
+                    9. $(p \wedge \sim q) \vee \sim p \vee (q \wedge \sim r) \vee r$ & Associatividade x2 \\
+                    10. $((p \vee \sim p) \wedge (\sim q \vee \sim p)) \vee ((q \vee r) \wedge (\sim r \vee r))$ & Distributividade \\
+                    11. $(\blacksquare \wedge (\sim q \vee \sim p)) \vee ((q \vee r) \wedge \blacksquare)$ & Tautologia x2 \\
+                    12. $(\sim q \vee \sim p) \vee (q \vee r)$ & Identidade X2 \\
+                    13. $\sim q \vee q \vee \sim p \vee r$ & Associatividade \\
+                    14. $\blacksquare \vee \sim p \vee r$ & Tautologia \\
+                    15. $\blacksquare$ & Identidade \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $((p \rightarrow q) \wedge (p \rightarrow \sim q)) \rightarrow \sim p \rightarrow \blacksquare $ & Definição da Implicação Lógica \\
+                    2. $((\sim p \vee q) \wedge (\sim p \vee \sim q)) \rightarrow \sim p \rightarrow \blacksquare$ & Equivalência da Condicional x2 \\
+                    3. $\sim((\sim p \vee q) \wedge (\sim p \vee \sim q)) \vee \sim p \rightarrow \blacksquare$ & Equivalência da Condicional \\
+                    4. $(\sim(\sim p \vee q)\vee \sim(\sim p \vee \sim q)) \vee \sim p \rightarrow \blacksquare$ & De Morgan \\
+                    5. $(\sim \sim p \wedge \sim q) \vee (\sim \sim p \wedge \sim \sim q) \vee \sim p \rightarrow \blacksquare$ & De Morgan \\
+                    6. $(p \wedge \sim q) \vee (p \wedge q) \vee \sim p \rightarrow \blacksquare$ & Dupla Negação x3 \\
+                    7. $\sim ((p \wedge \sim q) \vee (p \wedge q) \vee \sim p) \vee \blacksquare$ & Equivalência da Condicional \\
+                    8. $(\sim (p \wedge \sim q) \wedge \sim(p \wedge q) \wedge \sim \sim p) \vee \blacksquare$ & De Morgan \\
+                    9. $((\sim p \vee \sim \sim q) \wedge (\sim p \vee \sim q) \wedge p) \vee \blacksquare$ & De Morgan + Dupla Negação \\
+                    10. $((\sim p \vee q) \wedge (\sim p \vee \sim q) \wedge p) \vee \blacksquare$ & Dupla Negação \\
+                    11. $\blacksquare$ & Identidade \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $((p \rightarrow q) \wedge \sim q) \rightarrow \sim p$ & Definição da Implicação Lógica \\
+                    2. $((\sim p \vee q) \wedge \sim q) \rightarrow \sim p$ & Equivalência da Condicional \\
+                    3. $((\sim p \wedge \sim q) \vee (q \wedge \sim q)) \rightarrow \sim p$ & Distributividade \\ 
+                    4. $((\sim p \wedge \sim q) \vee \square) \rightarrow \sim p$ & Contradição \\
+                    5. $(\sim p \wedge \sim q) \rightarrow \sim p$ & Identidade \\
+                    6. $\sim(\sim p \wedge \sim q) \vee \sim p$ & Equivalência da Condicional \\
+                    7. $(\sim \sim p \vee \sim q) \vee \sim p$ & Equivalência da Condicional \\
+                    8. $p \vee \sim q \vee \sim p$ & Dupla Negação \\
+                    9. $p \vee \sim p \vee \sim q$ & Associatividade \\
+                    10. $\blacksquare \vee \sim q$ & Tautologia \\
+                    11. $\blacksquare$ & Identidade \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $((p \vee q) \leftrightarrow q) \rightarrow (\sim q \rightarrow \sim p)$ & Definição da Implicação Lógica \\
+                    2. $(((p \vee q) \rightarrow q) \wedge (q \rightarrow (p \vee q))) \rightarrow (\sim q \rightarrow \sim p)$ & Equivalência da Bicondicional \\
+                    3. $((\sim(p \vee q) \vee q) \wedge (\sim q \vee (p \vee q))) \rightarrow (\sim q \rightarrow \sim p)$ & Equivalência da Condicional x2 \\
+                    4. $(((\sim p \wedge \sim q) \vee q)) \wedge (\sim q \vee q \vee p) \rightarrow (\sim q \rightarrow \sim p)$ & De Morgan + Associatividade \\
+                    5. $(((\sim p \vee q) \wedge (\sim q \vee q)) \wedge (\blacksquare \vee p)) \rightarrow (\sim q \rightarrow \sim p)$ & Distributividade + Tautologia \\
+                    6. $((\sim p \vee q) \wedge \blacksquare) \wedge \blacksquare) \rightarrow (\sim q \rightarrow \sim p)$ & Tautologia x2 \\
+                    7. $(\sim p \vee q) \rightarrow (\sim q \rightarrow \sim p)$ & Identidade x2 \\
+                    8. $(\sim p \vee q) \rightarrow (\sim \sim q \vee \sim p)$ & Equivalência da Condicional \\ 
+                    9. $(\sim p \vee q) \rightarrow (q \vee \sim p)$ & Dupla Negação \\
+                    10. $(\sim p \vee q) \rightarrow (\sim p \vee q)$ & Comutatividade \\
+                    11. $\blacksquare$ & Tautologia \\
+                \end{tabular}
+            
+            \item  
+            
+                \begin{tabular}{ll}
+                    1. $((p \rightarrow \sim q) \wedge (r \rightarrow q) \wedge r) \rightarrow \sim p$ & Definição da Implicação Lógica \\
+                    2. $((\sim p \vee \sim q) \wedge (\sim r \vee q) \wedge r) \rightarrow \sim p$ & Equivalência da Condicional x2 \\
+                    3. $\sim((\sim p \vee \sim q) \wedge (\sim r \vee q) \wedge r) \vee \sim p$ & Equivalência da Condicional \\
+                    4. $\sim(\sim p \vee \sim q) \vee \sim(\sim r \vee q) \vee \sim r \vee \sim p$ & De Morgan \\
+                    5. $(\sim \sim p \wedge \sim \sim q) \vee (\sim \sim r \wedge \sim q) \vee \sim r \vee \sim p$ & De Morgan \\
+                    6. $(p \wedge q) \vee (r \wedge \sim q) \vee \sim r \vee \sim p$ & Dupla Negação \\
+                    7. $(p \wedge q) \vee \sim p \vee (r \wedge \sim q) \vee \sim r$ & Associatividade \\
+                    8. $((p \vee \sim p) \wedge (q \vee \sim p)) \vee ((r \vee \sim r) \wedge (\sim q \vee \sim r))$ & Distributividade x2 \\
+                    9. $(\blacksquare \wedge (q \vee \sim p)) \vee (\blacksquare \wedge (\sim q \vee \sim r))$ & Tautologia x2 \\
+                    10. $(q \vee \sim p) \vee (\sim q \vee \sim r)$ & Identidade \\
+                    11. $q \vee \sim q \vee \sim p \vee \sim r$ & Associatividade \\
+                    12. $\blacksquare \vee \sim p \vee \sim r$ & Tautologia \\
+                    13. $\blacksquare$ & Identidade \\ 
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(p \leftrightarrow  \sim q) \rightarrow (p \rightarrow q)$ & Definição da Implicação Lógica \\
+                    2. $((p \rightarrow \sim q) \wedge (\sim q \rightarrow p)) \rightarrow (p \rightarrow q)$ & Equivalência da Bicondicional \\
+                    3. $((\sim p \vee q) \wedge (\sim \sim q \vee p)) \rightarrow (p \rightarrow q)$ & Equivalência da Condicional x2 \\
+                    4. $((\sim p \vee q) \wedge (q \vee p)) \rightarrow (p \rightarrow q)$ & Dupla Negação \\
+                    5. $\sim((\sim p \vee q) \wedge (q \vee p)) \vee (p \rightarrow q)$ & Equivalência da Condicional \\
+                    6. $(\sim(\sim p \vee q) \vee \sim (q \vee p)) \vee (p \rightarrow q)$ & De Morgan \\
+                    7. $(\sim \sim p \wedge \sim q) \vee (\sim q \wedge \sim p) \vee (p \rightarrow q)$ & De Morgan \\
+                    8. $(p \wedge \sim q) \vee (\sim q \wedge \sim p) \vee (p \rightarrow q)$ & Dupla Negação \\
+                    9. $(p \wedge \sim q) \vee (\sim q \wedge \sim p) \vee (\sim p \vee q)$ & Equivalência da Condicional \\
+                    10. $(p \wedge \sim q) \vee q \vee (\sim p \wedge \sim q) \vee \sim p$ & Associatividade e Comutatividade \\
+                    11. $(p \wedge \sim q) \vee q \vee \sim p$ & Absorção \\
+                    12. $((p \vee q) \wedge (\sim q \vee q)) \vee \sim p$ & Distributividade \\
+                    13. $((p \vee q) \wedge \blacksquare ) \vee \sim p$ & Tautologia \\
+                    14. $(p \vee q) \vee \sim p$ & Identidade \\
+                    15. $p \vee \sim p \vee q$ & Associatividade \\
+                    16. $\blacksquare \vee q$ & Tautologia \\
+                    17. $\blacksquare$ & Identidade \\   
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $q \rightarrow p \vee q \leftrightarrow p$ & Definição da Implicação Lógica \\ 
+                    2. $q \rightarrow ((p \vee q) \leftrightarrow p)$ & Ordenando Parênteses \\
+                    3. $\sim q \vee ((p \vee q) \leftrightarrow p)$ & Equivalência da Condicional \\
+                    4. $\sim q \vee (((p \vee q)\rightarrow p) \wedge (p \rightarrow (p \vee q)))$ & Equivalência da Bicondicional \\
+                    5. $\sim q \vee ((\sim(p \vee q) \vee p) \wedge (\sim p \vee (p \vee q)))$ & Equivalência da Condicional x2 \\
+                    6. $\sim q \vee (((\sim p \wedge \sim q) \vee p) \wedge (\blacksquare \vee q))$ & De Morgan + Tautologia \\
+                    7. $\sim q \vee (((\sim p \vee p) \wedge (\sim q \vee p)) \wedge \blacksquare)$ & Distributividade + Identidade \\ 
+                    8. $\sim q \vee (\blacksquare \wedge (\sim q \vee p))$ & Tautologia + Identidade \\
+                    9. $\sim q \vee (\sim q \vee p)$ & Identidade \\
+                    10. $\sim q \vee p$ & Idempotência \\
+                \end{tabular}
+            
+            \vskip 5mm
+            
+            Deste ponto em diante não há mais operações não redundantes que possam ser feitas, portanto não há implicação.\\
+            Exercício Bônus: Prove por tabela verdade que, de fato, não há implicação.
+            
+            \vskip 5mm
+            
+            \item 
+            
+            % \begin{tabular}{@{}l@{}}Equivalência da\\ Condicional x4\end{tabular} \\
+            
+                \begin{tabular}{ll}
+                    1. $((p \rightarrow r) \wedge (q \leftrightarrow r)) \rightarrow ((p \vee q) \rightarrow) r$ & \begin{tabular}{@{}l@{}}Definição da\\ Implicação Lógica \end{tabular} \\
+                    2. $((p \rightarrow r) \wedge (q \rightarrow r) \wedge (r \rightarrow q)) \rightarrow ((p \vee q) \rightarrow r)$ & \begin{tabular}{@{}l@{}}Equivalência da\\ Bicondicional\end{tabular} \\
+                    3. $((\sim p \vee r) \wedge (\sim q \vee r) \wedge (\sim r \vee q)) \rightarrow (\sim(p \vee q) \vee r)$ & \begin{tabular}{@{}l@{}}Equivalência da\\ Condicional x4\end{tabular} \\
+                    4. $((\sim p \vee r) \wedge (\sim q \vee r) \wedge (\sim r \vee q)) \rightarrow ((\sim p \wedge \sim q) \vee r)$ & De Morgan \\
+                    5. $\sim((\sim p \vee r) \wedge (\sim q \vee r) \wedge (\sim r \vee q)) \vee ((\sim p \wedge \sim q) \vee r)$ & \begin{tabular}{@{}l@{}}Equivalência da\\ Condicional\end{tabular} \\
+                    6. $(\sim (\sim p \vee r) \vee \sim (\sim q \vee r) \vee \sim(\sim r \vee q)) \vee ((\sim p \wedge \sim q) \vee r)$ & De Morgan \\
+                    7. $(\sim \sim p \wedge \sim r) \vee (\sim \sim q \wedge \sim r) \vee (\sim \sim r \wedge \sim q) \vee (\sim p \wedge \sim q) \vee r$ & De Morgan \\
+                    8. $(p \wedge \sim r) \vee (q \wedge \sim r) \vee (r \wedge \sim q) \vee (\sim p \wedge \sim q) \vee r$ & Dupla Negação x3 \\
+                    9. $(p \wedge \sim r) \vee (q \wedge \sim r) \vee (r \wedge \sim q) \vee r \vee (\sim p \wedge \sim q)$ & Associatividade \\
+                    10. $(p \wedge \sim r) \vee (q \wedge \sim r) \vee r \vee (\sim p \wedge \sim q)$ & Absorção \\
+                    11. $(p \wedge \sim r) \vee ((q \vee r) \wedge (\sim r \vee r)) \vee (\sim p \wedge \sim q)$ & Distributividade \\
+                    12. $(p \wedge \sim r) \vee ((q \vee r) \wedge \blacksquare) \vee (\sim p \wedge \sim q)$ & Tautologia \\
+                    13. $(p \wedge \sim r) \vee q \vee r \vee (\sim p \wedge \sim q)$ & Identidade \\
+                    14. $(p \wedge \sim r) \vee r \vee (\sim p \wedge \sim q) \vee q$ & Associatividade \\
+                    15. $((p \vee r) \wedge (\sim r \vee r)) \vee ((\sim p \vee q) \wedge (\sim q \vee q))$ & Distributividade x2 \\
+                    16. $((p \vee r) \wedge \blacksquare) \vee ((\sim p \vee q) \wedge \blacksquare)$ & Tautologia x2 \\
+                    17. $p \vee r \vee \sim p \vee q$ & Identidade x2 \\
+                    18. $p \vee \sim p \vee r \vee q$ & Associatividade \\
+                    19. $\blacksquare \vee r \vee q$ & Tautologia \\
+                    20. $\blacksquare$ & Identidade \\
+                    
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $((p \uparrow q) \wedge (p \downarrow q)) \rightarrow (p \leftrightarrow q)$ & \begin{tabular}{@{}l@{}}Definição da \\ Implicação Lógica
+                    \end{tabular}\\
+                    2. $((\sim p \vee \sim q) \wedge (\sim p \wedge \sim q)) \rightarrow (p \leftrightarrow q)$ & \begin{tabular}{@{}l@{}} Equivalência de \\ Scheffer \end{tabular} \\
+                    3. $(((\sim p \vee \sim q) \wedge \sim p) \wedge \sim q) \rightarrow (p \leftrightarrow q)$ & Associatividade \\
+                    4. $(\sim p \wedge \sim q) \rightarrow (p \leftrightarrow q)$ & Absorção \\
+                    5. $\sim (\sim p \wedge \sim q) \vee (p \leftrightarrow q)$ & \begin{tabular}{@{}l@{}} Equivalência da \\ Condicional \end{tabular} \\
+                    6. $(\sim \sim p \vee \sim \sim q) \vee (p \leftrightarrow q)$ & De Morgan \\
+                    7. $(p \vee q) \vee (p \leftrightarrow q)$ & Dupla Negação \\
+                    8. $(p \vee q) \vee ((p \rightarrow q) \wedge (q \rightarrow p))$ & \begin{tabular}{@{}l@{}} Equivalência da \\ Bicondicional \end{tabular} \\
+                    9. $(p \vee q) \vee ((\sim p \vee q) \wedge (\sim q \vee p))$ & \begin{tabular}{@{}l@{}} Equivalência da \\ Condicional x2 \end{tabular} \\
+                    10. $(p \vee q) \vee (((\sim p \vee q)\wedge \sim q) \vee ((\sim p \vee q)\wedge p))$ & Distributividade \\
+                    11. $(p \vee q) \vee (((\sim p \wedge \sim q) \vee (q \wedge \sim q)) \vee ((\sim p \wedge p) \vee (q \wedge p)))$ & Distributividade \\
+                    12. $(p \vee q) \vee (((\sim p \wedge \sim q) \vee \square) \vee (\square \vee (q \wedge p)))$ & Contradição \\
+                    13. $(p \vee q) \vee (\sim p \wedge \sim q) \vee (q \wedge p)$ & Identidade \\
+                    14. $q \vee (\sim p \wedge \sim q) \vee p \vee (q \wedge p)$ & Associatividade \\
+                    15. $q \vee (\sim p \wedge \sim q) \vee p$ & Absorção \\
+                    16. $((\sim p \vee q) \wedge (q \vee \sim q)) \vee p$ & Distributividade \\
+                    17. $((\sim p \vee q) \wedge \blacksquare) \vee p$ & Tautologia \\
+                    18. $\sim p \vee q \vee p$ & Identidade \\
+                    19. $\sim p \vee p \vee q$ & Associatividade \\
+                    20. $\blacksquare \vee q$ & Tautologia \\
+                    21. $\blacksquare$ & Identidade \\
+                \end{tabular}
+            
+        \end{enumerate}
+        
+        \vskip 1cm
+        
+        \item Para esse exercício é importante notar que Tautologias e Contradições são formas normais
+        das proposições, assim como certas proposições só podem chegar "naturalmente" em uma das formas normais, essas proposições são chamadas de Proposições Fundamentais. Veja o exemplo abaixo.
+        
+        \vskip 5mm
+        
+        $p \rightarrow q$ $\Leftrightarrow$ \newline
+        $\sim p \vee q$ \newline
+        Esta é uma Proposição Disjuntiva Fundamental, ou seja, não há operações não redundantes (i.e. Dupla Negação, Equivalência da Condicional, etc.) que possam transformar a disjunção em uma conjunção. Portanto essa proposição está, ao mesmo tempo, na FNC e na FND.
+        
+        \vskip 5mm
+        
+        \begin{enumerate}[label=(\alph*), leftmargin = 5mm]
+            \setlength {\itemsep}{1em}
+            \setlength {\itemindent}{-2cm}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $\sim(\sim p \vee q) \leftrightarrow p $ & Equivalência da Condicional \\
+                    2. $(\sim \sim p \wedge \sim q) \leftrightarrow p$ & De Morgan \\
+                    3. $(p \wedge \sim q) \leftrightarrow p$ & Dupla Negação \\
+                    4. $((p \wedge \sim q) \rightarrow p) \wedge (p \rightarrow (p \wedge \sim q))$ & Equivalência da Bicondicional \\
+                    5. $(\sim(p \wedge \sim q) \vee p) \wedge (\sim p \vee (p \wedge \sim q))$ & Equivalência da Condicional x2 \\
+                    6. $((\sim p \vee \sim \sim q) \vee p) \wedge (\sim p \vee (p \wedge \sim q))$ & De Morgan \\
+                    7. $(\sim p \vee q \vee p) \wedge (\sim p \vee p) \wedge (\sim p \vee \sim q)$ & Dupla Negação + Distributividade \\
+                    7. $(\sim p \vee q \vee p) \wedge (\sim p \vee p) \wedge (\sim p \vee \sim q)$ & \textbf{FNC} \\
+                    8. $(\blacksquare \vee q) \wedge \blacksquare \wedge (\sim p \vee \sim q)$ & Tautologia x2 \\
+                    9. $\blacksquare \wedge (\sim p \vee \sim q)$ & Identidade x2\\
+                    10. $(\sim p \vee \sim q)$ & Identidade \\
+                    10. $\sim p \vee \sim q$ & \textbf{FND} \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $\sim ((p \rightarrow q) \wedge (q \rightarrow p)) \vee p \vee q$ & Equivalência da Bicondicional \\
+                    2. $\sim ((\sim p \vee q) \wedge (\sim q \vee p)) \vee p \vee q$ & Equivalência da Condicional x2 \\
+                    3. $(\sim (\sim p \vee q) \vee \sim(\sim q \vee p)) \vee p \vee q$ & De Morgan \\
+                    4. $((\sim \sim p \wedge \sim q) \vee (\sim \sim q \wedge \sim p)) \vee p \vee q$ & De Morgan x2 \\
+                    5. $(p \wedge \sim q) \vee (q \wedge \sim p) \vee p \vee q$ & Dupla Negação x2 \\
+                    5. $(p \wedge \sim q) \vee (q \wedge \sim p) \vee p \vee q$ & \textbf{FND} \\
+                    6. $(p \wedge \sim q) \vee p \vee (q \wedge \sim p) \vee q$ & Associatividade \\
+                    7. $p \vee q$ & Absorção x2 \\
+                    7. $p \vee q$ & \textbf{FNC}
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \vee q) \wedge \sim p \wedge r$ & Equivalência da Condicional \\
+                    1. $(\sim p \vee q) \wedge \sim p \wedge r$ & \textbf{FNC} \\
+                    2. $((\sim p \wedge \sim p) \vee (\sim p \wedge q)) \wedge r$ & Distributividade \\
+                    3. $(\sim p \vee (\sim p \wedge q)) \wedge r$ & Identidade \\
+                    4. $((\sim p \wedge r) \vee (\sim p \wedge q \wedge r))$ & Distributividade \\
+                    4. $((\sim p \wedge r) \vee (\sim p \wedge q \wedge r))$ & \textbf{FND} \\
+                     
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim p \wedge \sim q) \rightarrow ((\sim \sim p \vee q) \vee (\sim p \vee \sim q))$ & Equivalência da Condicional x2 \\
+                    2. $(\sim p \wedge \sim q) \rightarrow ((p \vee q) \vee (\sim p \vee \sim q))$ & Dupla Negação \\ 
+                    3. $\sim (\sim p \wedge \sim q) \vee (p \vee q) \vee (\sim p \vee \sim q)$ & Equivalência da Condicional \\
+                    4. $(\sim \sim p \vee \sim \sim q) \vee p \vee q \vee \sim p \vee \sim q $ & De Morgan \\
+                    5. $(p \vee q) \vee p \vee q \vee \sim p \vee \sim q $ & Dupla Negação \\
+                    5. $(p \vee q) \vee p \vee q \vee \sim p \vee \sim q $ & \textbf{FND} \\
+                    6. $p \vee q \vee p \vee \sim p \vee q \vee \sim q $ & Associatividade \\
+                    7. $p \vee q \vee \blacksquare \vee \blacksquare $ & Tautologia x2 \\
+                    8. $\blacksquare$ & Identidade \\
+                    8. $\blacksquare$ & \textbf{FNC} (e FND novamente) \\
+                \end{tabular}
+            
+            \item
+            
+                \begin{tabular}{l}
+                    1. $((\sim r \vee \sim q) \rightarrow p) \wedge (p \rightarrow (\sim r \vee \sim q))$\\ %& Equivalência da Bicondicional  \\
+                    2. $(\sim (\sim r \vee \sim q) \vee p) \wedge (\sim p \vee (\sim r \vee \sim q))$\\ %& Equivalência da Condicional x2 \\
+                    3. $((\sim \sim r \wedge \sim \sim q) \vee p) \wedge (\sim p \vee \sim r \vee \sim q)$\\ %& De Morgan \\
+                    4. $((r \wedge q) \vee p) \wedge (\sim p \vee \sim r \vee \sim q)$\\ %& Dupla Negação \\
+                    5. $(r \vee p) \wedge (q \vee p) \wedge (\sim p \vee \sim r \vee \sim q)$\\ %& Distributividade \\ 
+                    Por simplicidade, tomarei $(r \vee p)$ como sendo \textbf{T}.\\
+                    5. $\textbf{T} \wedge (q \vee p) \wedge (\sim p \vee \sim r \vee \sim q)$\\ %& \textbf{FNC} \\
+                    6. $\textbf{T} \wedge ((q \wedge (\sim p \vee \sim r \vee \sim q)) \vee (p \wedge (\sim p \vee \sim r \vee \sim q)))$\\ %& Distributividade \\
+                    7. $\textbf{T} \wedge ((q \wedge \sim p) \vee (q \wedge \sim r) \vee (q \wedge \sim q) \vee (p \wedge \sim p) \vee (p \wedge \sim r) \vee (p \wedge \sim q))$\\% distributividade
+                    8. $\textbf{T} \wedge ((q \wedge \sim p) \vee (q \wedge \sim r) \vee \square \vee \square \vee (p \wedge \sim r) \vee (p \wedge \sim q))$\\ % contradição
+                    9. $\textbf{T} \wedge ((q \wedge \sim p) \vee (q \wedge \sim r) \vee (p \wedge \sim r) \vee (p \wedge \sim q))$\\ % identidade
+                    10. $(\textbf{T} \wedge (q \wedge \sim p)) \vee (\textbf{T} \wedge (q \wedge \sim r)) \vee (\textbf{T} \wedge (p \wedge \sim r)) \vee (\textbf{T} \wedge (p \wedge \sim q))$\\ % distributividade
+                    11. $(q \wedge (\sim p \wedge \textbf{T})) \vee (q \wedge (\sim r \wedge \textbf{T})) \vee (p \wedge (\sim r \wedge \textbf{T})) \vee (\sim q \wedge (p \wedge \textbf{T}))$\\ % associatividade
+                    Desfazendo a simplificação de $(r \vee p)$ para \textbf{T}, temos\\
+                    11. $(q \wedge (\sim p \wedge (r \vee p))) \vee (q \wedge (\sim r \wedge (r \vee p))) \vee (p \wedge (\sim r \wedge (r \vee p))) \vee (\sim q \wedge (p \wedge (r \vee p)))$\\
+                    Todas idempotências, contradições e tautologias já serão simplificadas.\\
+                    12. $(q \wedge ((\sim p \wedge r) \vee \square)) \vee (q \wedge (\square \vee (\sim r \wedge p))) \vee (p \wedge (\square \vee (\sim r \wedge p))) \vee (\sim q \wedge ((p \wedge r) \vee p))$\\ % distributividade x100000
+                    13. $(q \wedge (\sim p \wedge r)) \vee (q \wedge (\sim r \wedge p)) \vee (p \wedge (\sim r \wedge p)) \vee (\sim q \wedge ((p \wedge r) \vee p))$ \\ %identidade
+                    14. $(q \wedge \sim p \wedge r) \vee (q \wedge \sim r \wedge p) \vee (p \wedge \sim r \wedge p) \vee (\sim q \wedge p)$ \\ % absorção e associatividade
+                    15. $(\sim p \wedge q \wedge r) \vee (p \wedge q \wedge \sim r) \vee (p \wedge \sim r) \vee (p \wedge \sim q)$ \\ %identidade e associatividade
+                    15. $(\sim p \wedge q \wedge r) \vee (p \wedge q \wedge \sim r) \vee (p \wedge \sim r) \vee (p \wedge \sim q)$ \\ % FND
+                    \\
+                    \\                            
+                    1. Equivalência da Bicondicional \\
+                    2. Equivalência da Condicional x2 \\
+                    3. De Morgan \\
+                    4. Dupla Negação \\
+                    5. Distributividade \\
+                    5. \textbf{FNC} \\
+                    6. Distributividade \\
+                    7. Distributividade \\
+                    8. Contradição \\
+                    9. Identidade \\
+                    10. Distributividade \\
+                    11. Associatividade \\
+                    12. Distributividade \\
+                    13. Identidade \\
+                    14. Absorção + Associatividade \\
+                    15. Identidade + Associatividade \\
+                    15. \textbf{FND} \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $\sim(\sim p \vee \sim q) \vee (p \wedge q)$ & Equivalência da Condicional \\
+                    2. $(\sim \sim p \wedge \sim \sim q) \vee (p \wedge q)$ & De Morgan \\
+                    3. $(p \wedge q) \vee (p \wedge q)$ & Dupla Negação \\
+                    3. $(p \wedge q) \vee (p \wedge q)$ & \textbf{FND} \\
+                    4. $p \wedge q$ & Identidade \\
+                    4. $p \wedge q$ & \textbf{FNC} \\
+                \end{tabular}
+            
+            \item 
+            % \begin{tabular}{@{}l@{}}Equivalência da\\ Condicional \end{tabular} \\
+            
+                \begin{tabular}{ll}
+                    1. $\sim(\sim p \vee q) \vee (q \wedge \sim r \wedge \sim p)$ & \begin{tabular}{@{}l@{}}Equivalência da\\ Condicional \end{tabular} \\
+                    2. $(\sim \sim p \wedge \sim q) \vee (q \wedge \sim r \wedge \sim p) $ & De Morgan \\
+                    3. $(p \wedge \sim q) \vee (q \wedge \sim r \wedge \sim p)$ & Dupla Negação \\
+                    3. $(p \wedge \sim q) \vee (q \wedge \sim r \wedge \sim p)$ & \textbf{FND} \\
+                    4. $((p \wedge \sim q) \vee q) \wedge ((p \wedge \sim q) \vee \sim r) \wedge ((p \wedge \sim q) \vee \sim p)$ & Distributividade \\
+                    5. $(p \vee q) \wedge (\sim q \vee q) \wedge (p \vee \sim r) \wedge (\sim q \vee \sim r) \wedge (p \vee \sim p) \wedge (\sim q \vee \sim p)$ & Distributividade \\
+                    5. $(p \vee q) \wedge (\sim q \vee q) \wedge (p \vee \sim r) \wedge (\sim q \vee \sim r) \wedge (p \vee \sim p) \wedge (\sim q \vee \sim p)$ & \textbf{FNC} \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{l}
+                    1. $((\sim p \wedge \sim q) \rightarrow r) \wedge (r \rightarrow (\sim p \wedge \sim q))$\\
+                    2. $(\sim(\sim p \wedge \sim q) \vee r) \wedge (\sim r \vee (\sim p \wedge \sim q))$ \\
+                    3. $((\sim \sim p \vee \sim \sim q) \vee r) \wedge (\sim r \vee (\sim p \wedge \sim q))$\\
+                    4. $((p \vee q) \vee r) \wedge (\sim r \vee (\sim p \wedge \sim q))$\\
+                    5. $(p \vee q \vee r) \wedge ((\sim r \vee \sim p) \wedge (\sim r \vee \sim q))$\\ 
+                    5. $(p \vee q \vee r) \wedge (\sim r \vee \sim p) \wedge (\sim r \vee \sim q)$\\
+                    Chamando $\sim r \vee \sim q$ como \textbf{T}, teremos:\\
+                    5. $(p \vee q \vee r) \wedge (\sim r \vee \sim p) \wedge \textbf{T}$ \\
+                    6. $((p \wedge (\sim r \vee \sim p)) \vee (q \wedge (\sim r \vee \sim p)) \vee (r \wedge (\sim r \vee \sim p))) \wedge \textbf{T}$\\ 
+                    Todas idempotências, contradições e tautologias já serão simplificadas.\\
+                    7. $((p \wedge \sim r) \vee \square \vee (q \wedge \sim r) \vee (q \wedge \sim p) \vee \square \vee (\sim r \wedge \sim p)) \wedge \textbf{T}$\\
+                    8. $((p \wedge \sim r) \vee (q \wedge \sim r) \vee (q \wedge \sim p) \vee (\sim r \wedge \sim p)) \wedge \textbf{T}$\\
+                    9. $((p \wedge \sim r) \wedge \textbf{T}) \vee ((q \wedge \sim r) \wedge \textbf{T}) \vee ((q \wedge \sim p) \wedge \textbf{T}) \vee ((\sim r \wedge \sim p) \wedge \textbf{T})$\\
+                    10. $(p \wedge (\textbf{T} \wedge \sim r)) \vee ((q \wedge \textbf{T}) \wedge \sim r) \vee ((q \wedge \textbf{T}) \wedge \sim p ) \vee (\sim p \wedge (\sim r \wedge \textbf{T}))$ \\
+                    11. $(p \wedge (\textbf{T} \wedge \sim r)) \vee ((q \wedge \textbf{T}) \wedge \sim r) \vee ((q \wedge \textbf{T}) \wedge \sim p ) \vee (\sim p \wedge (\sim r \wedge \textbf{T}))$\\
+                    Desfazendo a simplificação de $\sim r \vee \sim q$ para \textbf{T} e fazendo todas as de distributividade,\\ contradição e tautologia possíveis, temos:\\
+                    12. $(p \wedge \sim r) \vee (\sim r \wedge \sim q) \vee (q \wedge \sim r) \vee (q \wedge \sim r \wedge \sim p) \vee (\sim p \wedge \sim r) \vee (\sim r \wedge q)$ \\
+                    \\
+                    \\
+                    1. Equivalência da Bicondicional \\
+                    2. Equivalência da Condicional \\
+                    3. De Morgan \\
+                    4. Dupla Negação \\
+                    5. Distributividade \\
+                    5. \textbf{FNC} \\
+                    6. Distributividade \\
+                    7. Distributividade \\
+                    8. Identidade \\
+                    9. Distributividade \\
+                    10. Associatividade \\ 
+                    11. Associatividade \\
+                    12. Distributividade + Contradição + Tautologia \\
+                    12. \textbf{FND}
+                \end{tabular}
+            
+            \item   
+            
+                \begin{tabular}{ll}
+                    1. $\sim (p \wedge q) \vee \sim (p \vee q)$ & Equivalência da Condicional \\
+                    2. $(\sim p \vee \sim q) \vee (\sim p \wedge \sim q)$ & De Morgan \\
+                    2. $(\sim p \vee \sim q) \vee (\sim p \wedge \sim q)$ & \textbf{FND} \\
+                    3. $\sim p \vee (\sim q \vee (\sim p \wedge \sim q))$ & Associatividade \\
+                    4. $\sim p \vee \sim q$ & Absorção \\
+                    4. $\sim p \vee \sim q$ & \textbf{FNC} (Proposição Fundamental) \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $(\sim \sim p \vee q) \leftrightarrow (r \vee p)$ & \begin{tabular}{@{}l@{}}Equivalência da\\ Condicional \end{tabular} \\
+                    2. $(p \vee q) \leftrightarrow (r \vee p)$ & Dupla Negação \\
+                    3. $((p\vee q) \rightarrow (r \vee p)) \wedge ((r \vee p) \rightarrow (p \vee q))$ & \begin{tabular}{@{}l@{}}Equivalência da\\ Bicondicional \end{tabular} \\
+                    4. $(\sim (p \vee q) \vee (r \vee p)) \wedge (\sim (r \vee p) \vee (p \vee q))$ & \begin{tabular}{@{}l@{}}Equivalência da\\ Condicional x2 \end{tabular} \\
+                    5. $((\sim p \wedge \sim q) \vee r \vee p) \wedge ((\sim r \wedge \sim p) \vee p \vee q)$ & De Morgan \\
+                    6. $(((\sim p \vee p) \wedge (\sim q \vee p)) \vee r) \wedge (((\sim r \vee p) \wedge (\sim p \vee p)) \vee q)$ & Distributividade \\
+                    7.$((\blacksquare \wedge (\sim q \vee p)) \vee r) \wedge (((\sim r \vee p) \wedge \blacksquare)) \vee q)$ & Tautologia x2 \\
+                    8. $(\sim q \vee p \vee r) \wedge (\sim r \vee p \vee q)$ & Identidade x2 \\
+                    8. $(\sim q \vee p \vee r) \wedge (\sim r \vee p \vee q)$ & \textbf{FNC}  \\
+                    9. $(\sim q \wedge (\sim r \vee p \vee q)) \vee (p \wedge (\sim r \vee p \vee q)) \vee (r \wedge (\sim r \vee p \vee q))$ & Distributividade \\
+                    10. $(\sim q \wedge (\sim r \vee p \vee q)) \vee (p \wedge ((\sim r \vee p) \vee q)) \vee (r \wedge (\sim r \vee p \vee q))$ & Associatividade \\
+                    Simplificando todas as contradições, tautologias, idenpotências e absorções:\\
+                    11. $(\sim q \wedge \sim r) \vee (\sim q \wedge p) \vee \square \vee p \vee (p \wedge q) \vee \square \vee (r \wedge p) \vee (r \wedge q)$ & Distributividade \\
+                    12. $(\sim q \wedge \sim r) \vee (\sim q \wedge p) \vee p \vee (p \wedge q) \vee (r \wedge p) \vee (r \wedge q)$ & Identidade \\
+                    12. $(\sim q \wedge \sim r) \vee (\sim q \wedge p) \vee p \vee (p \wedge q) \vee (r \wedge p) \vee (r \wedge q)$ & \textbf{FND} \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                1. $\sim \sim (p \leftrightarrow q) \vee (p \wedge q) \vee r$ & Equivalência da Condicional \\
+                2. $(p \leftrightarrow q) \vee (p \wedge q) \vee r$ & Dupla Negação \\
+                3. $((p \rightarrow q) \wedge (q \rightarrow p)) \vee (p \wedge q) \vee r$ & Equivalência da Bicondicional \\
+                4. $((\sim p \vee q) \wedge (\sim q \vee p)) \vee (p \wedge q) \vee r$ & Equivalência da Condicional x2 \\
+                5. $(\sim p \wedge \sim q) \vee (q \wedge \sim q) \vee (p \wedge \sim p) \vee (q \wedge p) \vee (p \wedge q) \vee r$ & Distributividade \\
+                5. $(\sim p \wedge \sim q) \vee (q \wedge \sim q) \vee (p \wedge \sim p) \vee (q \wedge p) \vee (p \wedge q) \vee r$ & \textbf{FND} \\
+                6. $(\sim p \wedge \sim q) \vee \square \vee \square \vee (q \wedge p) \vee (p \wedge q) \vee r$ & Contradição x2 \\
+                7. $(\sim p \wedge \sim q) \vee (q \wedge p) \vee (p \wedge q) \vee r$ & Identidade \\
+                8. $(\sim p \wedge \sim q) \vee (p \wedge q) \vee r$ & Idempotência \\
+                9. $((\sim p \vee p) \wedge (\sim p \vee q) \wedge (\sim q \vee p) \wedge (\sim q \vee q)) \vee r$ & Distributividade \\
+                10. $(\blacksquare \wedge (\sim p \vee q) \wedge (\sim q \vee p) \wedge \blacksquare) \vee r$ & Tautologia x2 \\
+                11. $((\sim p \vee q) \wedge (\sim q \vee p)) \vee r$ & Identidade x2 \\
+                12. $((\sim p \vee q) \vee r) \wedge ((\sim q \vee p) \vee r)$ & Distributividade \\
+                13. $(\sim p \vee q \vee r) \wedge (\sim q \vee p \vee r)$ & Associatividade \\
+                13. $(\sim p \vee q \vee r) \wedge (\sim q \vee p \vee r)$ & \textbf{FNC} \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $((\sim p \wedge q) \rightarrow (q \vee \sim p)) \wedge ((q \vee \sim p) \rightarrow (\sim p \wedge q))$ & Equivalência da Bicondicional \\
+                    2. $(\sim(\sim p \wedge q) \vee (q \vee \sim p)) \wedge (\sim (q \vee \sim p) \vee (\sim p \wedge q))$ & Equivalência da Condicional x2 \\
+                    3. $(\sim \sim p \vee \sim q \vee q \vee \sim p) \wedge ((\sim q \wedge \sim \sim p) \vee (\sim p \wedge q))$ & De Morgan \\
+                    4. $(p \vee \sim q \vee q \vee \sim p) \wedge ((\sim q \wedge p) \vee (\sim p \wedge q))$ & Dupla Negação \\
+                    5. $\blacksquare \wedge ((\sim q \wedge p) \vee (\sim p \wedge q))$ & Tautologia \\
+                    6. $(\sim q \wedge p) \vee (\sim p \wedge q)$ & Identidade \\
+                    6. $(\sim q \wedge p) \vee (\sim p \wedge q)$ & \textbf{FND} \\
+                    7. $(\sim q \vee \sim p) \wedge (\sim q \vee q) \wedge (p \vee \sim p) \wedge (p \vee q)$ Distributividade \\
+                    7. $(\sim q \vee \sim p) \wedge (\sim q \vee q) \wedge (p \vee \sim p) \wedge (p \vee q)$ & \textbf{FNC} \\
+                \end{tabular}
+            
+            \item 
+            
+                \begin{tabular}{ll}
+                    1. $((\sim p \vee \sim q) \rightarrow p) \wedge (p \rightarrow (\sim p \vee \sim q))$ & Equivalência da Bicondicional \\
+                    2. $(\sim(\sim p \vee \sim q) \vee p) \wedge (\sim p \vee (\sim p \vee \sim q))$ & Equivalência da Condicional x2 \\
+                    3. $((\sim \sim p \wedge \sim \sim q) \vee p) \wedge (\sim p \vee (\sim p \vee \sim q))$ & De Morgan \\
+                    4. $((p \wedge q) \vee p) \wedge (\sim p \vee (\sim p \vee \sim q))$ & Dupla Negação \\
+                    5. $p \wedge (\sim p \vee (\sim p \vee \sim q))$ & Absorção \\
+                    6. $p \wedge (\sim p \vee \sim q)$ & Idempotência \\
+                    6. $p \wedge (\sim p \vee \sim q)$ & \textbf{FNC} \\
+                    7. $(p \wedge \sim p) \vee (p \wedge \sim q)$ & Distributividade \\
+                    7. $(p \wedge \sim p) \vee (p \wedge \sim q)$ & \textbf{FND} \\
+                \end{tabular}
+            
+            \item 
+                \begin{tabular}{ll}
+                    1. $((p \vee q) \rightarrow (p \wedge q)) \wedge ((p \wedge q) \rightarrow (p \vee q))$ & Equivalência da Bicondicional \\
+                    2. $(\sim (p \vee q) \vee (p \wedge q)) \wedge (\sim(p \wedge q) \vee (p \vee q))$ & Equivalência da Condicional x2 \\
+                    3. $((\sim p \wedge \sim q) \vee (p \wedge q)) \wedge ((\sim p \vee \sim q) \vee (p \vee q))$ & De Morgan \\
+                    4. $(\sim p \wedge \sim q) \vee (p \wedge q) \wedge \blacksquare $ & Tautologia \\
+                    5. $(\sim p \wedge \sim q) \vee (p \wedge q)$ & Identidade \\
+                    5. $(\sim p \wedge \sim q) \vee (p \wedge q)$ & \textbf{FND} \\
+                    6. $(\sim p \vee p) \wedge (\sim p \vee q) \wedge (\sim q \vee p) \wedge (\sim q \vee q)$ & Distributividade \\
+                    6. $(\sim p \vee p) \wedge (\sim p \vee q) \wedge (\sim q \vee p) \wedge (\sim q \vee q)$ & \textbf{FNC} \\
+                \end{tabular}
+        \end{enumerate}
+        
+        
+        
+    \end{enumerate}
+
+
+
+
+    \newpage % ---------------------------------------------%
+    
+    
+    
+    
+    \underline{{\Large Equivalências Notáveis}}:
+    
+    \begin{description}
+        \setlength{\itemsep}{-1pt}
+        
+        \item[Identidade (IDENT):] $\begin{array}{l} p \vee \blacksquare \Leftrightarrow \blacksquare \\ p \vee \square \Leftrightarrow p \\ p \wedge \blacksquare \Leftrightarrow p \\ p \wedge \square \Leftrightarrow \square \end{array}$
+        
+        \item[Idempotência (ID):] $\begin{array}{l} p\Leftrightarrow p\wedge p \\ p\Leftrightarrow p\vee p\end{array}$
+        
+        \item[Comutação (COM):] $\begin{array}{l} p\wedge q\Leftrightarrow q\wedge p \\ p\vee q\Leftrightarrow q\vee p\end{array}$
+        
+        \item[Associação (ASSOC):] $\begin{array}{l}p\wedge(q\wedge r)\Leftrightarrow (p\wedge q)\wedge r\\ p\vee(q\vee r)\Leftrightarrow (p\vee q)\vee r \end{array}$ 
+        
+        \item[Distribuição (DIST):] $\begin{array}{l}p\wedge(q\vee r)\Leftrightarrow (p\wedge q)\vee (p \wedge r)\\p\vee(q\wedge r)\Leftrightarrow (p\vee q)\wedge (p\vee r)\end{array}$
+        
+        \item[De Morgan (DM):] $\begin{array}{l}\sim(p \wedge q) \Leftrightarrow \sim p \vee\sim q\\\sim(p \vee q) \Leftrightarrow \sim p \wedge\sim q\end{array}$
+        
+        \item[Contradição:] $\begin{array}{l} p\wedge \sim p \Leftrightarrow \square \\ p \leftrightarrow \sim p \Leftrightarrow \square \\ \end{array}$
+        
+        \item[Tautologia:] $ \begin{array}{l} p\vee \sim p \Leftrightarrow \blacksquare \\ p \rightarrow p \Leftrightarrow \blacksquare \\ p \leftrightarrow p \Leftrightarrow \blacksquare \end{array}$
+        
+        \item [Absorção:] $\begin{array}{l}p \wedge (p \vee q) \Leftrightarrow p\\p \vee (p \wedge q) \Leftrightarrow p\end{array}$
+        
+        \item[Conectivos de Scheffer] $\begin{array}{l} p \uparrow q \Leftrightarrow \sim p \vee \sim q \\  p \downarrow q \Leftrightarrow \sim p \wedge \sim q \end{array}$
+        
+        \item[Dupla Negação (DN):] $p\Leftrightarrow \sim \sim p$ 
+        
+        \item[Condicional (COND):] $p\rightarrow q \Leftrightarrow\sim p \vee q$
+        
+        \item[Bicondicional (BICOND):] $p\leftrightarrow q \Leftrightarrow (p\rightarrow q)\wedge(q\rightarrow p)$
+        
+        \item[Contraposição (CP):] $p\rightarrow q \Leftrightarrow \sim q\rightarrow\sim p$
+        
+        \item[Exportação-Importação (EI):] $p\wedge q\rightarrow r \Leftrightarrow p\rightarrow(q\rightarrow r)$
+        
+        \item[Ou-Exclusivo (X-or)] $p \veebar q \Leftrightarrow (p \vee q) \wedge \sim (p \wedge q)$
+        
+    \end{description}
+    
+    \begin{comment}
+    
+        \vskip 1cm
+    
+        \underline{{\Large Regras de Inferência Válidas (Teoremas)}}:
+    
+        \begin{description}
+    
+        \setlength{\itemsep}{-1pt}
+        
+        \item[Adição (AD):] $\begin{array}{l} p \vdash p \vee q \\ p \vdash q \vee p\end{array}$
+        
+        \item[Simplificação (SIMP):] $\begin{array}{l} p \wedge q \vdash p\\p \wedge q \vdash q \end{array}$
+        
+        \item[Conjunção (CONJ)] $\begin{array}{l}p, q \vdash p \wedge q\\p, q \vdash q \wedge p\end{array}$
+        
+        \item[Absorção (ABS):] $p \rightarrow q \vdash p \rightarrow (p \wedge q)$
+        
+        \item[Modus Ponens (MP):] $p \rightarrow q, p \vdash q$
+        
+        \item[Modus Tollens (MT):] $p \rightarrow q, \sim q \vdash \sim p$
+        
+        \item[Silogismo Disjuntivo (SD):] $\begin{array}{l}p \vee q, \sim p \vdash q\\p \vee q, \sim q \vdash p\end{array}$
+       
+        \item[Silogismo Hipotético (SH):] $p \rightarrow q, q\rightarrow r \vdash p\rightarrow r$
+       
+        \item[Dilema Construtivo (DC):] $p\rightarrow q, r\rightarrow s, p \vee r \vdash q\vee s$
+       
+        \item[Dilema Destrutivo (DD):] $p\rightarrow q, r\rightarrow s, \sim q\vee\sim s \vdash \sim p \vee\sim r$
+    
+     \end{description}
+        
+    \end{comment}
+
+\end{document}
